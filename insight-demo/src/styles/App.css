@@ -1,0 +1,45 @@
+.carousel-cont {
+  background-image: url(../stacked-waves-haikei.svg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-slide-cont {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+}
+
+.below-the-fold-cont {
+  background-color: aqua;
+  height: 1000px;
+}
+
+.react-logo-svg {
+  height: 300px;
+  width: 300px;
+}
+
+.background-layers {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+    left: 0;
+}
