@@ -1,4 +1,3 @@
-import "./styles/App.css";
 import { Container } from "react-bootstrap";
 import FullHeightCarousel from "./components/carousel/FullHeightCarousel";
 
