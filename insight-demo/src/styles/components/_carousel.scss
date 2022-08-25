@@ -1,3 +1,5 @@
+@use '../abstracts/'as *;
+
 .background-cont {
     background-image: url(../stacked-waves-haikei.svg);
     background-size: cover;
@@ -88,13 +90,6 @@
 #logo-dot-right,
 #logo-line-btm {
     fill: #d40e8c;
-}
-
-.wave {
-    position: absolute;
-    height: auto;
-    width: auto;
-
 }
 
 

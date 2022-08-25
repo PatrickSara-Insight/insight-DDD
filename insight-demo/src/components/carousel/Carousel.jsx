@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { gsap } from "gsap";
 
-import HomeSlide from "./slides/HomeSlide";
+import BeAmbitious from "./slides/BeAmbitious";
 import SlideTemplate from "./slides/SlideTemplate";
 
 const PapaCarousel = () => {
@@ -53,17 +53,17 @@ const PapaCarousel = () => {
       <Carousel
         variant="dark"
         controls={false}
-        pause={false}
+        pause={"hover"}
         className="carousel gx-0"
       >
         <Carousel.Item className="carousel-item">
           <SlideTemplate />
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
-          <HomeSlide />
+          <BeAmbitious />
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
-          <HomeSlide />
+          <SlideTemplate />
         </Carousel.Item>
       </Carousel>
       <svg
