@@ -45,6 +45,7 @@ body {
 .carousel-slide-cont {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-height: 100%;

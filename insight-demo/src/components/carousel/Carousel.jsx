@@ -4,6 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { gsap } from "gsap";
 
 import HomeSlide from "./slides/HomeSlide";
+import SlideTemplate from "./slides/SlideTemplate";
 
 const PapaCarousel = () => {
   const logoRef = useRef();
@@ -39,8 +40,8 @@ const PapaCarousel = () => {
       .to("#logo-dot-left", { xPercent: -5000 }, 4.4)
       .to("#logo-dot-right", { xPercent: 5000 }, 4.4)
       .to("#logo-dot-btm", { yPercent: -5000 }, 4.4)
-      .to(".background-cont", { yPercent: -100, duration: 0.5 }, 5)
-      .to(".carousel", { opacity: 100 });
+      .to(".background-cont", { yPercent: -100, duration: 0.5 }, 7)
+      .to(".carousel", { opacity: 100, duration: 2 });
   };
 
   useEffect(() => {
@@ -56,7 +57,7 @@ const PapaCarousel = () => {
         className="carousel gx-0"
       >
         <Carousel.Item className="carousel-item">
-          <HomeSlide />
+          <SlideTemplate />
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
           <HomeSlide />
