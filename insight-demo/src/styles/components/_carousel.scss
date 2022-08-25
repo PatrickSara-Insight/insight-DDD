@@ -1,0 +1,99 @@
+.background-cont {
+    background-image: url(../stacked-waves-haikei.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.carousel-cont {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+
+.carousel-inner,
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-slide-cont {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+}
+
+.react-logo-svg {
+    height: 300px;
+    width: 300px;
+}
+
+.carousel-background {
+    position: relative;
+    background-color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-svg {
+    z-index: 99;
+    opacity: 0;
+    height: auto;
+    width: 100%;
+    padding: 20%;
+}
+
+.logo-letter {
+    fill: #554741;
+}
+
+#logo-dot-top, 
+#logo-line-right {
+    fill: #b01c87;
+}
+
+#logo-dot-left, 
+#logo-line-top {
+    fill: #d40e8c;
+}
+
+#logo-dot-btm,
+#logo-line-left {
+    fill: #d30c55;
+}
+
+#logo-dot-right,
+#logo-line-btm {
+    fill: #d40e8c;
+}
+
+.wave {
+    position: absolute;
+    height: auto;
+    width: auto;
+
+}
+
+
