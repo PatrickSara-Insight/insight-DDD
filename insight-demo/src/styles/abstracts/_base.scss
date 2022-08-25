@@ -39,3 +39,7 @@ $small: 768px;
 $medium: 992px;
 $large: 1200px;
 $extra-large: 1400px;
+
+$spacer-normal: 1rem;
+$spacer-large: $spacer-normal * 2;
+$spacer-small: $spacer-normal / 2;

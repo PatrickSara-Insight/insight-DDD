@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { gsap } from "gsap";
+import Logo from "../../LogoVertical.png";
 
 import BeAmbitious from "./slides/BeAmbitious";
 import SlideTemplate from "./slides/SlideTemplate";
@@ -41,7 +42,8 @@ const PapaCarousel = () => {
       .to("#logo-dot-right", { xPercent: 5000 }, 4.4)
       .to("#logo-dot-btm", { yPercent: -5000 }, 4.4)
       .to(".background-cont", { yPercent: -100, duration: 0.5 }, 7)
-      .to(".carousel", { opacity: 100, duration: 2 });
+      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 9)
+      .to(".carousel", { opacity: 100, duration: 2 }, 10);
   };
 
   useEffect(() => {
@@ -50,6 +52,7 @@ const PapaCarousel = () => {
 
   return (
     <Container fluid className="carousel-cont">
+      <Image className="logo-vertical" fluid alt="insight-logo" src={Logo} />
       <Carousel
         variant="dark"
         controls={false}

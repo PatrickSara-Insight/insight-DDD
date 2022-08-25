@@ -92,4 +92,15 @@
     fill: #d40e8c;
 }
 
+.logo-vertical {
+    position: absolute;
+    margin: $spacer-normal;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    max-width: 10%;
+    height: auto;
+    z-index: 1;
+}
+
 

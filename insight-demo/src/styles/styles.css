@@ -114,6 +114,17 @@ body {
   fill: #d40e8c;
 }
 
+.logo-vertical {
+  position: absolute;
+  margin: 1rem;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  max-width: 10%;
+  height: auto;
+  z-index: 1;
+}
+
 .slide-header {
   font-family: "Klinic Slab", sans-serif;
   color: #EFE9F4;

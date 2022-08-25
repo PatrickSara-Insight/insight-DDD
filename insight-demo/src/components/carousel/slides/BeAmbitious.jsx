@@ -1,6 +1,4 @@
 import { Container } from "react-bootstrap";
-import Carousel from "react-bootstrap/Carousel";
-import logo from "../../../logo-white.png";
 
 function BeAmbitious() {
   return (
