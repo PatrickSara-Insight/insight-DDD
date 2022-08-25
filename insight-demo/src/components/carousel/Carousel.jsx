@@ -31,14 +31,14 @@ const PapaCarousel = () => {
         2.9
       )
       .to(".logo", { opacity: 0, duration: 2 }, 4.25)
-      .to("#logo-dot-top", { yPercent: 5000 }, 4)
-      .to("#logo-dot-right", { xPercent: 5000 }, 4)
-      .to("#logo-dot-btm", { yPercent: -5000 }, 4)
-      .to("#logo-dot-left", { xPercent: -5000 }, 4)
-      .to("#logo-line-top", { xPercent: 5000 }, 4.25)
-      .to("#logo-line-right", { yPercent: -5000 }, 4.25)
-      .to("#logo-line-btm", { xPercent: -5000 }, 4.25)
-      .to("#logo-line-left", { yPercent: 5000 }, 4.25)
+      .to("#logo-line-left", { yPercent: 5000 }, 4)
+      .to("#logo-line-top", { xPercent: 5000 }, 4.1)
+      .to("#logo-line-right", { yPercent: -5000 }, 4.2)
+      .to("#logo-line-btm", { xPercent: -5000 }, 4.3)
+      .to("#logo-dot-top", { yPercent: 5000 }, 4.4)
+      .to("#logo-dot-left", { xPercent: -5000 }, 4.4)
+      .to("#logo-dot-right", { xPercent: 5000 }, 4.4)
+      .to("#logo-dot-btm", { yPercent: -5000 }, 4.4)
       .to(".background-cont", { yPercent: -100, duration: 0.5 }, 5)
       .to(".carousel", { opacity: 100 });
   };
