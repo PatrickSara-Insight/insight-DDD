@@ -3,22 +3,38 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
 }
 
-.carousel-cont {
+.background-cont {
   background-image: url(../stacked-waves-haikei.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+.carousel-cont {
+  height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
 }
 
 .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
+  opacity: 0;
+  z-index: 2;
 }
 
 .carousel-inner,
@@ -34,20 +50,54 @@ body {
   max-height: 100%;
 }
 
-.below-the-fold-cont {
-  background-color: aqua;
-  height: 1000px;
-}
-
 .react-logo-svg {
   height: 300px;
   width: 300px;
 }
 
-.background-layers {
-  position: absolute;
-  top: 0;
+.carousel-background {
+  position: relative;
+  background-color: #FFFFFF;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-svg {
+  z-index: 99;
+  opacity: 0;
   height: auto;
   width: 100%;
-  left: 0;
+  padding: 20%;
+}
+
+.logo-letter {
+  fill: #554741;
+}
+
+#logo-dot-top,
+#logo-line-right {
+  fill: #b01c87;
+}
+
+#logo-dot-left,
+#logo-line-top {
+  fill: #d40e8c;
+}
+
+#logo-dot-btm,
+#logo-line-left {
+  fill: #d30c55;
+}
+
+#logo-dot-right,
+#logo-line-btm {
+  fill: #d40e8c;
+}
+
+.wave {
+  position: absolute;
+  height: auto;
+  width: auto;
 }/*# sourceMappingURL=styles.css.map */
