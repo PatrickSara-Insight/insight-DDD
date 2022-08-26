@@ -3,5 +3,37 @@
 @mixin slide-title {
     font-family: $font-heading;
     color: $color-font-primary;
-    font-size: $font-size-heading
+    font-size: $font-size-heading;
+    text-align: center;
+
+    @media screen and (max-width: $extra-large) {
+        font-size: $font-size-subheader;
+    }
+
+        @media screen and (max-width: $small) {
+            font-size: calc($font-size-subheader / 2);
+        }
 }
+
+@mixin slide-subtitle {
+    font-family: $font-subheading;
+    color: $color-font-primary;
+    font-size: calc($font-size-subheader / 2);
+    text-align: center;
+
+    @media screen and (max-width: $small) {
+        font-size: calc($font-size-subheader / 3);
+    }
+}
+
+@mixin slide-body {
+    font-family: $font-heading;
+    color: $color-font-primary;
+    font-size: calc($font-size-body * 2);
+    text-align: center;
+
+    @media screen and (max-width: $small) {
+        font-size: calc($font-size-body);
+    }
+}
+

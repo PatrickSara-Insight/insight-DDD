@@ -5,7 +5,8 @@ import { gsap } from "gsap";
 import Logo from "../../LogoVertical.png";
 
 import BeAmbitious from "./slides/BeAmbitious";
-import SlideTemplate from "./slides/SlideTemplate";
+import AboutUs from "./slides/AboutUs";
+import Stats from "./slides/Stats";
 
 const PapaCarousel = () => {
   const logoRef = useRef();
@@ -61,15 +62,17 @@ const PapaCarousel = () => {
         pause={"hover"}
         className="carousel gx-0"
       >
+        {/* <Carousel.Item interval={15000} className="carousel-item">
+          <AboutUs />
+        </Carousel.Item> */}
         <Carousel.Item interval={15000} className="carousel-item">
+          <Stats />
+        </Carousel.Item>
+
+        {/* should be last slide, with long interval */}
+        {/* <Carousel.Item className="carousel-item">
           <BeAmbitious />
-        </Carousel.Item>
-        <Carousel.Item className="carousel-item">
-          <SlideTemplate />
-        </Carousel.Item>
-        <Carousel.Item className="carousel-item">
-          <SlideTemplate />
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
       <svg
         version="1.0"
