@@ -46,6 +46,8 @@ const PapaCarousel = () => {
       .to(".carousel", { opacity: 100, duration: 2 }, 10);
   };
 
+  // after the last slide reverse the animation and start again?
+
   useEffect(() => {
     logoAnimation();
   }, []);
@@ -59,11 +61,11 @@ const PapaCarousel = () => {
         pause={"hover"}
         className="carousel gx-0"
       >
-        <Carousel.Item className="carousel-item">
-          <SlideTemplate />
+        <Carousel.Item interval={15000} className="carousel-item">
+          <BeAmbitious />
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
-          <BeAmbitious />
+          <SlideTemplate />
         </Carousel.Item>
         <Carousel.Item className="carousel-item">
           <SlideTemplate />
