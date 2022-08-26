@@ -1,0 +1,5 @@
+@use '../abstracts/'as *;
+
+.slide-header {
+    @include slide-title
+}

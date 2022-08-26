@@ -1,0 +1,7 @@
+@use './base' as *;
+
+@mixin slide-title {
+    font-family: $font-heading;
+    color: $color-font-primary;
+    font-size: $font-size-heading
+}

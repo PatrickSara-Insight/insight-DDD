@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat") url('./FONTS/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    src: local("Klinic Slab"), url("./FONTS/KlinicSlab_OTF/KlinicSlabMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Klinic Slab Light";
+    src: local("Klinic Slab Light"), url("./FONTS/KlinicSlab_OTF/KlinicSlabLight.otf") format("opentype");
+}
+
+$font-heading: 'Klinic Slab Light', sans-serif;
+$font-subheading: 'Montserrat', sans-serif;
+$font-body: 'Montserrat', sans-serif;
+
+$font-size-heading: 10rem;
+$font-size-subheader: 6rem;
+$font-size-body: 1rem;
+
+$color-warm-gray: #554741;
+$color-primary: #D40E8C;
+$color-primary-shade: #b40b76;
+$color-secondary: #582873;
+$color-secondary-shade: #76379b;
+$color-font-primary: #EFE9F4;
+$color-font-secondary: #C9CECF;
+
+$color-error: #C52233;
+$color-error-shade: #a5222f;
+$color-bright: #D3E848;
+$color-bright-shade: #bace3c;
+
+$extra-small: 576px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+$extra-large: 1400px;
+
+$spacer-normal: 1rem;
+$spacer-large: $spacer-normal * 2;
+$spacer-small: $spacer-normal / 2;
