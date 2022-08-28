@@ -10,6 +10,14 @@
   font-family: "Klinic Slab Light";
   src: local("Klinic Slab Light"), url("./FONTS/KlinicSlab_OTF/KlinicSlabLight.otf") format("opentype");
 }
+@font-face {
+  font-family: "Klinic Slab Italic";
+  src: local("Klinic Slab Italic"), url("./FONTS/KlinicSlab_OTF/KlinicSlabLightIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "Klinic Slab Bold";
+  src: local("Klinic Slab Bold"), url("./FONTS/KlinicSlab_OTF/KlinicSlabBold.otf") format("opentype");
+}
 *::-webkit-scrollbar {
   display: none;
 }
@@ -41,7 +49,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: none;
 }
 
 .carousel {
@@ -50,13 +57,13 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  z-index: 2;
 }
 
 .carousel-inner,
 .carousel-item {
+  z-index: 1;
   height: 100%;
+  background: none;
 }
 
 .carousel-slide-cont {
@@ -66,20 +73,6 @@ body {
   justify-content: center;
   align-items: center;
   max-height: 100%;
-}
-
-.react-logo-svg {
-  height: 300px;
-  width: 300px;
-}
-
-.carousel-background {
-  position: relative;
-  background-color: #FFFFFF;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .logo-svg {
@@ -121,12 +114,65 @@ body {
   right: 0;
   opacity: 0;
   max-width: 10%;
+  min-width: 100px;
   height: auto;
-  z-index: 1;
+}
+
+.italic {
+  font-family: "Klinic Slab Italic", sans-serif;
 }
 
 .slide-header {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
   font-size: 10rem;
+  text-align: center;
+}
+@media screen and (max-width: 1400px) {
+  .slide-header {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slide-header {
+    font-size: 3rem;
+  }
+}
+
+.slide-subheader {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 3rem;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .slide-subheader {
+    font-size: 2rem;
+  }
+}
+
+.slide-stat-primary {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Klinic Slab Bold", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .slide-stat-primary {
+    font-size: 2rem;
+  }
+}
+
+.slide-body {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.1;
+}
+@media screen and (max-width: 768px) {
+  .slide-body {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

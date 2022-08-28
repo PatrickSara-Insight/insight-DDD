@@ -1,5 +1,23 @@
 @use '../abstracts/'as *;
 
+.italic {
+    font-family: $font-italic;
+}
+
 .slide-header {
     @include slide-title
+}
+
+.slide-subheader {
+    @include slide-subtitle
+}
+
+.slide-stat-primary {
+    @include slide-subtitle;
+    font-family: $font-bold
+}
+
+.slide-body {
+    @include slide-body;
+    line-height: 1.1;
 }
