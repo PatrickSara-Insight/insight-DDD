@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Image } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import { gsap } from "gsap";
@@ -47,11 +47,25 @@ const PapaCarousel = () => {
       .to(".carousel", { opacity: 100, duration: 2 }, 8.75);
   };
 
-  // after the last slide reverse the animation and start again?
+  // write custom hook - setTimeout with a default slide transition, it sets the slide index, and also calls an animation function
+  // based on the current slide index. the animation will animate said slide.
+  // controls will have to be disabled. toggle display state with css
+  // =========== OR ============
+  // function that tracks the index. this will allow users to navigate throught he carousel. is this wanted? it is presentational after all
+  // const [slideIndex, setSlideIndex] = useState(0);
 
-  useEffect(() => {
-    logoAnimation();
-  }, []);
+  // const handleChange = () => {
+  //   setSlideIndex(slideIndex + 1);
+  //   console.log(slideIndex);
+  // };
+
+  // const interval = () => setInterval(handleChange, 1500);
+
+  // interval();
+
+  // useEffect(() => {
+  //   logoAnimation();
+  // }, []);
 
   return (
     <Container fluid className="carousel-cont">
@@ -59,20 +73,22 @@ const PapaCarousel = () => {
       <Carousel
         variant="dark"
         controls={false}
+        touch={false}
         pause={"hover"}
         className="carousel gx-0"
+        interval={null}
       >
-        {/* <Carousel.Item interval={15000} className="carousel-item">
+        <Carousel.Item className="carousel-item">
+          <BeAmbitious />
+        </Carousel.Item>
+        <Carousel.Item interval={15000} className="carousel-item">
           <AboutUs />
-        </Carousel.Item> */}
+        </Carousel.Item>
         <Carousel.Item interval={15000} className="carousel-item">
           <Stats />
         </Carousel.Item>
 
         {/* should be last slide, with long interval */}
-        {/* <Carousel.Item className="carousel-item">
-          <BeAmbitious />
-        </Carousel.Item> */}
       </Carousel>
       <svg
         version="1.0"
