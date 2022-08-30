@@ -8,6 +8,11 @@
     @include slide-title
 }
 
+.slide-header-alt {
+    @include slide-title;
+    font-size: calc($font-size-heading / 2)
+}
+
 .slide-subheader {
     @include slide-subtitle
 }
@@ -15,6 +20,11 @@
 .slide-stat-primary {
     @include slide-subtitle;
     font-family: $font-bold
+}
+
+.slide-stat-title {
+    @include slide-body;
+    font-size: calc($font-size-title / 1.5)
 }
 
 .slide-body {
@@ -35,6 +45,12 @@
     height: 100%;
     width: 100%;
     padding: 2rem;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .stat-cont {

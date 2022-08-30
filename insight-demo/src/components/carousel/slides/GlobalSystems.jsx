@@ -1,68 +1,105 @@
-import React from "react";
-import { Image } from "react-bootstrap";
-import gptw from "../../../gptw-no-bg.png";
+import React, { useRef, useEffect, useContext } from "react";
+import { SlideContext } from "../../../store/SlideContext";
+import gsap from "gsap";
 
 const GlobalSystems = () => {
-  // insert svg graphics to the left of each div.
+  const slideIndex = useContext(SlideContext);
+
+  const tl = useRef(
+    gsap.timeline({
+      defaults: { ease: "power4.inOut", duration: 1 },
+    })
+  );
+
+  const slideAnimation = () => {
+    tl.current
+      .from("#global-title", { opacity: 0 })
+      .from("#global-subtitle", { opacity: 0 }, 0.25)
+      .from(".global-flex-col", { opacity: 0, y: 20, stagger: 0.1 })
+      .to(
+        ".global",
+        { opacity: 0, yPercent: 100, stagger: { each: 0.05, from: "end" } },
+        9
+      );
+  };
+
+  useEffect(() => {
+    if (slideIndex === 5) {
+      console.log("running slide 5");
+      slideAnimation();
+    }
+  }, [slideIndex]);
+
   return (
-    <div className="container mx-auto carousel-slide-cont">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="slide-header">A Global Systems Integrator</h1>
-          <h2 className="slide-subheader my-2 ">
-            A single team with expertise across all aspects of modern IT
-            solutions to architect, manage and execute initiatives from
-            end-to-end
-          </h2>
-        </div>
-        <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-1 sm:gap-4 md:gap-8 md:grid-cols-4">
-          <div className="flex flex-col">
-            <dt className="mt-2">Digital Innovation</dt>
-            <dd className="">
-              <ul>
-                <li>Design Thinking</li>
-                <li>UX Design</li>
-                <li>Full Stack Development</li>
-                <li>Data &#38; AI</li>
-                <li>IoT Edge</li>
-              </ul>
-            </dd>
-          </div>
-          <div className="flex flex-col">
-            <dt className="mt-2">Connected Workforce</dt>
-            <dd className="">
-              <ul>
-                <li>Digital Workplace</li>
-                <li>Content &#38; Collaboration</li>
-                <li>Enterprise Mobility</li>
-                <li>Lab Services</li>
-              </ul>
-            </dd>
-          </div>
-          <div className="flex flex-col">
-            <dt className="mt-2">Transformation</dt>
-            <dd className="">
-              <ul>
-                <li>Digital Transformation</li>
-                <li>Agile Delivery</li>
-                <li>Cyber Security</li>
-                <li>Data Platforms</li>
-              </ul>
-            </dd>
-          </div>
-          <div className="flex flex-col">
-            <dt className="mt-2">Advisory</dt>
-            <dd className="">
-              <ul>
-                <li>Strategy</li>
-                <li>Architecture</li>
-                <li>Coaching</li>
-                <li>Training</li>
-              </ul>
-            </dd>
-          </div>
-        </dl>
+    <div className="container mx-auto carousel-slide-cont global-cont">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="slide-header-alt global" id="global-title">
+          A Global Systems Integrator
+        </h1>
+        <h2 className="slide-body my-2 global" id="global-subtitle">
+          A single team with expertise across all aspects of modern IT solutions
+          to architect, manage and execute initiatives from end-to-end
+        </h2>
       </div>
+      <dl className="fluid flex flex-col md:flex-row mt-10 text-center justify-evenly items-center md:items-start">
+        <div className="flex flex-col col-span-12 mx-4">
+          {/* <div>insert svg</div> */}
+          <dt className="my-2 slide-stat-title global global-flex-col">
+            Digital Innovation
+          </dt>
+          <dd className="slide-body global global-flex-col">
+            <ul>
+              <li>Design Thinking</li>
+              <li>UX Design</li>
+              <li>Full Stack Development</li>
+              <li>Data &#38; AI</li>
+              <li>IoT Edge</li>
+            </ul>
+          </dd>
+        </div>
+        <div className="flex flex-col col-span-12 mx-4">
+          {/* <div>insert svg</div> */}
+          <dt className="my-2 slide-stat-title global global-flex-col">
+            Connected Workforce
+          </dt>
+          <dd className="slide-body global global-flex-col">
+            <ul>
+              <li>Digital Workplace</li>
+              <li>Content &#38; Collaboration</li>
+              <li>Enterprise Mobility</li>
+              <li>Lab Services</li>
+            </ul>
+          </dd>
+        </div>
+        <div className="flex flex-col col-span-12 mx-4">
+          {/* <div>insert svg</div> */}
+          <dt className="my-2 slide-stat-title global global-flex-col">
+            Transformation
+          </dt>
+          <dd className="slide-body global global-flex-col">
+            <ul>
+              <li>Digital Transformation</li>
+              <li>Agile Delivery</li>
+              <li>Cyber Security</li>
+              <li>Data Platforms</li>
+            </ul>
+          </dd>
+        </div>
+        <div className="flex flex-col col-span-12 mx-4">
+          {/* <div>insert svg</div> */}
+          <dt className="my-2 slide-stat-title global global-flex-col">
+            Advisory
+          </dt>
+          <dd className="slide-body global global-flex-col">
+            <ul>
+              <li>Strategy</li>
+              <li>Architecture</li>
+              <li>Coaching</li>
+              <li>Training</li>
+            </ul>
+          </dd>
+        </div>
+      </dl>
     </div>
   );
 };

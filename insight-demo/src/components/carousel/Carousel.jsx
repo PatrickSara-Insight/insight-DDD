@@ -12,11 +12,12 @@ import LogoAnimation from "./slides/LogoAnimation";
 import Impact from "./slides/Impact";
 import GPTW from "./slides/GPTW";
 import GlobalSystems from "./slides/GlobalSystems";
+import Industry from "./slides/Industry";
 
 const PapaCarousel = () => {
   // how do I reset everything so the carousel can look effectively?
   const [slideIndex, setSlideIndex] = useState(0);
-  const ENDSLIDEINDEX = 6;
+  const ENDSLIDEINDEX = 7;
   const SLIDEDURATION = 10000;
 
   const nextSlide = useCallback(() => {
@@ -48,27 +49,30 @@ const PapaCarousel = () => {
           className="carousel gx-0"
           interval={null}
           // activeIndex={slideIndex}
-          activeIndex={5}
+          activeIndex={7}
         >
-          <Carousel.Item className="carousel-item" id="slide-0">
+          <Carousel.Item className="carousel-item">
             <LogoAnimation />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-1">
+          <Carousel.Item className="carousel-item">
             <AboutUs />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-2">
+          <Carousel.Item className="carousel-item">
             <Culture />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-3">
+          <Carousel.Item className="carousel-item">
             <Impact />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-4">
+          <Carousel.Item className="carousel-item">
             <GPTW />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-5">
+          <Carousel.Item className="carousel-item">
             <GlobalSystems />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-6">
+          <Carousel.Item className="carousel-item">
+            <Industry />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <BeAmbitious />
           </Carousel.Item>
         </Carousel>

@@ -15,17 +15,28 @@ const AboutUs = () => {
   const slideAnimation = () => {
     tl.current
       .from("#about-title", { opacity: 0 })
-      .from(".about-sub-info", {
-        opacity: 0,
-        duration: 2,
-        stagger: 0.2,
-      })
-      .to(".about-sub-info", { opacity: 0 }, 5);
+      .from(
+        ".about-sub-info",
+        {
+          opacity: 0,
+          duration: 2,
+          stagger: 0.2,
+        },
+        0
+      )
+      .from(".about-grid", { opacity: 0, duration: 1 }, 2)
+      .from(".about-flex-col-svg", { y: 50, stagger: 0.1, duration: 0.5 }, 1.85)
+      .from(
+        ".about-flex-col-title",
+        { y: 50, stagger: 0.1, duration: 0.5 },
+        1.95
+      )
+      .to(".about-container", { opacity: 0 }, 9);
   };
 
   useEffect(() => {
-    if (slideIndex === 2) {
-      console.log("running slide 2");
+    if (slideIndex === 1) {
+      console.log("running slide 1");
       slideAnimation();
     }
   }, [slideIndex]);
@@ -44,22 +55,28 @@ const AboutUs = () => {
           something.
         </h2>
       </div>
-      <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 ">
-        <div className="flex flex-col">
-          <dt className="order-2 mt-2 leading-6 slide-body">We deliver.</dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">
+      <dl className="flex flex-col md:flex-row mt-10 text-center about-grid">
+        <div className="flex flex-col col-span-4 about-flex-col">
+          <dt className="order-2 mt-2 leading-6 slide-body about-flex-col-title">
+            We deliver
+          </dt>
+          <dd className="order-1 tracking-tight slide-stat-primary about-flex-col-svg">
             *insert svg
           </dd>
         </div>
-        <div className="flex flex-col mt-10 sm:mt-0">
-          <dt className="order-2 mt-2 leading-6 slide-body">We intergrate.</dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">
+        <div className="flex flex-col col-span-4 about-flex-col">
+          <dt className="order-2 mt-2 leading-6 slide-body about-flex-col-title">
+            We intergrate
+          </dt>
+          <dd className="order-1 tracking-tight slide-stat-primary about-flex-col-svg">
             *insert svg
           </dd>
         </div>
-        <div className="flex flex-col mt-10 sm:mt-0">
-          <dt className="order-2 mt-2 leading-6 slide-body">We connect.</dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">
+        <div className="flex flex-col col-span-4 about-flex-col">
+          <dt className="order-2 mt-2 leading-6 slide-body about-flex-col-title">
+            We connect
+          </dt>
+          <dd className="order-1 tracking-tight slide-stat-primary about-flex-col-svg">
             *insert svg
           </dd>
         </div>

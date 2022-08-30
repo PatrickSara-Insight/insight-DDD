@@ -139,6 +139,24 @@ body {
   }
 }
 
+.slide-header-alt {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+  text-align: center;
+  font-size: 5rem;
+}
+@media screen and (max-width: 1400px) {
+  .slide-header-alt {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slide-header-alt {
+    font-size: 3rem;
+  }
+}
+
 .slide-subheader {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
@@ -161,6 +179,19 @@ body {
 @media screen and (max-width: 768px) {
   .slide-stat-primary {
     font-size: 2rem;
+  }
+}
+
+.slide-stat-title {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .slide-stat-title {
+    font-size: 1rem;
   }
 }
 
@@ -190,6 +221,12 @@ body {
   height: 100%;
   width: 100%;
   padding: 2rem;
+}
+
+.about-grid {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .stat-cont {
