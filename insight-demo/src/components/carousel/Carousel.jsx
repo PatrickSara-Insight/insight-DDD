@@ -12,11 +12,11 @@ import LogoAnimation from "./slides/LogoAnimation";
 
 const PapaCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const TOTALSLIDES = 4;
-  const SLIDEDURATION = 10;
+  const ENDSLIDEINDEX = 3;
+  const SLIDEDURATION = 10000;
 
   const nextSlide = useCallback(() => {
-    if (slideIndex < 3) {
+    if (slideIndex < ENDSLIDEINDEX) {
       setSlideIndex((i) => i + 1);
     } else {
       setSlideIndex(0);
@@ -26,7 +26,7 @@ const PapaCarousel = () => {
   useEffect(() => {
     const nextSlideInterval = setInterval(() => {
       nextSlide();
-    }, 2000);
+    }, SLIDEDURATION);
 
     return () => {
       clearInterval(nextSlideInterval);

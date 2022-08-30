@@ -14,7 +14,7 @@ function LogoAnimation() {
     })
   );
 
-  const logoAnimation = () => {
+  const slideAnimation = () => {
     tl.current
       .set(logoRef.current, { x: 0, y: 0, opacity: 0 })
       .to(logoRef.current, { duration: 2, opacity: 100 })
@@ -46,8 +46,8 @@ function LogoAnimation() {
 
   useEffect(() => {
     if (slideIndex === 0) {
-      console.log("running slide 0 animation");
-      logoAnimation();
+      console.log("running slide 0");
+      slideAnimation();
     }
   }, [slideIndex]);
 
