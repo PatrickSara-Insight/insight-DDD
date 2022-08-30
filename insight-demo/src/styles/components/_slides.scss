@@ -8,6 +8,11 @@
     @include slide-title
 }
 
+.slide-header-alt {
+    @include slide-title;
+    font-size: calc($font-size-heading / 2)
+}
+
 .slide-subheader {
     @include slide-subtitle
 }
@@ -17,7 +22,45 @@
     font-family: $font-bold
 }
 
+.slide-stat-title {
+    @include slide-body;
+    font-size: calc($font-size-title / 1.5)
+}
+
 .slide-body {
     @include slide-body;
     line-height: 1.1;
+}
+
+#be-ambitious-title {
+    opacity: 100;
+}
+
+#ambitious-it-span {
+    border-bottom: 15px solid $color-secondary-shade;
+}
+
+.about-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.stat-cont {
+    position: absolute;
+    bottom: 33%;
+}
+
+.gptw-logo {
+    max-height: 20%;
+    max-width: 30%;
+    min-width: 100px;
+    height: auto;
 }

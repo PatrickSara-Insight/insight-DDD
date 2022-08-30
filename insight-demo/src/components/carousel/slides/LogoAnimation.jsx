@@ -40,8 +40,7 @@ function LogoAnimation() {
       .to("#logo-dot-right", { xPercent: 5000 }, 4.4)
       .to("#logo-dot-btm", { yPercent: -5000 }, 4.4)
       .to(".background-cont", { yPercent: -100, duration: 0.5 }, 7)
-      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 8.5)
-      .to(".carousel", { opacity: 100, duration: 2 }, 8.75);
+      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 8.5);
   };
 
   useEffect(() => {
