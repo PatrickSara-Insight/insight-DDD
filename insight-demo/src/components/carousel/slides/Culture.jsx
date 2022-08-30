@@ -36,46 +36,43 @@ const Culture = () => {
 
   return (
     <div className="container mx-auto carousel-slide-cont culture-cont">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="max-w-4xl mx-auto text-center mb-10">
-          <h1 className="slide-header" id="culture-title">
-            Core Values
-          </h1>
-          <h2 className="slide-subheader" id="culture-subtitle">
-            Our success starts with our culture
-          </h2>
-        </div>
-        <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 culture-flex-cont">
-          <div className="flex flex-col">
-            <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
-              We are change agents, united in our passion to improve every day
-              and deliver outstanding results for our clients, partners and
-              Insight.
-            </dt>
-            <dd className="order-1 tracking-tight slide-stat-primary culture-col-title">
-              Hunger
-            </dd>
-          </div>
-          <div className="flex flex-col mt-10 sm:mt-0">
-            <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
-              We are teammates. We take care of each other, our clients and our
-              communities.
-            </dt>
-            <dd className="order-1 tracking-tight slide-stat-primary culture-col-title">
-              Heart
-            </dd>
-          </div>
-          <div className="flex flex-col mt-10 sm:mt-0">
-            <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
-              We are a team of diverse individuals who value inclusivity and
-              create meaningful connections so we can win together.
-            </dt>
-            <dd className="order-1 tracking-tight slide-stat-primary culture-col-title">
-              Harmony
-            </dd>
-          </div>
-        </dl>
+      <div className="max-w-4xl mx-auto text-center mb-10">
+        <h1 className="slide-header" id="culture-title">
+          Core Values
+        </h1>
+        <h2 className="slide-subheader" id="culture-subtitle">
+          Our success starts with our culture
+        </h2>
       </div>
+      <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 culture-flex-cont">
+        <div className="flex flex-col">
+          <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
+            We are change agents, united in our passion to improve every day and
+            deliver outstanding results for our clients, partners and Insight.
+          </dt>
+          <dd className="order-1 tracking-tight slide-stat-primary culture-col-title">
+            Hunger
+          </dd>
+        </div>
+        <div className="flex flex-col mt-10 sm:mt-0">
+          <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
+            We are teammates. We take care of each other, our clients and our
+            communities.
+          </dt>
+          <dd className="order-1 tracking-tight slide-stat-primary culture-col-title">
+            Heart
+          </dd>
+        </div>
+        <div className="flex flex-col mt-10 sm:mt-0">
+          <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
+            We are a team of diverse individuals who value inclusivity and
+            create meaningful connections so we can win together.
+          </dt>
+          <dd className="order-1 tracking-tight slide-stat-primary culture-col-title">
+            Harmony
+          </dd>
+        </div>
+      </dl>
     </div>
   );
 };
