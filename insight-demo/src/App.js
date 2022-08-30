@@ -6,6 +6,7 @@ import Showcase from "./components/main/Showcase";
 function App() {
   return (
     <div className="App">
+      {/* insert slideIndex context provider */}
       <Carousel />
       <Showcase />
     </div>
