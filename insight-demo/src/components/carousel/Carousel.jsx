@@ -11,6 +11,7 @@ import Stats from "./slides/Stats";
 import LogoAnimation from "./slides/LogoAnimation";
 
 const PapaCarousel = () => {
+  // how do I reset everything so the carousel can look effectively?
   const [slideIndex, setSlideIndex] = useState(0);
   const ENDSLIDEINDEX = 3;
   const SLIDEDURATION = 10000;
@@ -37,24 +38,25 @@ const PapaCarousel = () => {
     <Container fluid className="carousel-cont">
       <SlideContext.Provider value={slideIndex}>
         <Carousel
-          variant="dark"
+          // variant="dark"
+          fade={true}
           controls={false}
           touch={false}
-          pause={"hover"}
           className="carousel gx-0"
           interval={null}
           activeIndex={slideIndex}
+          // activeIndex={1}
         >
-          <Carousel.Item className="carousel-item">
+          <Carousel.Item className="carousel-item" id="slide-0">
             <LogoAnimation />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item">
+          <Carousel.Item className="carousel-item" id="slided-1">
             <BeAmbitious />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item">
+          <Carousel.Item className="carousel-item" id="slide-2">
             <AboutUs />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item">
+          <Carousel.Item className="carousel-item" id="slide-3">
             <Stats />
           </Carousel.Item>
         </Carousel>
