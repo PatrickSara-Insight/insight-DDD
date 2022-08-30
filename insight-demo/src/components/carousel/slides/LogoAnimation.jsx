@@ -1,8 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
+import { SlideContext } from "../../../store/SlideContext";
 
 function LogoAnimation() {
+  const slideIndex = useContext(SlideContext);
+
   const logoRef = useRef();
 
   const tl = useRef(
@@ -42,8 +45,11 @@ function LogoAnimation() {
   };
 
   useEffect(() => {
-    logoAnimation();
-  }, []);
+    if (slideIndex === 0) {
+      console.log("running slide 0 animation");
+      logoAnimation();
+    }
+  }, [slideIndex]);
 
   return (
     <Container fluid className="carousel-slide-cont">
