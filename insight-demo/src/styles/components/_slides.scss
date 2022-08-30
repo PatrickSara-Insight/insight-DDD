@@ -25,3 +25,26 @@
 #be-ambitious-title {
     opacity: 100;
 }
+
+#ambitious-it-span {
+    border-bottom: 15px solid $color-secondary-shade;
+}
+
+.about-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+}
+
+.stat-cont {
+    position: absolute;
+    bottom: 33%;
+}
+
+.gptw-logo {
+    max-height: 20%;
+    max-width: 30%;
+    min-width: 100px;
+    height: auto;
+}

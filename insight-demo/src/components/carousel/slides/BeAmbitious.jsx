@@ -14,12 +14,12 @@ function BeAmbitious() {
 
   const slideAnimation = () => {
     tl.current
-      .from("#be-ambitious-title", { opacity: 0 })
+      .fromTo("#be-ambitious-title", { opacity: 0 }, { opacity: 100 })
       .to("#be-ambitious-title", { opacity: 0 }, 9);
   };
 
   useEffect(() => {
-    if (slideIndex === 1) {
+    if (slideIndex === 4) {
       console.log("running slide 1");
       slideAnimation();
     }
@@ -28,8 +28,11 @@ function BeAmbitious() {
   return (
     <Container fluid className="carousel-slide-cont">
       <h1 className="slide-header" id="be-ambitious-title">
-        Be Ambitious.
+        Be Amb<span id="ambitious-it-span">it</span>ious.
       </h1>
+      <h2 className="slide-subheader my-2 ">
+        You have what it takes to achieve your bold technology goals.
+      </h2>
     </Container>
   );
 }

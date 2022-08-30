@@ -7,13 +7,16 @@ import { SlideContext } from "../../store/SlideContext";
 
 import BeAmbitious from "./slides/BeAmbitious";
 import AboutUs from "./slides/AboutUs";
-import Stats from "./slides/Stats";
+import Culture from "./slides/Culture";
 import LogoAnimation from "./slides/LogoAnimation";
+import Impact from "./slides/Impact";
+import GPTW from "./slides/GPTW";
+import GlobalSystems from "./slides/GlobalSystems";
 
 const PapaCarousel = () => {
   // how do I reset everything so the carousel can look effectively?
   const [slideIndex, setSlideIndex] = useState(0);
-  const ENDSLIDEINDEX = 3;
+  const ENDSLIDEINDEX = 6;
   const SLIDEDURATION = 10000;
 
   const nextSlide = useCallback(() => {
@@ -44,20 +47,29 @@ const PapaCarousel = () => {
           touch={false}
           className="carousel gx-0"
           interval={null}
-          activeIndex={slideIndex}
-          // activeIndex={1}
+          // activeIndex={slideIndex}
+          activeIndex={5}
         >
           <Carousel.Item className="carousel-item" id="slide-0">
             <LogoAnimation />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slided-1">
-            <BeAmbitious />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" id="slide-2">
+          <Carousel.Item className="carousel-item" id="slide-1">
             <AboutUs />
           </Carousel.Item>
+          <Carousel.Item className="carousel-item" id="slide-2">
+            <Culture />
+          </Carousel.Item>
           <Carousel.Item className="carousel-item" id="slide-3">
-            <Stats />
+            <Impact />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item" id="slide-4">
+            <GPTW />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item" id="slide-5">
+            <GlobalSystems />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item" id="slide-6">
+            <BeAmbitious />
           </Carousel.Item>
         </Carousel>
       </SlideContext.Provider>
