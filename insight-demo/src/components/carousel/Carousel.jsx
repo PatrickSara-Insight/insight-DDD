@@ -62,7 +62,6 @@ const PapaCarousel = () => {
       <Container fluid className="background-cont">
         <Image className="logo-vertical" fluid alt="insight-logo" src={Logo} />
       </Container>
-      <h1 id="slide-index">{`Slide index: ${slideIndex}`}</h1>
     </Container>
   );
 };

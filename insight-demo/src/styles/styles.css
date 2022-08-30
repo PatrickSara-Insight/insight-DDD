@@ -118,10 +118,6 @@ body {
   height: auto;
 }
 
-#slide-index {
-  z-index: 90;
-}
-
 .italic {
   font-family: "Klinic Slab Italic", sans-serif;
 }
