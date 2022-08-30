@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Container, Image } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
-import { gsap } from "gsap";
 import Logo from "../../LogoVertical.png";
 import { SlideContext } from "../../store/SlideContext";
 
@@ -48,8 +47,8 @@ const PapaCarousel = () => {
           touch={false}
           className="carousel gx-0"
           interval={null}
-          // activeIndex={slideIndex}
-          activeIndex={7}
+          activeIndex={slideIndex}
+          // activeIndex={7}
         >
           <Carousel.Item className="carousel-item">
             <LogoAnimation />
