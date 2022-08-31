@@ -8,17 +8,41 @@ function LogoAnimation() {
 
   const logoRef = useRef();
 
-  const tl = useRef(
+  const logoTl = useRef(
     gsap.timeline({
-      defaults: { ease: "power4.inOut", duration: 1 },
+      defaults: {
+        ease: "power4.inOut",
+        duration: 1,
+      },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
-      .set(logoRef.current, { x: 0, y: 0, opacity: 0 })
-      .to(logoRef.current, { duration: 2, opacity: 100 })
-      .to(".logo", { x: 7500, ease: "power4.inOut", duration: 1 }, 2.75)
+  const backgroundControl = useRef(
+    gsap.timeline({
+      defaults: {
+        ease: "power4.inOut",
+        duration: 1,
+      },
+    })
+  );
+
+  const setBackground = () => {
+    backgroundControl.current
+      .to(".background-cont", { yPercent: -100, duration: 0.5 }, 9)
+      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 9.25);
+  };
+
+  const play = () => {
+    logoTl.current.progress(0).play();
+    logoTl.current
+      .set(".logo-cont", { opacity: 100 })
+      .fromTo(logoRef.current, { opacity: 0 }, { duration: 2, opacity: 100 })
+      .fromTo(
+        ".logo",
+        { x: 0 },
+        { x: 7500, ease: "power4.inOut", duration: 1 },
+        2.75
+      )
       .to(
         ".logo-letter",
         {
@@ -38,20 +62,25 @@ function LogoAnimation() {
       .to("#logo-dot-top", { yPercent: 5000 }, 4.4)
       .to("#logo-dot-left", { xPercent: -5000 }, 4.4)
       .to("#logo-dot-right", { xPercent: 5000 }, 4.4)
-      .to("#logo-dot-btm", { yPercent: -5000 }, 4.4)
-      .to(".background-cont", { yPercent: -100, duration: 0.5 }, 7)
-      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 8.5);
+      .to("#logo-dot-btm", { yPercent: -5000 }, 4.4);
+  };
+
+  const revert = () => {
+    logoTl.current.revert();
   };
 
   useEffect(() => {
     if (slideIndex === 0) {
-      console.log("running slide 0");
-      slideAnimation();
+      console.log("running slide 1");
+      play();
+      setBackground();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 
   return (
-    <Container fluid className="carousel-slide-cont">
+    <Container fluid className="carousel-slide-cont logo-cont">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"

@@ -6,14 +6,16 @@ const Impact = () => {
   // insert svg graphics to the left of each div.
   const slideIndex = useContext(SlideContext);
 
-  const tl = useRef(
+  const impactTl = useRef(
     gsap.timeline({
       defaults: { ease: "power4.inOut", duration: 1 },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
+  const play = () => {
+    impactTl.current.progress(0).play();
+    impactTl.current
+      .set(".impact-cont", { opacity: 100 })
       .from("#impact-title", { opacity: 0, duration: 1.5 })
       .from(
         "#impact-subtitle",
@@ -34,10 +36,16 @@ const Impact = () => {
       );
   };
 
+  const revert = () => {
+    impactTl.current.revert();
+  };
+
   useEffect(() => {
     if (slideIndex === 3) {
       console.log("running slide 3");
-      slideAnimation();
+      play();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 

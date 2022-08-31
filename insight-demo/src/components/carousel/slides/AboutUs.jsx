@@ -6,14 +6,16 @@ import { Container } from "react-bootstrap";
 const AboutUs = () => {
   const slideIndex = useContext(SlideContext);
 
-  const tl = useRef(
+  const aboutTl = useRef(
     gsap.timeline({
       defaults: { ease: "power4.inOut", duration: 1 },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
+  const play = () => {
+    aboutTl.current.progress(0).play();
+    aboutTl.current
+      .set(".about-container", { opacity: 100 })
       .from("#about-title", { opacity: 0 })
       .from(
         ".about-sub-info",
@@ -34,14 +36,20 @@ const AboutUs = () => {
       .to(
         ".about",
         { opacity: 0, yPercent: 100, stagger: { each: 0.05, from: "end" } },
-        9
+        8.9
       );
+  };
+
+  const revert = () => {
+    aboutTl.current.revert();
   };
 
   useEffect(() => {
     if (slideIndex === 1) {
       console.log("running slide 1");
-      slideAnimation();
+      play();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 

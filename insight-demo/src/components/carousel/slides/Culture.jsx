@@ -5,14 +5,16 @@ import gsap from "gsap";
 const Culture = () => {
   const slideIndex = useContext(SlideContext);
 
-  const tl = useRef(
+  const cultureTl = useRef(
     gsap.timeline({
       defaults: { ease: "power4.inOut", duration: 1 },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
+  const play = () => {
+    cultureTl.current.progress(0).play();
+    cultureTl.current
+      .set(".culture-cont", { opacity: 100 })
       .from("#culture-title", { opacity: 0 })
       .from(
         "#culture-subtitle",
@@ -31,10 +33,16 @@ const Culture = () => {
       );
   };
 
+  const revert = () => {
+    cultureTl.current.revert();
+  };
+
   useEffect(() => {
     if (slideIndex === 2) {
       console.log("running slide 2");
-      slideAnimation();
+      play();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 

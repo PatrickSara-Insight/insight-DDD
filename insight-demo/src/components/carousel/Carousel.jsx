@@ -14,7 +14,6 @@ import GlobalSystems from "./slides/GlobalSystems";
 import Industry from "./slides/Industry";
 
 const PapaCarousel = () => {
-  // how do I reset everything so the carousel can look effectively?
   const [slideIndex, setSlideIndex] = useState(0);
   const ENDSLIDEINDEX = 7;
   const SLIDEDURATION = 10000;
