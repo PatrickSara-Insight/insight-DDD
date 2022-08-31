@@ -13,6 +13,7 @@ function BeAmbitious() {
   );
 
   const play = () => {
+    bATl.current.revert();
     bATl.current.progress(0).play();
     bATl.current
       .set(".ba-cont", { opacity: 100 })
@@ -21,16 +22,12 @@ function BeAmbitious() {
       .to(".ambitious", { opacity: 0, stagger: { each: 0.2, from: "end" } }, 9);
   };
 
-  const revert = () => {
-    bATl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 7) {
-      console.log("running slide 7");
+      console.log("animating be ambitious...");
       play();
     } else {
-      revert();
+      bATl.current.pause();
     }
   }, [slideIndex]);
 

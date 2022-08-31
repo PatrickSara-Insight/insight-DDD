@@ -30,21 +30,18 @@ function Projects() {
   };
 
   const play = () => {
+    projectsTl.current.revert();
     projectsTl.current.progress(0).play();
     projectsTl.current.set(".projects-cont", { opacity: 100 });
   };
 
-  const revert = () => {
-    projectsTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 8) {
-      console.log("slide 8 (projects): animating");
+      console.log("animating projects...");
       setBackground();
       play();
     } else {
-      revert();
+      projectsTl.current.pause();
     }
   }, [slideIndex]);
 

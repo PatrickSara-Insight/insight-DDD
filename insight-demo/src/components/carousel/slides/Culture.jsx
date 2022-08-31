@@ -12,6 +12,7 @@ const Culture = () => {
   );
 
   const play = () => {
+    cultureTl.current.revert();
     cultureTl.current.progress(0).play();
     cultureTl.current
       .set(".culture-cont", { opacity: 100 })
@@ -33,16 +34,12 @@ const Culture = () => {
       );
   };
 
-  const revert = () => {
-    cultureTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 2) {
-      console.log("running slide 2");
+      console.log("animating culture...");
       play();
     } else {
-      revert();
+      cultureTl.current.pause();
     }
   }, [slideIndex]);
 

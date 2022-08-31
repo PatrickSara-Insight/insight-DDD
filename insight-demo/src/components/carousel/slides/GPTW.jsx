@@ -14,6 +14,7 @@ const GPTW = () => {
   );
 
   const play = () => {
+    gptwTl.current.revert();
     gptwTl.current.progress(0).play();
     gptwTl.current
       .set(".gptw-cont", { opacity: 100 })
@@ -46,16 +47,12 @@ const GPTW = () => {
       .to(".gptw", { yPercent: 100, stagger: { each: 0.05, from: "end" } }, 9);
   };
 
-  const revert = () => {
-    gptwTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 4) {
-      console.log("running slide 4");
+      console.log("animating great place to work...");
       play();
     } else {
-      revert();
+      gptwTl.current.pause();
     }
   }, [slideIndex]);
 

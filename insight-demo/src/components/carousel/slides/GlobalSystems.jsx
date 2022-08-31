@@ -12,6 +12,7 @@ const GlobalSystems = () => {
   );
 
   const play = () => {
+    globalSystemsTl.current.revert();
     globalSystemsTl.current.progress(0).play();
     globalSystemsTl.current
       .set(".global-cont", { opacity: 100 })
@@ -25,16 +26,12 @@ const GlobalSystems = () => {
       );
   };
 
-  const revert = () => {
-    globalSystemsTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 5) {
-      console.log("running slide 5");
+      console.log("animating global systems...");
       play();
     } else {
-      revert();
+      globalSystemsTl.current.pause();
     }
   }, [slideIndex]);
 

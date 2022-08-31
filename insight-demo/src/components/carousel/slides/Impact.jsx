@@ -13,6 +13,7 @@ const Impact = () => {
   );
 
   const play = () => {
+    impactTl.current.revert();
     impactTl.current.progress(0).play();
     impactTl.current
       .set(".impact-cont", { opacity: 100 })
@@ -36,16 +37,12 @@ const Impact = () => {
       );
   };
 
-  const revert = () => {
-    impactTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 3) {
-      console.log("running slide 3");
+      console.log("animating impact...");
       play();
     } else {
-      revert();
+      impactTl.current.pause();
     }
   }, [slideIndex]);
 

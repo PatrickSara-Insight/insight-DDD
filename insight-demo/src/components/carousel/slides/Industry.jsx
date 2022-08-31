@@ -12,6 +12,7 @@ const Industry = () => {
   );
 
   const play = () => {
+    industryTL.current.revert();
     industryTL.current.progress(0).play();
     industryTL.current
       .set(".industry-cont", { opacity: 100 })
@@ -25,16 +26,12 @@ const Industry = () => {
       );
   };
 
-  const revert = () => {
-    industryTL.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 6) {
-      console.log("running slide 6");
+      console.log("animating industries...");
       play();
     } else {
-      revert();
+      industryTL.current.pause();
     }
   }, [slideIndex]);
 

@@ -35,6 +35,7 @@ function LogoAnimation() {
   };
 
   const play = () => {
+    logoTl.current.revert();
     logoTl.current.progress(0).play();
     logoTl.current
       .set(".logo-cont", { opacity: 100 })
@@ -67,17 +68,13 @@ function LogoAnimation() {
       .to("#logo-dot-btm", { yPercent: -5000 }, 4.4);
   };
 
-  const revert = () => {
-    logoTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 0) {
-      console.log("running slide 1");
+      console.log("animating logo...");
       play();
       setBackground();
     } else {
-      revert();
+      logoTl.current.pause();
     }
   }, [slideIndex]);
 

@@ -13,6 +13,7 @@ const AboutUs = () => {
   );
 
   const play = () => {
+    aboutTl.current.revert();
     aboutTl.current.progress(0).play();
     aboutTl.current
       .set(".about-container", { opacity: 100 })
@@ -40,16 +41,12 @@ const AboutUs = () => {
       );
   };
 
-  const revert = () => {
-    aboutTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 1) {
-      console.log("running slide 1");
+      console.log("animating about us...");
       play();
     } else {
-      revert();
+      aboutTl.current.pause();
     }
   }, [slideIndex]);
 
