@@ -24,7 +24,11 @@ const Culture = () => {
       .from(".culture-flex-cont", { opacity: 0, duration: 1 }, 2)
       .from(".culture-col-title", { y: 50, stagger: 0.1, duration: 0.5 }, 1.85)
       .from(".culture-col-desc", { y: 50, stagger: 0.1, duration: 0.5 }, 1.95)
-      .to(".culture-cont", { opacity: 0 }, 9);
+      .to(
+        ".culture",
+        { opacity: 0, yPercent: 100, stagger: { each: 0.05, from: "end" } },
+        9
+      );
   };
 
   useEffect(() => {
@@ -37,15 +41,15 @@ const Culture = () => {
   return (
     <div className="container mx-auto carousel-slide-cont culture-cont">
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <h1 className="slide-header" id="culture-title">
+        <h1 className="slide-header culture" id="culture-title">
           Core Values
         </h1>
-        <h2 className="slide-subheader" id="culture-subtitle">
+        <h2 className="slide-subheader culture" id="culture-subtitle">
           Our success starts with our culture
         </h2>
       </div>
       <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 culture-flex-cont">
-        <div className="flex flex-col">
+        <div className="flex flex-col culture">
           <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
             We are change agents, united in our passion to improve every day and
             deliver outstanding results for our clients, partners and Insight.
@@ -54,7 +58,7 @@ const Culture = () => {
             Hunger
           </dd>
         </div>
-        <div className="flex flex-col mt-10 sm:mt-0">
+        <div className="flex flex-col mt-10 sm:mt-0 culture">
           <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
             We are teammates. We take care of each other, our clients and our
             communities.
@@ -63,7 +67,7 @@ const Culture = () => {
             Heart
           </dd>
         </div>
-        <div className="flex flex-col mt-10 sm:mt-0">
+        <div className="flex flex-col mt-10 sm:mt-0 culture">
           <dt className="order-2 mt-2 leading-6 slide-body culture-col-desc">
             We are a team of diverse individuals who value inclusivity and
             create meaningful connections so we can win together.

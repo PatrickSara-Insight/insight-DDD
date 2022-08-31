@@ -27,7 +27,11 @@ const Impact = () => {
         { opacity: 0, stagger: { each: 0.2, from: "center" }, duration: 1.5 },
         1.5
       )
-      .to(".impact-cont", { opacity: 0 }, 9);
+      .to(
+        ".impact",
+        { opacity: 0, yPercent: 100, stagger: { each: 0.05, from: "end" } },
+        9
+      );
   };
 
   useEffect(() => {
@@ -40,15 +44,15 @@ const Impact = () => {
   return (
     <div className="container mx-auto carousel-slide-cont impact-cont">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="slide-body my-2" id="impact-subtitle">
+        <h2 className="slide-body my-2 impact" id="impact-subtitle">
           See how we're making a positive impact
         </h2>
-        <h1 className="slide-header-alt mx-0 my-10" id="impact-title">
+        <h1 className="slide-header-alt mx-0 my-10 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
       </div>
       <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 ">
-        <div className="flex flex-col impact-col">
+        <div className="flex flex-col impact-col impact">
           <dt className="order-2 mt-2 leading-6 slide-body">
             teammates worldwide
           </dt>
@@ -56,13 +60,13 @@ const Impact = () => {
             12,000 +
           </dd>
         </div>
-        <div className="flex flex-col mt-10 sm:mt-0 impact-col">
+        <div className="flex flex-col mt-10 sm:mt-0 impact-col impact">
           <dt className="order-2 mt-2 leading-6 slide-body">
             countries with insight operations
           </dt>
           <dd className="order-1 tracking-tight slide-stat-primary">21</dd>
         </div>
-        <div className="flex flex-col mt-10 sm:mt-0 impact-col">
+        <div className="flex flex-col mt-10 sm:mt-0 impact-col impact">
           <dt className="order-2 mt-2 leading-6 slide-body">
             technical resources
           </dt>
