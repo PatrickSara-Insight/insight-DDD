@@ -27,6 +27,8 @@ function LogoAnimation() {
   );
 
   const setBackground = () => {
+    backgroundControl.current.revert();
+    backgroundControl.current.progress(0).play();
     backgroundControl.current
       .to(".background-cont", { yPercent: -100, duration: 0.5 }, 9)
       .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 9.25);
