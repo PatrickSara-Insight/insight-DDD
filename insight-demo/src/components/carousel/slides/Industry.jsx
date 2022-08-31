@@ -5,14 +5,16 @@ import gsap from "gsap";
 const Industry = () => {
   const slideIndex = useContext(SlideContext);
 
-  const tl = useRef(
+  const industryTL = useRef(
     gsap.timeline({
       defaults: { ease: "power4.inOut", duration: 1 },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
+  const play = () => {
+    industryTL.current.progress(0).play();
+    industryTL.current
+      .set(".industry-cont", { opacity: 100 })
       .from("#industry-title", { opacity: 0 })
       .from("#industry-subtitle", { opacity: 0 }, 0.25)
       .from(".industry-flex-col", { opacity: 0, y: 20, stagger: 0.1 })
@@ -23,15 +25,21 @@ const Industry = () => {
       );
   };
 
+  const revert = () => {
+    industryTL.current.revert();
+  };
+
   useEffect(() => {
     if (slideIndex === 6) {
       console.log("running slide 6");
-      slideAnimation();
+      play();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 
   return (
-    <div className="container mx-auto carousel-slide-cont">
+    <div className="container mx-auto carousel-slide-cont industry-cont">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="slide-header-alt industry" id="industry-title">
           Industries we serve

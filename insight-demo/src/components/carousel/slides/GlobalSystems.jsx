@@ -5,14 +5,16 @@ import gsap from "gsap";
 const GlobalSystems = () => {
   const slideIndex = useContext(SlideContext);
 
-  const tl = useRef(
+  const globalSystemsTl = useRef(
     gsap.timeline({
       defaults: { ease: "power4.inOut", duration: 1 },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
+  const play = () => {
+    globalSystemsTl.current.progress(0).play();
+    globalSystemsTl.current
+      .set(".global-cont", { opacity: 100 })
       .from("#global-title", { opacity: 0 })
       .from("#global-subtitle", { opacity: 0 }, 0.25)
       .from(".global-flex-col", { opacity: 0, y: 20, stagger: 0.1 })
@@ -23,10 +25,16 @@ const GlobalSystems = () => {
       );
   };
 
+  const revert = () => {
+    globalSystemsTl.current.revert();
+  };
+
   useEffect(() => {
     if (slideIndex === 5) {
       console.log("running slide 5");
-      slideAnimation();
+      play();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 

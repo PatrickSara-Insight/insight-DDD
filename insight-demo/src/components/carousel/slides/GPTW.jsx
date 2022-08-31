@@ -7,14 +7,16 @@ import gptw from "../../../gptw-no-bg.png";
 const GPTW = () => {
   const slideIndex = useContext(SlideContext);
 
-  const tl = useRef(
+  const gptwTl = useRef(
     gsap.timeline({
       defaults: { ease: "power4.inOut", duration: 1 },
     })
   );
 
-  const slideAnimation = () => {
-    tl.current
+  const play = () => {
+    gptwTl.current.progress(0).play();
+    gptwTl.current
+      .set(".gptw-cont", { opacity: 100 })
       .from("#gptw-title", { opacity: 0, duration: 1.5 })
       .from(
         "#gptw-subtitle",
@@ -44,10 +46,16 @@ const GPTW = () => {
       .to(".gptw", { yPercent: 100, stagger: { each: 0.05, from: "end" } }, 9);
   };
 
+  const revert = () => {
+    gptwTl.current.revert();
+  };
+
   useEffect(() => {
     if (slideIndex === 4) {
       console.log("running slide 4");
-      slideAnimation();
+      play();
+    } else {
+      revert();
     }
   }, [slideIndex]);
 
