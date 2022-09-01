@@ -32,6 +32,11 @@
     line-height: 1.1;
 }
 
+.card-body {
+    @include slide-body;
+    color: $color-warm-gray;
+}
+
 #be-ambitious-title {
     opacity: 100;
 }
@@ -40,11 +45,10 @@
     border-bottom: 15px solid $color-secondary-shade;
 }
 
-.about-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 2rem;
+.about-insight-logo {
+    max-width: 50%;
+    min-width: 500px;
+    height: auto;
 }
 
 .about-grid {
@@ -62,4 +66,10 @@
     max-width: 30%;
     min-width: 100px;
     height: auto;
+}
+
+.project-logos {
+    position: absolute;
+    top: 0;
+    left: 0;
 }

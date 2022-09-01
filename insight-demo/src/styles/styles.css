@@ -209,6 +209,19 @@ body {
   }
 }
 
+.card-body {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  color: #554741;
+}
+@media screen and (max-width: 768px) {
+  .card-body {
+    font-size: 1rem;
+  }
+}
+
 #be-ambitious-title {
   opacity: 100;
 }
@@ -217,11 +230,10 @@ body {
   border-bottom: 15px solid #76379b;
 }
 
-.about-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
+.about-insight-logo {
+  max-width: 50%;
+  min-width: 500px;
+  height: auto;
 }
 
 .about-grid {
@@ -239,4 +251,28 @@ body {
   max-width: 30%;
   min-width: 100px;
   height: auto;
+}
+
+.project-logos {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.showcase-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 100;
+  height: 100vh;
+}
+
+.showcase-logo {
+  width: 50%;
+  fill: #554741;
+}
+
+.gray {
+  color: #554741;
 }/*# sourceMappingURL=styles.css.map */

@@ -41,14 +41,13 @@ const PapaCarousel = () => {
     <Container fluid className="carousel-cont">
       <SlideContext.Provider value={slideIndex}>
         <Carousel
-          // variant="dark"
           fade={true}
           controls={false}
           touch={false}
           className="carousel gx-0"
           interval={null}
           activeIndex={slideIndex}
-          // activeIndex={4}
+          // activeIndex={1}
         >
           <Carousel.Item className="carousel-item">
             <LogoAnimation />
