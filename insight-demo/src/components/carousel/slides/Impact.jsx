@@ -1,6 +1,10 @@
 import React, { useRef, useEffect, useContext } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
+import ImpactCard from "../../common/ImpactCard";
+import Earth from "../../../assets/world.svg";
+import Teammates from "../../../assets/group.svg";
+import Operator from "../../../assets/operator.svg";
 
 const Impact = () => {
   // insert svg graphics to the left of each div.
@@ -17,7 +21,7 @@ const Impact = () => {
     impactTl.current.progress(0).play();
     impactTl.current
       .set(".impact-cont", { opacity: 100 })
-      .from("#impact-title", { opacity: 0, duration: 1.5 })
+      .from("#impact-title", { opacity: 0, duration: 1.5 }, 0)
       .from(
         "#impact-subtitle",
         {
@@ -26,13 +30,13 @@ const Impact = () => {
         0.5
       )
       .from(
-        ".impact-col",
-        { opacity: 0, stagger: { each: 0.2, from: "center" }, duration: 1.5 },
-        1.5
+        ".impact-card",
+        { opacity: 0, stagger: { each: 0.2, from: "start" }, duration: 1.5 },
+        1
       )
       .to(
         ".impact",
-        { opacity: 0, yPercent: 100, stagger: { each: 0.05, from: "end" } },
+        { opacity: 0, y: 1500, stagger: { each: 0.05, from: "end" } },
         9
       );
   };
@@ -56,28 +60,26 @@ const Impact = () => {
           Local presence, global reach, since 1988
         </h1>
       </div>
-      <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 ">
-        <div className="flex flex-col impact-col impact">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            teammates worldwide
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">
-            12,000 +
-          </dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 impact-col impact">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            countries with insight operations
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">21</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 impact-col impact">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            technical resources
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">5000 +</dd>
-        </div>
-      </dl>
+      <ul className="mt-3 grid grid-cols-1 gap-10 sm:grid-cols-3">
+        <ImpactCard
+          stat="12,000 +"
+          desc="teammates worldwide"
+          bg="bg-red"
+          svg={Teammates}
+        />
+        <ImpactCard
+          stat="21"
+          desc="countries with insight operations"
+          bg="bg-fuchsia"
+          svg={Earth}
+        />
+        <ImpactCard
+          stat="5,000 +"
+          desc="technical resources"
+          bg="bg-purple"
+          svg={Operator}
+        />
+      </ul>
     </div>
   );
 };

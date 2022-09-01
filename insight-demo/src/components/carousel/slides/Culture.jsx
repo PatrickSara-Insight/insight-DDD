@@ -49,7 +49,10 @@ const Culture = () => {
         <h1 className="slide-header culture" id="culture-title">
           Core Values
         </h1>
-        <h2 className="slide-subheader culture" id="culture-subtitle">
+        <h2
+          className="slide-subheader text-center culture"
+          id="culture-subtitle"
+        >
           Our success starts with our culture
         </h2>
       </div>

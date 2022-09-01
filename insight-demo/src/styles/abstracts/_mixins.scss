@@ -19,7 +19,6 @@
     font-family: $font-subheading;
     color: $color-font-primary;
     font-size: calc($font-size-subheader / 2);
-    text-align: center;
 
     @media screen and (max-width: $small) {
         font-size: calc($font-size-subheader / 3);

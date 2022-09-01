@@ -123,3 +123,13 @@
 .bg-purple::after {
     border-top-color: $color-secondary-shade;
 }
+
+.impact-card {
+    max-height: 50%;
+    min-height: 30%;
+}
+
+.impact-svg {
+    height: 100%;
+    width: 100%;
+}
