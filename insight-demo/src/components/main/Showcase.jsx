@@ -11,32 +11,28 @@ const Showcase = () => {
         <h1 className="slide-header gray">Title</h1>
         <h2 className="slide-subheader text-center gray">Some subtitle text</h2>
       </div>
-      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-4 lg:gap-20 gptw-grid">
-        <GptwCard stat="No. 360" desc="Fortune 500 Company" bg="bg-red" />
+      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-20 gptw-grid">
+        <GptwCard stat="No. 360" desc="Fortune 500 Company" bg="bg-fuchsia" />
         <GptwCard
           stat="2021"
           desc="Fortune World's Most Admired Cmpanies"
-          bg="bg-red"
+          bg="bg-fuchsia"
         />
         <GptwCard
           stat="The Org"
           desc="2nd Most Gender Diverse Executive Team in Technology"
-          bg="bg-red"
+          bg="bg-fuchsia"
         />
         <GptwCard
           stat="95/100"
           desc="Human Rights Campaign Foundation's 2021"
           bg="bg-red"
         />
-        <GptwCard
-          stat="100/100"
-          desc="LGBTQ Workplace Equality"
-          bg="bg-purple"
-        />
+        <GptwCard stat="100/100" desc="LGBTQ Workplace Equality" bg="bg-red" />
         <GptwCard
           stat="2022"
           desc="Reconciliation Australia: Reflect Reconciliation Action Plan"
-          bg="bg-purple"
+          bg="bg-red"
         />
         <GptwCard
           stat="No. 95"

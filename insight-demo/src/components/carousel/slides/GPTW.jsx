@@ -74,7 +74,7 @@ const GPTW = () => {
           </h1>
         </div>
       </div>
-      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-4 lg:gap-20 gptw-grid">
+      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-20 gptw-grid">
         <GptwCard stat="No. 360" desc="Fortune 500 Company" bg="bg-red" />
         <GptwCard
           stat="2021"
