@@ -30,7 +30,11 @@ const AboutUs = () => {
       )
       .to(
         ".about",
-        { opacity: 0, stagger: { each: 0.5, from: "end" }, duration: 2 },
+        {
+          opacity: 0,
+          stagger: { each: 0.5, from: "end" },
+          duration: 1.5,
+        },
         8
       );
   };

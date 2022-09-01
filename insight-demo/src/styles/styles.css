@@ -214,8 +214,8 @@ body {
   color: #EFE9F4;
   font-size: 10rem;
   text-align: center;
-  font-size: 3rem;
-  color: #554741;
+  font-size: 2.5rem;
+  color: #EFE9F4;
 }
 @media screen and (max-width: 1400px) {
   .card-title {
@@ -233,7 +233,7 @@ body {
   color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #554741;
 }
 @media screen and (max-width: 768px) {
@@ -262,6 +262,25 @@ body {
   width: 100%;
 }
 
+.culture-card-header {
+  position: relative;
+  background-color: inherit;
+}
+
+.culture-card-header::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: inherit;
+  border: solid transparent;
+  content: " ";
+  border-color: #FFFFFF;
+  height: 0;
+  width: 0;
+  border-width: 30px;
+  margin-left: -30px;
+}
+
 .stat-cont {
   position: absolute;
   bottom: 33%;
@@ -277,6 +296,30 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.bg-red {
+  background-color: #a5222f;
+}
+
+.bg-red::after {
+  border-top-color: #a5222f;
+}
+
+.bg-fuchsia {
+  background-color: #b40b76;
+}
+
+.bg-fuchsia::after {
+  border-top-color: #b40b76;
+}
+
+.bg-purple {
+  background-color: #76379b;
+}
+
+.bg-purple::after {
+  border-top-color: #76379b;
 }
 
 .showcase-cont {

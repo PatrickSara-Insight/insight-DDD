@@ -34,13 +34,13 @@
 
 .card-title {
     @include slide-title;
-    font-size: calc($font-size-title);
-    color: $color-warm-gray
+    font-size: calc($font-size-body * 2.5);
+    color: $color-font-primary;
 }
 
 .card-body {
     @include slide-body;
-    font-size: calc($font-size-body * 1.5);
+    font-size: calc($font-size-body * 1.8);
     color: $color-warm-gray;
 }
 
@@ -64,6 +64,25 @@
     width: 100%;
 }
 
+.culture-card-header {
+    position: relative;
+    background-color: inherit;
+}
+
+.culture-card-header::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: inherit;
+    border: solid transparent;
+    content: " ";
+    border-color: #FFFFFF;
+    height: 0;
+    width: 0;
+    border-width: 30px;
+    margin-left: -30px;
+}
+
 .stat-cont {
     position: absolute;
     bottom: 33%;
@@ -79,4 +98,28 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.bg-red {
+    background-color: $color-error-shade;
+}
+
+.bg-red::after {
+    border-top-color: $color-error-shade;
+}
+
+.bg-fuchsia {
+    background-color: $color-primary-shade;
+}
+
+.bg-fuchsia::after {
+    border-top-color: $color-primary-shade;
+}
+
+.bg-purple {
+    background-color: $color-secondary-shade;
+}
+
+.bg-purple::after {
+    border-top-color: $color-secondary-shade;
 }
