@@ -2,9 +2,9 @@ import React from "react";
 
 const ImpactCard = (props) => {
   return (
-    <li className="col-span-1 flex rounded-md shadow-sm impact-card impact">
+    <li className="flex rounded-md shadow-sm impact-card impact">
       <div
-        className={`flex-shrink-0 flex items-center justify-center ${props.bg} rounded-l-md p-2`}
+        className={`flex items-center justify-center ${props.bg} rounded-l-md p-2`}
       >
         {props.svg ? <img className="impact-svg" src={props.svg} alt="" /> : ""}
       </div>

@@ -56,7 +56,7 @@ const Culture = () => {
           Our success starts with our culture
         </h2>
       </div>
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3 mt-10 sm:mx-auto culture-grid">
+      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3 mt-10 sm:mx-auto lg:gap-20 culture-grid">
         <ValueCard
           title="Hunger"
           desc="We are change agents, united in our passion to improve every day

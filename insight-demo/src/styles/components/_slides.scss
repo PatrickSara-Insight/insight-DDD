@@ -124,9 +124,14 @@
     border-top-color: $color-secondary-shade;
 }
 
+.impact-grid {
+    width: 100%;
+}
+
 .impact-card {
     max-height: 50%;
     min-height: 30%;
+    min-width: 25%;
 }
 
 .impact-svg {

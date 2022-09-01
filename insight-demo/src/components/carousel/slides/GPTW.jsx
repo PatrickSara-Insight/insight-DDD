@@ -3,6 +3,7 @@ import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Image } from "react-bootstrap";
 import gptw from "../../../gptw-no-bg.png";
+import GptwCard from "../../common/GptwCard";
 
 const GPTW = () => {
   const slideIndex = useContext(SlideContext);
@@ -73,56 +74,44 @@ const GPTW = () => {
           </h1>
         </div>
       </div>
-      <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-1 sm:gap-4 md:gap-8 md:grid-cols-4">
-        <div className="flex flex-col gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            FORTUNE 500 Company
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">No. 360</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            Fortune World's Most Admired Cmpanies
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">2021</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            2nd Most Gender Diverse Executive Team in Technology
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">The Org</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            Human Rights Campaign Foundation's 2021
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">95/100</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            LGBTQ Workplace Equality
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">100/100</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            Reconciliation Australia: Reflect Reconciliation Action Plan
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">2022</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            Partnership with the Indigenous Literacy Foundation
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">2022</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 gptw-col gptw">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            Forbes World's Best Employers 2021
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">No. 95</dd>
-        </div>
-      </dl>
+      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-4 lg:gap-20 gptw-grid">
+        <GptwCard stat="No. 360" desc="Fortune 500 Company" bg="bg-red" />
+        <GptwCard
+          stat="2021"
+          desc="Fortune World's Most Admired Cmpanies"
+          bg="bg-red"
+        />
+        <GptwCard
+          stat="The Org"
+          desc="2nd Most Gender Diverse Executive Team in Technology"
+          bg="bg-red"
+        />
+        <GptwCard
+          stat="95/100"
+          desc="Human Rights Campaign Foundation's 2021"
+          bg="bg-red"
+        />
+        <GptwCard
+          stat="100/100"
+          desc="LGBTQ Workplace Equality"
+          bg="bg-purple"
+        />
+        <GptwCard
+          stat="2022"
+          desc="Reconciliation Australia: Reflect Reconciliation Action Plan"
+          bg="bg-purple"
+        />
+        <GptwCard
+          stat="No. 95"
+          desc="Forbes World's Best Employers 2021"
+          bg="bg-purple"
+        />
+        <GptwCard
+          stat="2022"
+          desc="Partnership with the Indigenous Literacy Foundation"
+          bg="bg-purple"
+        />
+      </ul>
     </div>
   );
 };

@@ -320,9 +320,14 @@ body {
   border-top-color: #76379b;
 }
 
+.impact-grid {
+  width: 100%;
+}
+
 .impact-card {
   max-height: 50%;
   min-height: 30%;
+  min-width: 25%;
 }
 
 .impact-svg {

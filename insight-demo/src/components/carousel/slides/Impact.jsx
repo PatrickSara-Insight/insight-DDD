@@ -60,7 +60,7 @@ const Impact = () => {
           Local presence, global reach, since 1988
         </h1>
       </div>
-      <ul className="mt-3 grid grid-cols-1 gap-10 sm:grid-cols-3">
+      <ul className="mt-3 grid grid-cols-1 gap-10 sm:grid-cols-3 lg:gap-20 impact-grid">
         <ImpactCard
           stat="12,000 +"
           desc="teammates worldwide"

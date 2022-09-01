@@ -47,7 +47,7 @@ const PapaCarousel = () => {
           className="carousel gx-0"
           interval={null}
           activeIndex={slideIndex}
-          // activeIndex={1}
+          // activeIndex={3}
         >
           <Carousel.Item className="carousel-item">
             <LogoAnimation />
