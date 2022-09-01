@@ -209,11 +209,31 @@ body {
   }
 }
 
+.card-title {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #554741;
+}
+@media screen and (max-width: 1400px) {
+  .card-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-title {
+    font-size: 3rem;
+  }
+}
+
 .card-body {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
+  font-size: 1.5rem;
   color: #554741;
 }
 @media screen and (max-width: 768px) {

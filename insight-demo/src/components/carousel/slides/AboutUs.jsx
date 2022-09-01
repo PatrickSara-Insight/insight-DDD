@@ -28,17 +28,10 @@ const AboutUs = () => {
         },
         0
       )
-      // .from(".about-grid", { opacity: 0, duration: 1 }, 2)
-      // .from(".about-flex-col-svg", { y: 50, stagger: 0.1, duration: 0.5 }, 1.85)
-      // .from(
-      //   ".about-flex-col-title",
-      //   { y: 50, stagger: 0.1, duration: 0.5 },
-      //   1.5
-      // )
       .to(
         ".about",
-        { opacity: 0, y: 750, stagger: { each: 0.05, from: "end" } },
-        8.9
+        { opacity: 0, stagger: { each: 0.5, from: "end" }, duration: 2 },
+        8
       );
   };
 
@@ -65,24 +58,6 @@ const AboutUs = () => {
           understanding of someone or something.
         </h2>
       </div>
-      {/* -too much noise for first slide 
-      <dl className="flex flex-col md:flex-row mt-10 text-center about-grid">
-        <div className="flex flex-col col-span-4 about-flex-col about">
-          <dt className="order-2 mt-2 leading-6 slide-body about-flex-col-title">
-            We deliver
-          </dt>
-        </div>
-        <div className="flex flex-col col-span-4 about-flex-col about">
-          <dt className="order-2 mt-2 leading-6 slide-body about-flex-col-title">
-            We intergrate
-          </dt>
-        </div>
-        <div className="flex flex-col col-span-4 about-flex-col about">
-          <dt className="order-2 mt-2 leading-6 slide-body about-flex-col-title">
-            We connect
-          </dt>
-        </div>
-      </dl> */}
     </Container>
   );
 };

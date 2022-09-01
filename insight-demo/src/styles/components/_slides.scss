@@ -32,8 +32,15 @@
     line-height: 1.1;
 }
 
+.card-title {
+    @include slide-title;
+    font-size: calc($font-size-title);
+    color: $color-warm-gray
+}
+
 .card-body {
     @include slide-body;
+    font-size: calc($font-size-body * 1.5);
     color: $color-warm-gray;
 }
 
