@@ -12,24 +12,53 @@ import Parents from "../../assets/parents.svg";
 import Hands from "../../assets/hands.svg";
 import Study from "../../assets/study.svg";
 import Health from "../../assets/health.svg";
+import ExpertiseCard from "../common/ExpertiseCard";
+import ModernWorkplace from "../../assets/expertise-modern-workplace-icon.png";
+
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <div className="container md:mx-8 lg:mx-20 xl:mx-40">
-        <h1 className="slide-header text-center gray">Title</h1>
-        <h2 className="slide-subheader text-center gray">Some subtitle text</h2>
+      <div className="max-w-7xl mx-auto text-center">
+        <h1 className="slide-header expertise-slide-header gray mx-0 ">
+          Our areas of expertise
+        </h1>
+        <h2 className="slide-subheader gray mx-0 mt-2">
+          Tackle today’s ever-changing business environment alongside teams of
+          technical experts with decades of industry experience.
+        </h2>
       </div>
-
-      <div className="lg:min-w-7xl">
-        <dl className="rounded-lg shadow-lg mt-5 lg:mx-10 grid grid-cols-4 gap-3 gptw-grid bg-slate-100 pb-10">
-          <GptwCard title="Additional annual leave" svg={AnnualLeave} />
-          <GptwCard title="Social events" svg={SocialEvents} />
-          <GptwCard title="Work life balance days" svg={Balance} />
-          <GptwCard title="Technology benefit" svg={Technology} />
-          <GptwCard title="Paid parental leave" svg={Parents} />
-          <GptwCard title="Rewards and Recognition program" svg={Hands} />
-          <GptwCard title="Study assistance allowance" svg={Study} />
-          <GptwCard title="Health and wellness benefit" svg={Health} />
+      <div>
+        <dl className="mt-5 lg:mx-10 grid grid-cols-1 gap-5 lg:grid-cols-3 expertise-grid">
+          <ExpertiseCard
+            title="Modern Workplace"
+            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+            svg={ModernWorkplace}
+          />
+          <ExpertiseCard
+            title="Modern Workplace"
+            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+            svg={ModernWorkplace}
+          />
+          <ExpertiseCard
+            title="Modern Workplace"
+            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+            svg={ModernWorkplace}
+          />
+          <ExpertiseCard
+            title="Modern Workplace"
+            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+            svg={ModernWorkplace}
+          />
+          <ExpertiseCard
+            title="Modern Workplace"
+            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+            svg={ModernWorkplace}
+          />
+          <ExpertiseCard
+            title="Modern Workplace"
+            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+            svg={ModernWorkplace}
+          />
         </dl>
       </div>
     </Container>

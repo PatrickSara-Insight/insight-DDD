@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { Container, Image } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Logo from "../../LogoVertical.png";
+import QR from "../../assets/DDDQR.png";
 import { SlideContext } from "../../store/SlideContext";
 
 import BeAmbitious from "./slides/BeAmbitious";
@@ -10,13 +11,14 @@ import Culture from "./slides/Culture";
 import LogoAnimation from "./slides/LogoAnimation";
 import Impact from "./slides/Impact";
 import GPTW from "./slides/GPTW";
+import Expertise from "./slides/Expertise";
 import GlobalSystems from "./slides/GlobalSystems";
 import Industry from "./slides/Industry";
 import Projects from "./slides/Projects";
 
 const PapaCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const ENDSLIDEINDEX = 8;
+  const ENDSLIDEINDEX = 5;
   const SLIDEDURATION = 10000;
 
   const nextSlide = useCallback(() => {
@@ -64,8 +66,11 @@ const PapaCarousel = () => {
           <Carousel.Item className="carousel-item">
             <GPTW />
           </Carousel.Item>
-
           <Carousel.Item className="carousel-item">
+            <Expertise />
+          </Carousel.Item>
+
+          {/* <Carousel.Item className="carousel-item">
             <GlobalSystems />
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
@@ -76,11 +81,17 @@ const PapaCarousel = () => {
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <Projects />
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>
       </SlideContext.Provider>
       <Container fluid className="background-cont">
         <Image className="logo-vertical" fluid alt="insight-logo" src={Logo} />
+        <Image
+          className="qr-code"
+          fluid
+          alt="insight qr code for ddd"
+          src={QR}
+        />
       </Container>
     </Container>
   );

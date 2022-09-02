@@ -159,7 +159,8 @@
     min-width: 90%;
 }
 
-.gptw-svg-cont {
+.gptw-svg-cont,
+.expertise-svg-cont {
     height: auto;
     width: auto;
 }
@@ -167,4 +168,14 @@
 .gptw-svg {
     height: 75%;
     width: 75%;
+}
+
+.expertise-svg {
+    height: 25%;
+    width: 25%;
+}
+
+.expertise-slide-header { 
+    @include slide-title;
+    font-size: 8rem;
 }

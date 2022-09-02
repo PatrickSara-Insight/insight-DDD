@@ -89,3 +89,13 @@
     opacity: 0;
 }
 
+.qr-code {
+    position: absolute;
+    margin: $spacer-normal;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 7.5%;
+    opacity: 100;
+}
+
