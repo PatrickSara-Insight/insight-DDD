@@ -71,7 +71,7 @@ const Impact = () => {
           />
           <ImpactCard
             stat="19"
-            desc="countries with Insight operations"
+            desc="Countries with Insight Operations"
             descInfo="As of 2022"
           />
           <ImpactCard
@@ -86,13 +86,13 @@ const Impact = () => {
           />
           <ImpactCard
             stat="3.7k"
-            desc="engineers, architects and consultants
+            desc="Engineers, Architects and Consultants
 "
             descInfo="As of 2022"
           />
           <ImpactCard
             stat="11k+"
-            desc="Insight teammates worldwide"
+            desc="Insight Teammates Worldwide"
             descInfo="As of 2022"
           />
           <ImpactCard

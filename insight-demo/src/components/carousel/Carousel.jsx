@@ -64,6 +64,7 @@ const PapaCarousel = () => {
           <Carousel.Item className="carousel-item">
             <GPTW />
           </Carousel.Item>
+
           <Carousel.Item className="carousel-item">
             <GlobalSystems />
           </Carousel.Item>
