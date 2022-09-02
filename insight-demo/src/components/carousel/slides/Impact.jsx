@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useContext } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import ImpactCard from "../../common/ImpactCard";
+import { Container } from "react-bootstrap";
 
 const Impact = () => {
   // insert svg graphics to the left of each div.
@@ -48,7 +49,10 @@ const Impact = () => {
   }, [slideIndex]);
 
   return (
-    <div className="container mx-auto carousel-slide-cont impact-cont">
+    <Container
+      fluid
+      className="container mx-auto carousel-slide-cont impact-cont"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="slide-subheader my-2 px-4 impact" id="impact-subtitle">
           See how we're making a positive impact
@@ -102,7 +106,7 @@ const Impact = () => {
           />
         </dl>
       </div>
-    </div>
+    </Container>
   );
 };
 

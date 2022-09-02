@@ -290,7 +290,9 @@ body {
 .culture-cont,
 .culture-sub-cont,
 .gptw-cont,
-.impact-cont {
+.impact-cont,
+.industry-cont,
+.ba-cont {
   min-width: 100%;
   margin: 0;
 }
@@ -394,6 +396,7 @@ body {
   font-size: 1.5rem;
   text-align: left;
   color: #2d2622;
+  align-self: end;
 }
 @media screen and (max-width: 768px) {
   .impact-mute {
@@ -434,6 +437,27 @@ body {
 }
 @media screen and (max-width: 768px) {
   .expertise-slide-header {
+    font-size: 3rem;
+  }
+}
+
+.industry-card-title {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+  font-size: 2.5rem;
+  background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+@media screen and (max-width: 1400px) {
+  .industry-card-title {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .industry-card-title {
     font-size: 3rem;
   }
 }

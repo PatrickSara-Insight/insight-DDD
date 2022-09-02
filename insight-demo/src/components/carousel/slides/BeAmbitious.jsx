@@ -32,13 +32,10 @@ function BeAmbitious() {
   }, [slideIndex]);
 
   return (
-    <Container fluid className="carousel-slide-cont ba-cont">
+    <Container className="carousel-slide-cont ba-cont max-w-5xl">
       <h1 className="slide-header ambitious" id="be-ambitious-title">
-        Be Ambitious.
+        Now is the time to be ambitious.
       </h1>
-      <h2 className="slide-subheader my-2 ambitious" id="ambitious-subtitle">
-        You have what it takes to achieve your bold technology goals.
-      </h2>
     </Container>
   );
 }

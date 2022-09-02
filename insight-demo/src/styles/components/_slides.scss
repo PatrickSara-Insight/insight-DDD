@@ -68,7 +68,9 @@
 .culture-cont, 
 .culture-sub-cont,
 .gptw-cont,
-.impact-cont
+.impact-cont,
+.industry-cont,
+.ba-cont
  {
     min-width: 100%;
     margin: 0
@@ -163,6 +165,7 @@
     font-size: calc($font-size-body * 1.5);
     text-align: left;
     color: $color-dark-gray;
+    align-self: end;
 }
 
 .gptw-grid {
@@ -188,4 +191,10 @@
 .expertise-slide-header { 
     @include slide-title;
     font-size: 8rem;
+}
+
+.industry-card-title {
+    @include slide-title;
+    font-size: calc($font-size-body * 2.5);
+    @include gradient-text
 }

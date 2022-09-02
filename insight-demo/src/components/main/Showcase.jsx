@@ -15,41 +15,32 @@ import Health from "../../assets/health.svg";
 import ExpertiseCard from "../common/ExpertiseCard";
 import ModernWorkplace from "../../assets/expertise-modern-workplace-icon.png";
 import ValueCard from "../common/ValueCard";
+import IndustryCard from "../common/IndustryCard";
+import Construction from "../../assets/construction-industry-icon.png";
+import Financial from "../../assets/financial-industry-icon.png";
+import Healthcare from "../../assets/healthcare-industry-icon.png";
+import Manufacturing from "../../assets/manufacturing-industry-icon.png";
+import Retail from "../../assets/retail-industry-icon.png";
+import Service from "../../assets/service-provider-industry-icon.png";
+import SmallBusiness from "../../assets/small-medium-industry-icon.png";
+import Travel from "../../assets/travel-industry-icon.png";
 
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="slide-header expertise-slide-header gray mx-0 ">
-          Our areas of expertise
+          Industries we serve
         </h1>
         <h2 className="slide-subheader gray mx-0 mt-2">
-          Tackle today’s ever-changing business environment alongside teams of
-          technical experts with decades of industry experience.
+          We offer breadth and depth — combining deep industry expertise and
+          technical skills
         </h2>
       </div>
-      <div>
-        <dl className="mt-5 lg:mx-20 grid grid-cols-1 gap-5 lg:grid-cols-3 culture-grid">
-          <ValueCard
-            title="Hunger"
-            desc="We are change agents, united in our passion to improve every day
-                and deliver outstanding results for our clients, partners and
-                Insight."
-            bg="bg-red"
-          />
-          <ValueCard
-            title="Heart"
-            desc="We are teammates. We take care of each other, our clients and
-                our communities."
-            bg="bg-fuchsia"
-          />
-          <ValueCard
-            title="Harmony"
-            desc="We are a team of diverse individuals who value inclusivity and
-                create meaningful connections so we can win together."
-            bg="bg-purple"
-          />
-        </dl>
+      <div className="max-w-5xl">
+        <h1 className="slide-header ambitious" id="be-ambitious-title">
+          Now is the time to be ambitious.
+        </h1>
       </div>
     </Container>
   );

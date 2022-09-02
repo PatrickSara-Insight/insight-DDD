@@ -12,13 +12,12 @@ import LogoAnimation from "./slides/LogoAnimation";
 import Impact from "./slides/Impact";
 import GPTW from "./slides/GPTW";
 import Expertise from "./slides/Expertise";
-import GlobalSystems from "./slides/GlobalSystems";
 import Industry from "./slides/Industry";
 import Projects from "./slides/Projects";
 
 const PapaCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const ENDSLIDEINDEX = 5;
+  const ENDSLIDEINDEX = 7;
   const SLIDEDURATION = 10000;
 
   const nextSlide = useCallback(() => {
@@ -69,16 +68,18 @@ const PapaCarousel = () => {
           <Carousel.Item className="carousel-item">
             <Expertise />
           </Carousel.Item>
-
-          {/* <Carousel.Item className="carousel-item">
-            <GlobalSystems />
-          </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <Industry />
           </Carousel.Item>
+          {/* microsoft gold partner slide */}
+          {/* day in the life slides here */}
           <Carousel.Item className="carousel-item">
             <BeAmbitious />
           </Carousel.Item>
+
+          {/*
+
+
           <Carousel.Item className="carousel-item">
             <Projects />
           </Carousel.Item> */}
