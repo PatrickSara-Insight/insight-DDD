@@ -35,13 +35,13 @@
 
 .card-title {
     @include slide-title;
-    font-size: calc($font-size-body * 2.5);
+    font-size: calc($font-size-body * 4);
     color: $color-font-primary;
 }
 
 .card-body {
     @include slide-body;
-    font-size: calc($font-size-body * 1.8);
+    font-size: calc($font-size-body * 2.5);
     color: $color-warm-gray;
 }
 
@@ -65,9 +65,19 @@
     width: 100%;
 }
 
+.culture-cont, 
+.culture-sub-cont,
+.gptw-cont,
+.impact-cont
+ {
+    min-width: 100%;
+    margin: 0
+}
+
+
+
 .culture-card-header {
     position: relative;
-    background-color: inherit;
 }
 
 .culture-card-header::after {
@@ -142,21 +152,21 @@
 .gptw-body,
 .impact-body {
     @include slide-body;
-    font-size: calc($font-size-body * 1.5);
+    font-size: calc($font-size-body * 2);
     text-align: left;
     line-height: 1.2;
-    color: $color-warm-gray;
+    color: $color-dark-gray;
 }
 
 .impact-mute {
     @include slide-body;
-    font-size: calc($font-size-body * 1);
+    font-size: calc($font-size-body * 1.5);
     text-align: left;
-    color: $color-warm-gray;
+    color: $color-dark-gray;
 }
 
 .gptw-grid {
-    min-width: 90%;
+    max-width: 66%;
 }
 
 .gptw-svg-cont,

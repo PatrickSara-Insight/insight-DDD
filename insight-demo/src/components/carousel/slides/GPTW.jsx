@@ -42,20 +42,11 @@ const GPTW = () => {
         },
         0.25
       )
-      .from(
-        ".gptw-col",
-        {
-          opacity: 0,
-          y: 10,
-          stagger: { each: 0.1, from: "start" },
-          duration: 1,
-        },
-        2
-      )
+      .from(".gptw-grid", { opacity: 0, duration: 1.5 }, 1)
       .to(
         ".gptw",
         { opacity: 0, y: 1500, stagger: { each: 0.05, from: "end" } },
-        9
+        8.5
       );
   };
 
@@ -73,7 +64,7 @@ const GPTW = () => {
       fluid
       className="container mx-auto carousel-slide-cont gptw-cont"
     >
-      <div className="flex flex-row justify-center items-start">
+      <div className="flex flex-row justify-center items-start mb-6">
         <Image
           className="gptw-logo gptw"
           alt="great place to work award"
@@ -83,23 +74,21 @@ const GPTW = () => {
           <h1 className="slide-header" id="gptw-title">
             Insight Benefits
           </h1>
-          <h2 className="slide-subheader my-2" id="gptw-subtitle">
+          <h2 className="slide-subheader my-4" id="gptw-subtitle">
             No. 16 Australia Best Places To Work
           </h2>
         </div>
       </div>
-      <div className="lg:min-w-full">
-        <dl className="rounded-lg shadow-lg mt-5 lg:mx-10 grid grid-cols-4 gap-3 gptw-grid bg-slate-100 pb-10 gptw">
-          <GptwCard title="Additional annual leave" svg={AnnualLeave} />
-          <GptwCard title="Social events" svg={SocialEvents} />
-          <GptwCard title="Work life balance days" svg={Balance} />
-          <GptwCard title="Technology benefit" svg={Technology} />
-          <GptwCard title="Paid parental leave" svg={Parents} />
-          <GptwCard title="Rewards and Recognition program" svg={Hands} />
-          <GptwCard title="Study assistance allowance" svg={Study} />
-          <GptwCard title="Health and wellness benefit" svg={Health} />
-        </dl>
-      </div>
+      <dl className="rounded-lg shadow-lg mt-5 lg:mx-10 grid grid-cols-4 gap-10 gptw-grid bg-slate-100 pb-10 gptw-grid gptw">
+        <GptwCard title="Additional annual leave" svg={AnnualLeave} />
+        <GptwCard title="Social events" svg={SocialEvents} />
+        <GptwCard title="Work life balance days" svg={Balance} />
+        <GptwCard title="Technology benefit" svg={Technology} />
+        <GptwCard title="Paid parental leave" svg={Parents} />
+        <GptwCard title="Rewards and Recognition program" svg={Hands} />
+        <GptwCard title="Study assistance allowance" svg={Study} />
+        <GptwCard title="Health and wellness benefit" svg={Health} />
+      </dl>
     </Container>
   );
 };

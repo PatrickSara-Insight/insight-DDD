@@ -239,7 +239,7 @@ body {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
   font-size: 10rem;
-  font-size: 2.5rem;
+  font-size: 4rem;
   color: #EFE9F4;
 }
 @media screen and (max-width: 1400px) {
@@ -258,7 +258,7 @@ body {
   color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #554741;
 }
 @media screen and (max-width: 768px) {
@@ -287,9 +287,16 @@ body {
   width: 100%;
 }
 
+.culture-cont,
+.culture-sub-cont,
+.gptw-cont,
+.impact-cont {
+  min-width: 100%;
+  margin: 0;
+}
+
 .culture-card-header {
   position: relative;
-  background-color: inherit;
 }
 
 .culture-card-header::after {
@@ -367,10 +374,10 @@ body {
   color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: left;
   line-height: 1.2;
-  color: #554741;
+  color: #2d2622;
 }
 @media screen and (max-width: 768px) {
   .gptw-body,
@@ -384,9 +391,9 @@ body {
   color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: left;
-  color: #554741;
+  color: #2d2622;
 }
 @media screen and (max-width: 768px) {
   .impact-mute {
@@ -395,7 +402,7 @@ body {
 }
 
 .gptw-grid {
-  min-width: 90%;
+  max-width: 66%;
 }
 
 .gptw-svg-cont,

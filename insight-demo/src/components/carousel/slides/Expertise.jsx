@@ -26,7 +26,16 @@ function Expertise() {
       .set(".expertise-cont", { opacity: 100 })
       .from("#expertise-title", { opacity: 0 })
       .from("#expertise-subtitle", { opacity: 0 }, 0.5)
-      .to(".expertise", { opacity: 0, stagger: { each: 0.2, from: "end" } }, 9);
+      .from(
+        ".expertise-card",
+        { opacity: 0, stagger: { each: 0.2, from: "start" }, duration: 1.5 },
+        1
+      )
+      .to(
+        ".expertise",
+        { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
+        8.5
+      );
   };
 
   useEffect(() => {
@@ -42,7 +51,7 @@ function Expertise() {
     <Container fluid className="carousel-slide-cont mx-auto expertise-cont">
       <div className="max-w-7xl mx-auto text-center">
         <h1
-          className="slide-header expertise-slide-header mx-0"
+          className="slide-header expertise-slide-header expertise mx-0"
           id="expertise-title"
         >
           Our areas of expertise

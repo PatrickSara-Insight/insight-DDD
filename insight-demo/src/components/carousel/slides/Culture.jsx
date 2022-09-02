@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useContext } from "react";
 import ValueCard from "../../common/ValueCard";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
+import { Container } from "react-bootstrap";
 
 const Culture = () => {
   const slideIndex = useContext(SlideContext);
@@ -29,8 +30,8 @@ const Culture = () => {
       .from(".culture-card", { y: 100, stagger: 0.1, duration: 0.5 }, 1.45)
       .to(
         ".culture",
-        { opacity: 0, y: 1500, stagger: { each: 0.1, from: "end" } },
-        9
+        { opacity: 0, y: 2000, stagger: { each: 0.1, from: "end" } },
+        8.5
       );
   };
 
@@ -44,8 +45,8 @@ const Culture = () => {
   }, [slideIndex]);
 
   return (
-    <div className="container mx-auto carousel-slide-cont culture-cont">
-      <div className="max-w-4xl mx-auto text-center mb-10">
+    <Container fluid className="container carousel-slide-cont culture-cont">
+      <div className="culture-sub-cont mx-auto text-center mb-5">
         <h1 className="slide-header culture" id="culture-title">
           Core Values
         </h1>
@@ -56,7 +57,7 @@ const Culture = () => {
           Our success starts with our culture
         </h2>
       </div>
-      <ul className="grid grid-cols-1 gap-6 sm:grid-cols-3 mt-10 sm:mx-auto lg:gap-20 culture-grid">
+      <dl className="mt-5 mx-20 grid grid-cols-1 gap-20 lg:grid-cols-3 culture-grid">
         <ValueCard
           title="Hunger"
           desc="We are change agents, united in our passion to improve every day
@@ -76,8 +77,8 @@ const Culture = () => {
                 create meaningful connections so we can win together."
           bg="bg-purple"
         />
-      </ul>
-    </div>
+      </dl>
+    </Container>
   );
 };
 

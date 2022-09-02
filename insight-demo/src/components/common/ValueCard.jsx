@@ -2,14 +2,14 @@ import React from "react";
 
 const ValueCard = (props) => {
   return (
-    <li className="col-span-1 flex flex-col rounded-md bg-white text-center shadow culture-card culture">
-      <div className={`${props.bg} py-2 culture-card-header`}>
-        <h3 className="card-title">{props.title}</h3>
-      </div>
-      <dl className="mt-2 p-5 flex flex-grow flex-col justify-between">
-        <dd className="card-body">{props.desc}</dd>
-      </dl>
-    </li>
+    <div className="rounded-md bg-white shadow culture-card culture">
+      <dd
+        className={`${props.bg} rounded-md text-center py-4 culture-card-header border-0`}
+      >
+        <h3 className="card-title font-bold">{props.title}</h3>
+      </dd>
+      <dt className="card-body gray text-center my-5 p-20">{props.desc}</dt>
+    </div>
   );
 };
 

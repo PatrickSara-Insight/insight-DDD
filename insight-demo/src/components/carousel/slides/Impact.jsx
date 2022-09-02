@@ -57,7 +57,7 @@ const Impact = () => {
           Local presence, global reach, since 1988
         </h1>
       </div>
-      <div>
+      <div className="max-w-screen-2xl">
         <dl className="mt-5 lg:mx-10 grid grid-cols-1 gap-5 lg:grid-cols-4 impact-grid">
           <ImpactCard
             stat="#16"

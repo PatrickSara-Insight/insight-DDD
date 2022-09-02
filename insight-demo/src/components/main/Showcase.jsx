@@ -14,6 +14,7 @@ import Study from "../../assets/study.svg";
 import Health from "../../assets/health.svg";
 import ExpertiseCard from "../common/ExpertiseCard";
 import ModernWorkplace from "../../assets/expertise-modern-workplace-icon.png";
+import ValueCard from "../common/ValueCard";
 
 const Showcase = () => {
   return (
@@ -28,36 +29,25 @@ const Showcase = () => {
         </h2>
       </div>
       <div>
-        <dl className="mt-5 lg:mx-10 grid grid-cols-1 gap-5 lg:grid-cols-3 expertise-grid">
-          <ExpertiseCard
-            title="Modern Workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
+        <dl className="mt-5 lg:mx-20 grid grid-cols-1 gap-5 lg:grid-cols-3 culture-grid">
+          <ValueCard
+            title="Hunger"
+            desc="We are change agents, united in our passion to improve every day
+                and deliver outstanding results for our clients, partners and
+                Insight."
+            bg="bg-red"
           />
-          <ExpertiseCard
-            title="Modern Workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
+          <ValueCard
+            title="Heart"
+            desc="We are teammates. We take care of each other, our clients and
+                our communities."
+            bg="bg-fuchsia"
           />
-          <ExpertiseCard
-            title="Modern Workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
-          />
-          <ExpertiseCard
-            title="Modern Workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
-          />
-          <ExpertiseCard
-            title="Modern Workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
-          />
-          <ExpertiseCard
-            title="Modern Workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
+          <ValueCard
+            title="Harmony"
+            desc="We are a team of diverse individuals who value inclusivity and
+                create meaningful connections so we can win together."
+            bg="bg-purple"
           />
         </dl>
       </div>
