@@ -74,44 +74,7 @@ const GPTW = () => {
           </h1>
         </div>
       </div>
-      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-20 gptw-grid">
-        <GptwCard stat="No. 360" desc="Fortune 500 Company" bg="bg-red" />
-        <GptwCard
-          stat="2021"
-          desc="Fortune World's Most Admired Cmpanies"
-          bg="bg-red"
-        />
-        <GptwCard
-          stat="The Org"
-          desc="2nd Most Gender Diverse Executive Team in Technology"
-          bg="bg-red"
-        />
-        <GptwCard
-          stat="95/100"
-          desc="Human Rights Campaign Foundation's 2021"
-          bg="bg-red"
-        />
-        <GptwCard
-          stat="100/100"
-          desc="LGBTQ Workplace Equality"
-          bg="bg-purple"
-        />
-        <GptwCard
-          stat="2022"
-          desc="Reconciliation Australia: Reflect Reconciliation Action Plan"
-          bg="bg-purple"
-        />
-        <GptwCard
-          stat="No. 95"
-          desc="Forbes World's Best Employers 2021"
-          bg="bg-purple"
-        />
-        <GptwCard
-          stat="2022"
-          desc="Partnership with the Indigenous Literacy Foundation"
-          bg="bg-purple"
-        />
-      </ul>
+      {/* insert benefits here */}
     </div>
   );
 };

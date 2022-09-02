@@ -23,8 +23,9 @@
 }
 
 .slide-stat-title {
-    @include slide-body;
-    font-size: calc($font-size-title / 1.5)
+    @include slide-title;
+    @include gradient-text;
+    font-size: calc($font-size-heading / 2)
 }
 
 .slide-body {
@@ -94,6 +95,11 @@
     height: auto;
 }
 
+.gptw-card {
+    width: 50%;
+    justify-self: center;
+}
+
 .project-logos {
     position: absolute;
     top: 0;
@@ -125,16 +131,26 @@
 }
 
 .impact-grid {
-    width: 100%;
+    max-width: 100%;
 }
 
-.impact-card {
-    max-height: 50%;
-    min-height: 30%;
-    min-width: 25%;
+.gptw-header {
+    font-family: $font-bold;
+    font-size: calc($font-size-body * 2.5);
 }
 
-.impact-svg {
-    height: 100%;
-    width: 100%;
+.gptw-body,
+.impact-body {
+    @include slide-body;
+    font-size: calc($font-size-body * 1.5);
+    text-align: left;
+    line-height: 1.2;
+    color: $color-warm-gray;
+}
+
+.impact-mute {
+    @include slide-body;
+    font-size: calc($font-size-body * 1);
+    text-align: left;
+    color: $color-warm-gray;
 }

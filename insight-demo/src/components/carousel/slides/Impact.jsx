@@ -2,9 +2,6 @@ import React, { useRef, useEffect, useContext } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import ImpactCard from "../../common/ImpactCard";
-import Earth from "../../../assets/world.svg";
-import Teammates from "../../../assets/group.svg";
-import Operator from "../../../assets/operator.svg";
 
 const Impact = () => {
   // insert svg graphics to the left of each div.
@@ -53,33 +50,58 @@ const Impact = () => {
   return (
     <div className="container mx-auto carousel-slide-cont impact-cont">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="slide-body my-2 impact" id="impact-subtitle">
+        <h2 className="slide-subheader my-2 px-4 impact" id="impact-subtitle">
           See how we're making a positive impact
         </h2>
         <h1 className="slide-header-alt mx-0 my-10 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
       </div>
-      <ul className="mt-3 grid grid-cols-1 gap-10 sm:grid-cols-3 lg:gap-20 impact-grid">
-        <ImpactCard
-          stat="12,000 +"
-          desc="teammates worldwide"
-          bg="bg-red"
-          svg={Teammates}
-        />
-        <ImpactCard
-          stat="21"
-          desc="countries with insight operations"
-          bg="bg-fuchsia"
-          svg={Earth}
-        />
-        <ImpactCard
-          stat="5,000 +"
-          desc="technical resources"
-          bg="bg-purple"
-          svg={Operator}
-        />
-      </ul>
+      <div>
+        <dl className="mt-5 lg:mx-10 grid grid-cols-1 gap-5 lg:grid-cols-4 impact-grid">
+          <ImpactCard
+            stat="#16"
+            desc="Australia Best Places to Work"
+            descInfo="Awarded in 2022"
+          />
+          <ImpactCard
+            stat="#7"
+            desc="Fortune World’s Most Admired Companies"
+            descInfo="Awarded in 2021"
+          />
+          <ImpactCard
+            stat="19"
+            desc="countries with Insight operations"
+            descInfo="As of 2022"
+          />
+          <ImpactCard
+            stat="#95"
+            desc="on Forbes World's Best Employers"
+            descInfo="Awarded in 2021"
+          />
+          <ImpactCard
+            stat="#373"
+            desc="on the Fortune 500"
+            descInfo="As of 2022"
+          />
+          <ImpactCard
+            stat="3.7k"
+            desc="engineers, architects and consultants
+"
+            descInfo="As of 2022"
+          />
+          <ImpactCard
+            stat="11k+"
+            desc="Insight teammates worldwide"
+            descInfo="As of 2022"
+          />
+          <ImpactCard
+            stat="#2"
+            desc="Most Gender Diverse Executive Team in Technology"
+            descInfo="Awarded in 2021"
+          />
+        </dl>
+      </div>
     </div>
   );
 };

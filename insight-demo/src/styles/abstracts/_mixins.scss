@@ -4,7 +4,6 @@
     font-family: $font-heading;
     color: $color-font-primary;
     font-size: $font-size-heading;
-    text-align: center;
 
     @media screen and (max-width: $extra-large) {
         font-size: $font-size-subheader;
@@ -34,6 +33,12 @@
     @media screen and (max-width: $small) {
         font-size: calc($font-size-body);
     }
+}
+
+@mixin gradient-text {
+        background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
+        background-clip: text;
+        color: transparent;
 }
 
 
