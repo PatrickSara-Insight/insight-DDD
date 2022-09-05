@@ -61,7 +61,7 @@ const GPTW = () => {
 
   return (
     <Container fluid className="carousel-slide-cont gptw-cont">
-      <Container className="slide-title-cont flex flex-row justify-center items-start">
+      <Container className="slide-title-cont flex flex-row justify-center items-start mb-20">
         <Image
           className="gptw-logo gptw"
           alt="great place to work award"
@@ -76,7 +76,7 @@ const GPTW = () => {
           </h2>
         </div>
       </Container>
-      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-4 gap-10 gptw-grid bg-slate-100 gptw-grid responsive-grid gptw">
+      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-4 gap-10 gptw-grid bg-white pb-6 gptw-grid responsive-grid gptw">
         <GptwCard title="Additional annual leave" svg={AnnualLeave} />
         <GptwCard title="Social events" svg={SocialEvents} />
         <GptwCard title="Work life balance days" svg={Balance} />

@@ -54,7 +54,7 @@ const Impact = () => {
         <h1 className="title-secondary mx-0 mb-2 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
-        <h2 className="slide-body mb-20 px-4 impact" id="impact-subtitle">
+        <h2 className="title-tertiary mb-20 px-4 impact" id="impact-subtitle">
           See how we're making a positive impact
         </h2>
       </Container>

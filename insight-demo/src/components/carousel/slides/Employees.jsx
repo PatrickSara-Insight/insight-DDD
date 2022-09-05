@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useContext } from "react";
-import ValueCard from "../../common/ValueCard";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
 import EmployeeCard from "../../common/EmployeeCard";
+import PatrickSara from "../../../assets/Patrick_SARA.png";
 
 const Employee = () => {
   const slideIndex = useContext(SlideContext);
@@ -28,12 +28,7 @@ const Employee = () => {
         0.25
       )
       .from(".employee-grid", { opacity: 0, duration: 1 }, 1.5)
-      .from(".employee-card", { y: 100, stagger: 0.1, duration: 0.5 }, 1.45)
-      .to(
-        ".employee",
-        { opacity: 0, y: 2000, stagger: { each: 0.1, from: "end" } },
-        8.5
-      );
+      .to(".employee-grid-1", { opacity: 0 }, 9);
   };
 
   useEffect(() => {
@@ -47,21 +42,30 @@ const Employee = () => {
 
   return (
     <Container fluid className="carousel-slide-cont employee-cont">
-      <Container className="slide-content-cont employee-sub-cont text-center">
+      <Container className="slide-content-cont employee-sub-cont text-center mb-20">
         <h1 className="title-primary employee" id="employee-title">
-          What we're about
+          A day in the life
         </h1>
         <h2
-          className="title-secondary text-center employee"
+          className="title-tertiary text-center employee"
           id="employee-subtitle"
         >
           See what some of our employees have to say
         </h2>
       </Container>
-      <ul className="grid grid-cols-1 gap-20 lg:grid-cols-3 slide-content-cont employee-grid">
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
+      <ul className="grid grid-cols-1 gap-20 xl:grid-cols-2 slide-content-cont employee-grid employee-grid-1 responsive-grid">
+        <EmployeeCard
+          name="Partick Sara"
+          position="Graduate Consultant"
+          quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
+          src={PatrickSara}
+        />
+        <EmployeeCard
+          name="Partick Sara"
+          position="Graduate Consultant"
+          quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
+          src={PatrickSara}
+        />
       </ul>
     </Container>
   );

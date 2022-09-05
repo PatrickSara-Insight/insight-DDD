@@ -10,7 +10,7 @@ const GptwCard = (props) => {
           ""
         )}
       </dd>
-      <dt className="mt-2 leading-6 text-center gptw-body">{props.title}</dt>
+      <dt className="my-2 leading-6 text-center gptw-body">{props.title}</dt>
     </div>
   );
 };

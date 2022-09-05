@@ -21,21 +21,14 @@ const Microsoft = () => {
       .set(".microsoft-cont", { opacity: 100 })
       .from("#microsoft-title", { opacity: 0, duration: 1.5 }, 0)
       .from(
-        "#microsoft-subtitle",
-        {
-          opacity: 0,
-        },
-        0.5
-      )
-      .from(
         ".microsoft-card",
         { opacity: 0, stagger: { each: 0.2, from: "start" }, duration: 1.5 },
         1
       )
       .to(
         ".microsoft",
-        { opacity: 0, y: 1500, stagger: { each: 0.05, from: "end" } },
-        9
+        { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
+        8
       );
   };
 
@@ -50,16 +43,16 @@ const Microsoft = () => {
 
   return (
     <Container fluid className="carousel-slide-cont microsoft-cont">
-      <Container className="slide-title-cont text-center">
-        <Image alt="microsoft logo" src={MicrosoftLogo} />
+      <Container className="slide-title-cont flex flex-col justify-start items-center text-center mb-20">
+        <Image alt="microsoft logo" src={MicrosoftLogo} className="microsoft" />
         <h1
-          className="slide-header-alt mx-0 my-10 microsoft"
+          className="title-tertiary mx-0 my-10 microsoft"
           id="microsoft-title"
         >
           Our head is only in one cloud
         </h1>
       </Container>
-      <dl className="grid grid-cols-1 gap-5 lg:grid-cols-5 slide-content-cont microsoft-grid">
+      <dl className="grid grid-cols-1 gap-20 lg:grid-cols-5 slide-content-cont microsoft-grid responsive-grid">
         <MicrosoftCard desc="Solution Assessment (Aus) Partner of the Year" />
         <MicrosoftCard desc="12 Advanced Specialisations in Azure, Security &#38; Modern Work" />
         <MicrosoftCard desc="18 Microsoft Gold Competencies" />

@@ -49,22 +49,22 @@ function Expertise() {
 
   return (
     <Container fluid className="carousel-slide-cont expertise-cont">
-      <Container className="slide-title-cont text-center">
+      <Container className="slide-title-cont text-center mb-20">
         <h1
-          className="slide-header expertise-slide-header expertise mx-0"
+          className="title-primary expertise-slide-header expertise mx-0"
           id="expertise-title"
         >
           Our areas of expertise
         </h1>
         <h2
-          className="slide-subheader mx-0 mt-2 expertise"
+          className="title-tertiary mx-0 mt-2 expertise"
           id="expertise-subtitle"
         >
           Tackle today’s ever-changing business environment alongside teams of
           technical experts with decades of industry experience.
         </h2>
       </Container>
-      <dl className="slide-content-cont grid grid-cols-1 gap-5 lg:grid-cols-3 expertise-grid">
+      <dl className="slide-content-cont grid grid-cols-1 gap-5 xl:grid-cols-3 expertise-grid responsive-grid">
         <ExpertiseCard
           title="Modern workplace"
           descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."

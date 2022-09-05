@@ -18,7 +18,7 @@ const AboutUs = () => {
     aboutTl.current.progress(0).play();
     aboutTl.current
       .set(".about-container", { opacity: 100 })
-      .from("#about-insight-logo", { opacity: 0 })
+      .from(".about-insight-logo", { opacity: 0 })
       .from(
         ".about-sub-info",
         {

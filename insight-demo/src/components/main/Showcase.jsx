@@ -14,6 +14,11 @@ import Study from "../../assets/study.svg";
 import Health from "../../assets/health.svg";
 import ExpertiseCard from "../common/ExpertiseCard";
 import ModernWorkplace from "../../assets/expertise-modern-workplace-icon.png";
+import ModernApps from "../../assets/modern-apps-icon.png";
+import ModernInfra from "../../assets/expertise-modern-infrastructure-icon.png";
+import IntelligentEdge from "../../assets/expertise-intelligent-edge-icon.png";
+import DataAI from "../../assets/expertise-data-and-ai-icon.png";
+import Cybersecurity from "../../assets/expertise-cybersecurity-icon.png";
 import ValueCard from "../common/ValueCard";
 import IndustryCard from "../common/IndustryCard";
 import Construction from "../../assets/construction-industry-icon.png";
@@ -29,35 +34,14 @@ import EmployeeCard from "../common/EmployeeCard";
 import MicrosoftLogo from "../../assets/microsoft-logo-white.png";
 import MicrosoftCard from "../common/MicrosoftCard";
 import gptw from "../../gptw-no-bg.png";
+import PatrickSara from "../../assets/Patrick_SARA.png";
 
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <Container className="slide-title-cont flex flex-row justify-center items-start mb-16">
-        <Image
-          className="gptw-logo gptw"
-          alt="great place to work award"
-          src={gptw}
-        />
-        <div className="flex flex-col justify-start items-center mx-auto text-left gptw">
-          <h1 className="title-primary" id="gptw-title">
-            Insight Benefits
-          </h1>
-          <h2 className="title-tertiary my-4" id="gptw-subtitle">
-            No. 16 Australia Best Places To Work
-          </h2>
-        </div>
-      </Container>
-      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-4 gap-10 gptw-grid bg-white gptw-grid responsive-grid gptw">
-        <GptwCard title="Additional annual leave" svg={AnnualLeave} />
-        <GptwCard title="Social events" svg={SocialEvents} />
-        <GptwCard title="Work life balance days" svg={Balance} />
-        <GptwCard title="Technology benefit" svg={Technology} />
-        <GptwCard title="Paid parental leave" svg={Parents} />
-        <GptwCard title="Rewards and Recognition program" svg={Hands} />
-        <GptwCard title="Study assistance allowance" svg={Study} />
-        <GptwCard title="Health and wellness benefit" svg={Health} />
-      </dl>
+      <h1 className="slide-header ambitious" id="be-ambitious-title">
+        Now is the time to be ambitious.
+      </h1>
     </Container>
   );
 };

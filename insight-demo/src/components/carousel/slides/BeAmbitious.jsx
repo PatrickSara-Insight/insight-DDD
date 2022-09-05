@@ -18,7 +18,6 @@ function BeAmbitious() {
     bATl.current
       .set(".ba-cont", { opacity: 100 })
       .from("#be-ambitious-title", { opacity: 0 })
-      .from("#ambitious-subtitle", { opacity: 0 }, 0.5)
       .to(".ambitious", { opacity: 0, stagger: { each: 0.2, from: "end" } }, 9);
   };
 
@@ -32,8 +31,11 @@ function BeAmbitious() {
   }, [slideIndex]);
 
   return (
-    <Container className="carousel-slide-cont">
-      <h1 className="slide-header ambitious" id="be-ambitious-title">
+    <Container className="carousel-slide-cont ba-cont">
+      <h1
+        className="title-primary text-center ambitious"
+        id="be-ambitious-title"
+      >
         Now is the time to be ambitious.
       </h1>
     </Container>
