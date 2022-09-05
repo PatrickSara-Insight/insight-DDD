@@ -2,8 +2,10 @@ import React from "react";
 
 const MicrosoftCard = (props) => {
   return (
-    <div className="rounded-lg bg-white shadow microsoft-card microsoft p-10">
-      <dt className="microsoft-body mb-4">{props.desc}</dt>
+    <div className="p-10 rounded-md shadow flex justify-center items-center bg-white microsoft-card microsoft">
+      <dt className="text-center industry-card-title microsoft-body">
+        {props.desc}
+      </dt>
     </div>
   );
 };

@@ -47,19 +47,19 @@ const Industry = () => {
 
   return (
     <Container fluid className="carousel-slide-cont industry-cont">
-      <Container className="slide-title-cont text-center">
-        <h1 className="slide-header mx-0 my-10 industry" id="industry-title">
+      <Container className="slide-title-cont text-center mb-20">
+        <h1 className="title-primary mx-0 my-10 industry" id="industry-title">
           Industries we serve
         </h1>
         <h2
-          className="slide-subheader my-2 px-4 industry"
+          className="title-tertiary my-2 px-4 industry"
           id="industry-subtitle"
         >
           We offer breadth and depth — combining deep industry expertise and
           technical skills
         </h2>
       </Container>
-      <dl className="slide-content-cont grid grid-cols-1 gap-5 lg:grid-cols-4 industry-grid">
+      <dl className="slide-content-cont grid grid-cols-1 gap-20 xl:grid-cols-4 industry-grid responsive-grid">
         <IndustryCard title="Construction technology" svg={Construction} />
         <IndustryCard title="Financial services" svg={Financial} />
         <IndustryCard title="Healthcare &#38; life sciences" svg={Healthcare} />

@@ -14,6 +14,11 @@ import Study from "../../assets/study.svg";
 import Health from "../../assets/health.svg";
 import ExpertiseCard from "../common/ExpertiseCard";
 import ModernWorkplace from "../../assets/expertise-modern-workplace-icon.png";
+import ModernApps from "../../assets/modern-apps-icon.png";
+import ModernInfra from "../../assets/expertise-modern-infrastructure-icon.png";
+import IntelligentEdge from "../../assets/expertise-intelligent-edge-icon.png";
+import DataAI from "../../assets/expertise-data-and-ai-icon.png";
+import Cybersecurity from "../../assets/expertise-cybersecurity-icon.png";
 import ValueCard from "../common/ValueCard";
 import IndustryCard from "../common/IndustryCard";
 import Construction from "../../assets/construction-industry-icon.png";
@@ -28,31 +33,32 @@ import Employee from "../carousel/slides/Employees";
 import EmployeeCard from "../common/EmployeeCard";
 import MicrosoftLogo from "../../assets/microsoft-logo-white.png";
 import MicrosoftCard from "../common/MicrosoftCard";
+import gptw from "../../gptw-no-bg.png";
+import PatrickSara from "../../assets/Patrick_SARA.png";
+import PublicSector from "../../assets/public-sector.png";
+import ProjectCont from "../common/ProjectCont";
+import Education from "../../assets/education.png";
+import Entertainment from "../../assets/entertainment-financial.png";
+import Manfacturing from "../../assets/manufacturing_utilities.png";
+import Mining from "../../assets/mining.png";
+import QR from "../../assets/DDDQR.png";
 
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <Container className="slide-title-cont text-center">
-        <Image alt="microsoft logo" src={MicrosoftLogo} />
-        <h1
-          className="slide-header-alt mx-0 my-10 microsoft"
-          id="microsoft-title"
-        >
-          Our head is only in one cloud
-        </h1>
-      </Container>
-      <dl className="grid grid-cols-1 gap-5 lg:grid-cols-5 slide-content-cont microsoft-grid">
-        <MicrosoftCard desc="Solution Assessment (Aus) Partner of the Year" />
-        <MicrosoftCard desc="12 Advanced Specialisations in Azure, Security &#38; Modern Work" />
-        <MicrosoftCard desc="18 Microsoft Gold Competencies" />
-        <MicrosoftCard desc="Migration to Azure Partner of the Year" />
-        <MicrosoftCard desc="Azure Security Deployment Global Partner of the Year" />
-        <MicrosoftCard desc="Microsoft Azure Expert MSP and pure-play cloud strategy" />
-        <MicrosoftCard desc="Data &#38; AI Inner Circle Partner" />
-        <MicrosoftCard desc="IoT G10 &#38; Microsoft Bonsai Partner" />
-        <MicrosoftCard desc="Elite DevOps &#38; GitHub Verified Partner" />
-        <MicrosoftCard desc="Global LSP, CSP, and Surface Partner" />
-      </dl>
+      <h1
+        className="title-primary text-center mb-20 ambitious"
+        id="be-ambitious-title"
+      >
+        Now is the time to be ambitious.
+      </h1>
+      <Image
+        className="ba-qr-code w-80 h-80"
+        fluid
+        alt="insight qr code for ddd"
+        src={QR}
+      />
+      <h2 className="title-secondary text-center mb-10 font-bold">Join us</h2>
     </Container>
   );
 };

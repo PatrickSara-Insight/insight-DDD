@@ -1,9 +1,13 @@
 import React, { useRef, useEffect, useContext } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
-import { Container, Image } from "react-bootstrap";
-import image from "../../../logos.png";
-
+import { Container } from "react-bootstrap";
+import PublicSector from "../../../assets/public-sector.png";
+import ProjectCont from "../../common/ProjectCont";
+import Education from "../../../assets/education.png";
+import Entertainment from "../../../assets/entertainment-financial.png";
+import Manfacturing from "../../../assets/manufacturing_utilities.png";
+import Mining from "../../../assets/mining.png";
 function Projects() {
   const slideIndex = useContext(SlideContext);
 
@@ -35,7 +39,7 @@ function Projects() {
     projectsTl.current.progress(0).play();
     projectsTl.current
       .set(".projects-cont", { opacity: 100 }, 3)
-      .to(".projects.cont", { opacity: 0 }, 9);
+      .to(".projects-cont", { opacity: 0 }, 9);
   };
 
   useEffect(() => {
@@ -50,7 +54,19 @@ function Projects() {
 
   return (
     <Container fluid className="carousel-slide-cont projects-cont">
-      <Image fluid alt="" src={image} className="project-logos" />
+      <Container
+        fluid
+        className="flex flex-col justify-start items-center projects-container"
+      >
+        <ProjectCont title="Public Sector" src={PublicSector} />
+        <ProjectCont title="Education" src={Education} />
+        <ProjectCont title="Entertainment  &#38; Finance" src={Entertainment} />
+        <ProjectCont
+          title="Manufacturing  &#38; Utilities"
+          src={Manfacturing}
+        />
+        <ProjectCont title="Mining" src={Mining} />
+      </Container>
     </Container>
   );
 }
