@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
@@ -13,7 +13,8 @@ import SmallBusiness from "../../../assets/small-medium-industry-icon.png";
 import Travel from "../../../assets/travel-industry-icon.png";
 
 const Industry = () => {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 10000;
 
   const industryTL = useRef(
     gsap.timeline({
@@ -36,14 +37,23 @@ const Industry = () => {
       );
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 6) {
-      console.log("animating industries...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       industryTL.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont industry-cont">

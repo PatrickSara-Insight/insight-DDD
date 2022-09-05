@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
@@ -8,8 +8,10 @@ import Education from "../../../assets/education.png";
 import Entertainment from "../../../assets/entertainment-financial.png";
 import Manfacturing from "../../../assets/manufacturing_utilities.png";
 import Mining from "../../../assets/mining.png";
+
 function Projects() {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 12500;
 
   const projectsTl = useRef(
     gsap.timeline({
@@ -31,7 +33,8 @@ function Projects() {
     backgroundControl.current.progress(0).play();
     backgroundControl.current
       .to(".background-cont", { yPercent: 100, duration: 2 }, 1)
-      .to(".logo-vertical", { opacity: 0, duration: 1.5 }, 0);
+      .to(".logo-vertical", { opacity: 0, duration: 1.5 }, 0)
+      .to(".qr-code", { opacity: 0, duration: 1.5 }, 0);
   };
 
   const play = () => {
@@ -42,21 +45,30 @@ function Projects() {
       .to(".projects-cont", { opacity: 0 }, 9);
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex(0);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 11) {
-      console.log("animating projects...");
-      setBackground();
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      setBackground();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       projectsTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont projects-cont">
       <Container
         fluid
-        className="flex flex-col justify-start items-center projects-container"
+        className="flex flex-col justify-evenly items-center projects-container"
       >
         <ProjectCont title="Public Sector" src={PublicSector} />
         <ProjectCont title="Education" src={Education} />

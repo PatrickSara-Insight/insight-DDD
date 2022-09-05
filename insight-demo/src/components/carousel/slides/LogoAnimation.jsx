@@ -1,10 +1,11 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
 import { SlideContext } from "../../../store/SlideContext";
 
 function LogoAnimation() {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 8000;
 
   const logoRef = useRef();
 
@@ -68,15 +69,24 @@ function LogoAnimation() {
       .to("#logo-dot-btm", { yPercent: -5000 }, 4.4);
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 0) {
-      console.log("animating logo...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
       setBackground();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       logoTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont logo-cont">

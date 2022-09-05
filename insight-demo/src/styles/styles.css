@@ -622,11 +622,15 @@ body {
 }
 
 .project-card-title {
-  width: 66%;
+  width: 100%;
   border-width: 3px;
   border-style: solid;
   -o-border-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%) 0 0 100% 0;
      border-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%) 0 0 100% 0;
+}
+
+.projects-container {
+  height: 100%;
 }
 
 .showcase-cont {

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import ImpactCard from "../../common/ImpactCard";
@@ -6,7 +6,8 @@ import { Container } from "react-bootstrap";
 
 const Impact = () => {
   // insert svg graphics to the left of each div.
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 15000;
 
   const impactTl = useRef(
     gsap.timeline({
@@ -35,18 +36,27 @@ const Impact = () => {
       .to(
         ".impact",
         { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
-        8
+        13.5
       );
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 3) {
-      console.log("animating impact...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       impactTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont impact-cont">

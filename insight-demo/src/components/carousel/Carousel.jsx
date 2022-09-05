@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Image } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Logo from "../../LogoVertical.png";
@@ -20,30 +20,14 @@ import MoreEmployees from "./slides/MoreEmployees";
 
 const PapaCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const ENDSLIDEINDEX = 11;
-  const SLIDEDURATION = 10000;
-
-  const nextSlide = useCallback(() => {
-    if (slideIndex < ENDSLIDEINDEX) {
-      setSlideIndex((i) => i + 1);
-    } else {
-      setSlideIndex(0);
-    }
-  }, [slideIndex]);
 
   useEffect(() => {
-    const nextSlideInterval = setInterval(() => {
-      nextSlide();
-    }, SLIDEDURATION);
-
-    return () => {
-      clearInterval(nextSlideInterval);
-    };
-  }, [nextSlide]);
+    console.log("INDEX: " + slideIndex);
+  }, [slideIndex]);
 
   return (
     <Container fluid className="carousel-cont">
-      <SlideContext.Provider value={slideIndex}>
+      <SlideContext.Provider value={{ slideIndex, setSlideIndex }}>
         <Carousel
           fade={true}
           controls={false}
@@ -51,7 +35,6 @@ const PapaCarousel = () => {
           className="carousel gx-0"
           interval={null}
           activeIndex={slideIndex}
-          // activeIndex={4}
         >
           <Carousel.Item className="carousel-item">
             <LogoAnimation />

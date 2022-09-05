@@ -1,11 +1,12 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import Logo from "../../../LogoTrimmed.png";
 import { Container, Image } from "react-bootstrap";
 
 const AboutUs = () => {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 7750;
 
   const aboutTl = useRef(
     gsap.timeline({
@@ -33,18 +34,27 @@ const AboutUs = () => {
           stagger: { each: 0.25, from: "end" },
           duration: 1,
         },
-        8
+        6.5
       );
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 1) {
-      console.log("animating about us...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       aboutTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont about-container">

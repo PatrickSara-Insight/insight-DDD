@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
@@ -7,7 +7,8 @@ import PatrickSara from "../../../assets/Patrick_SARA.png";
 import Ilson from "../../../assets/Ilson_BISCUOLA.png";
 
 const Employee = () => {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 20000;
 
   const employeeTl = useRef(
     gsap.timeline({
@@ -29,17 +30,26 @@ const Employee = () => {
         0.25
       )
       .from(".employee-grid", { opacity: 0, duration: 1 }, 1.5)
-      .to(".employee-grid-1", { opacity: 0 }, 9);
+      .to(".employee-grid-1", { opacity: 0 }, 19);
   };
+
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
 
   useEffect(() => {
     if (slideIndex === 8) {
-      console.log("animating employees...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       employeeTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont employee-cont">

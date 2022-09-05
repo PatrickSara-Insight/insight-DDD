@@ -1,11 +1,12 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container, Image } from "react-bootstrap";
 import QR from "../../../assets/DDDQR.png";
 
 function BeAmbitious() {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 8000;
 
   const bATl = useRef(
     gsap.timeline({
@@ -24,18 +25,27 @@ function BeAmbitious() {
       .to(
         ".ambitious",
         { opacity: 0, stagger: { each: 0.2, from: "end" } },
-        8.5
+        6.5
       );
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 10) {
-      console.log("animating be ambitious...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       bATl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont ba-cont">
