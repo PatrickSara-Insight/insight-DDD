@@ -20,6 +20,7 @@ const MoreEmployees = () => {
     moreEmployeeTl.current.progress(0).play();
     moreEmployeeTl.current
       .set(".moreEmployee-cont", { opacity: 100 })
+      .set("#moreEmployee-title", { opacity: 100 })
       .from(".moreEmployee-grid", { opacity: 0, duration: 1 }, 0)
       .to(".moreEmployee-grid", { opacity: 0 }, 8.5)
       .to(".moreEmployee-cont", { opacity: 0 }, 8.75);
@@ -37,7 +38,7 @@ const MoreEmployees = () => {
   return (
     <Container fluid className="carousel-slide-cont moreEmployee-cont">
       <Container className="slide-content-cont employee-sub-cont text-center mb-20">
-        <h1 className="title-primary employee" id="employee-title">
+        <h1 className="title-primary employee" id="moreEmployee-title">
           A day in the life
         </h1>
         <h2
