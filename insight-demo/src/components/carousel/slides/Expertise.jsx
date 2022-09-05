@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
@@ -11,7 +11,8 @@ import DataAI from "../../../assets/expertise-data-and-ai-icon.png";
 import Cybersecurity from "../../../assets/expertise-cybersecurity-icon.png";
 
 function Expertise() {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 15000;
 
   const expertiseTl = useRef(
     gsap.timeline({
@@ -34,18 +35,27 @@ function Expertise() {
       .to(
         ".expertise",
         { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
-        8.5
+        13.5
       );
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 5) {
-      console.log("animating expertise...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       expertiseTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont expertise-cont">

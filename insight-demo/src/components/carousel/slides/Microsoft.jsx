@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container, Image } from "react-bootstrap";
@@ -6,7 +6,8 @@ import MicrosoftLogo from "../../../assets/microsoft-logo-white.png";
 import MicrosoftCard from "../../common/MicrosoftCard";
 
 const Microsoft = () => {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 15000;
 
   const microsoftTl = useRef(
     gsap.timeline({
@@ -28,18 +29,27 @@ const Microsoft = () => {
       .to(
         ".microsoft",
         { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
-        8
+        13.5
       );
   };
 
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
+
   useEffect(() => {
     if (slideIndex === 7) {
-      console.log("animating microsoft...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       microsoftTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont microsoft-cont">

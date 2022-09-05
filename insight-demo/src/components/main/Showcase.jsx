@@ -46,19 +46,19 @@ import QR from "../../assets/DDDQR.png";
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <h1
-        className="title-primary text-center mb-20 ambitious"
-        id="be-ambitious-title"
-      >
-        Now is the time to be ambitious.
-      </h1>
-      <Image
-        className="ba-qr-code w-80 h-80"
+      <Container
         fluid
-        alt="insight qr code for ddd"
-        src={QR}
-      />
-      <h2 className="title-secondary text-center mb-10 font-bold">Join us</h2>
+        className="flex flex-col justify-evenly items-center projects-container"
+      >
+        <ProjectCont title="Public Sector" src={PublicSector} />
+        <ProjectCont title="Education" src={Education} />
+        <ProjectCont title="Entertainment  &#38; Finance" src={Entertainment} />
+        <ProjectCont
+          title="Manufacturing  &#38; Utilities"
+          src={Manfacturing}
+        />
+        <ProjectCont title="Mining" src={Mining} />
+      </Container>
     </Container>
   );
 };

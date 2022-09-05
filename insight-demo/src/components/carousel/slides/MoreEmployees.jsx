@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext, useCallback } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
@@ -7,7 +7,8 @@ import PatrickSara from "../../../assets/Patrick_SARA.png";
 import Claire from "../../../assets/Claire_DOMASZ.png";
 
 const MoreEmployees = () => {
-  const slideIndex = useContext(SlideContext);
+  const { slideIndex, setSlideIndex } = useContext(SlideContext);
+  const SLIDEDURATION = 20000;
 
   const moreEmployeeTl = useRef(
     gsap.timeline({
@@ -22,18 +23,27 @@ const MoreEmployees = () => {
       .set(".moreEmployee-cont", { opacity: 100 })
       .set("#moreEmployee-title", { opacity: 100 })
       .from(".moreEmployee-grid", { opacity: 0, duration: 1 }, 0)
-      .to(".moreEmployee-grid", { opacity: 0 }, 8.5)
-      .to(".moreEmployee-cont", { opacity: 0 }, 8.75);
+      .to(".moreEmployee-grid", { opacity: 0 }, 18.5)
+      .to(".moreEmployee-cont", { opacity: 0 }, 18.75);
   };
+
+  const nextSlide = useCallback(() => {
+    setSlideIndex((i) => i + 1);
+  }, [setSlideIndex]);
 
   useEffect(() => {
     if (slideIndex === 9) {
-      console.log("animating moreEmployees...");
+      const timer = setTimeout(() => {
+        nextSlide();
+      }, SLIDEDURATION);
       play();
+      return () => {
+        clearTimeout(timer);
+      };
     } else {
       moreEmployeeTl.current.pause();
     }
-  }, [slideIndex]);
+  }, [slideIndex, nextSlide]);
 
   return (
     <Container fluid className="carousel-slide-cont moreEmployee-cont">
@@ -57,7 +67,7 @@ const MoreEmployees = () => {
         />
         <EmployeeCard
           name="Thomas"
-          position="Power Platform Team Lead"
+          position="Power Platforms Team Lead"
           quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
           src={PatrickSara}
         />
