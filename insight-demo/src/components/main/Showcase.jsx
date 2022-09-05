@@ -35,13 +35,30 @@ import MicrosoftLogo from "../../assets/microsoft-logo-white.png";
 import MicrosoftCard from "../common/MicrosoftCard";
 import gptw from "../../gptw-no-bg.png";
 import PatrickSara from "../../assets/Patrick_SARA.png";
+import PublicSector from "../../assets/public-sector.png";
+import ProjectCont from "../common/ProjectCont";
+import Education from "../../assets/education.png";
+import Entertainment from "../../assets/entertainment-financial.png";
+import Manfacturing from "../../assets/manufacturing_utilities.png";
+import Mining from "../../assets/mining.png";
+import QR from "../../assets/DDDQR.png";
 
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <h1 className="slide-header ambitious" id="be-ambitious-title">
+      <h1
+        className="title-primary text-center mb-20 ambitious"
+        id="be-ambitious-title"
+      >
         Now is the time to be ambitious.
       </h1>
+      <Image
+        className="ba-qr-code w-80 h-80"
+        fluid
+        alt="insight qr code for ddd"
+        src={QR}
+      />
+      <h2 className="title-secondary text-center mb-10 font-bold">Join us</h2>
     </Container>
   );
 };

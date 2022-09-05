@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { Container } from "react-bootstrap";
 import EmployeeCard from "../../common/EmployeeCard";
 import PatrickSara from "../../../assets/Patrick_SARA.png";
+import Claire from "../../../assets/Claire_DOMASZ.png";
 
 const MoreEmployees = () => {
   const slideIndex = useContext(SlideContext);
@@ -20,11 +21,8 @@ const MoreEmployees = () => {
     moreEmployeeTl.current
       .set(".moreEmployee-cont", { opacity: 100 })
       .from(".moreEmployee-grid", { opacity: 0, duration: 1 }, 0)
-      .to(
-        ".employee",
-        { opacity: 0, y: 2000, stagger: { each: 0.1, from: "end" } },
-        8.5
-      );
+      .to(".moreEmployee-grid", { opacity: 0 }, 8.5)
+      .to(".moreEmployee-cont", { opacity: 0 }, 8.75);
   };
 
   useEffect(() => {
@@ -51,14 +49,14 @@ const MoreEmployees = () => {
       </Container>
       <ul className="grid grid-cols-1 gap-20 xl:grid-cols-2 slide-content-cont moreEmployee-grid employee-grid-2 responsive-grid">
         <EmployeeCard
-          name="Partick Sara"
-          position="Graduate Consultant"
-          quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
-          src={PatrickSara}
+          name="Claire"
+          position="UX Consultant"
+          quote={`"I began my career at Insight as a graduate consultant, fresh from getting my degree. I have had the opportunity to work on a variety of different projects in different ways, making each one interesting and unique. The amazing Strategy & Design team has welcomed me in and taught me so much on each project, helping me to continue to grow as a designer and as a person."`}
+          src={Claire}
         />
         <EmployeeCard
-          name="Partick Sara"
-          position="Graduate Consultant"
+          name="Thomas"
+          position="Power Platform Team Lead"
           quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
           src={PatrickSara}
         />

@@ -8,10 +8,11 @@ const EmployeeCard = (props) => {
         src={props.src}
         alt=""
       />
-
-      <h3 className="mt-6 card-title font-bold gray">{props.name}</h3>
-      <dd className="mt-1 card-body gray">{props.position}</dd>
-      <dt className="card-body gray text-center p-20">{props.quote}</dt>
+      <div className="flex flex-col justify-start items-center">
+        <h3 className="mt-2 card-title font-bold gray">{props.name}</h3>
+        <dd className="mt-1 card-body gray">{props.position}</dd>
+        <dt className="card-body gray text-center px-20 py-4">{props.quote}</dt>
+      </div>
     </li>
   );
 };

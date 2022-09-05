@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { Container } from "react-bootstrap";
 import EmployeeCard from "../../common/EmployeeCard";
 import PatrickSara from "../../../assets/Patrick_SARA.png";
+import Ilson from "../../../assets/Ilson_BISCUOLA.png";
 
 const Employee = () => {
   const slideIndex = useContext(SlideContext);
@@ -55,16 +56,16 @@ const Employee = () => {
       </Container>
       <ul className="grid grid-cols-1 gap-20 xl:grid-cols-2 slide-content-cont employee-grid employee-grid-1 responsive-grid">
         <EmployeeCard
-          name="Partick Sara"
+          name="Partick"
           position="Graduate Consultant"
           quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
           src={PatrickSara}
         />
         <EmployeeCard
-          name="Partick Sara"
-          position="Graduate Consultant"
-          quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
-          src={PatrickSara}
+          name="Ilson"
+          position="Technical Specialist"
+          quote={`"I’ve had an incredible journey at Insight working on several private and public sector products. I’m constantly exposed to new technologies which has developed my career path into new and exciting areas. I’ve also had the opportunity to use these skills to give back to the community. The company culture and values empowers the individual to grow and be their best self"`}
+          src={Ilson}
         />
       </ul>
     </Container>

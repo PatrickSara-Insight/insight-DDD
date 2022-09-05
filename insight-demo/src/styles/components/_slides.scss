@@ -205,7 +205,8 @@
     font-size: 8rem;
 }
 
-.industry-card-title {
+.industry-card-title,
+.project-card-title {
     @include slide-title;
     font-size: calc($font-size-body * 2.5);
     @include gradient-text
@@ -213,4 +214,11 @@
 
 .insight-gradient {
     @include gradient-text
+}
+
+.project-card-title {
+    width: 66%;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%) 0 0 100% 0;
 }

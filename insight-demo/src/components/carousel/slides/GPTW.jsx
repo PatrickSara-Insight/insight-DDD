@@ -68,7 +68,7 @@ const GPTW = () => {
           src={gptw}
         />
         <div className="flex flex-col justify-start items-center mx-auto text-left gptw">
-          <h1 className="title-primary" id="gptw-title">
+          <h1 className="title-secondary" id="gptw-title">
             Insight Benefits
           </h1>
           <h2 className="title-tertiary my-4" id="gptw-subtitle">
