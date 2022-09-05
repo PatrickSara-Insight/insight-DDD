@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useContext } from "react";
 import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
+import ImpactCard from "../../common/ImpactCard";
+import { Container } from "react-bootstrap";
 
 const Impact = () => {
   // insert svg graphics to the left of each div.
@@ -13,10 +15,11 @@ const Impact = () => {
   );
 
   const play = () => {
+    impactTl.current.revert();
     impactTl.current.progress(0).play();
     impactTl.current
       .set(".impact-cont", { opacity: 100 })
-      .from("#impact-title", { opacity: 0, duration: 1.5 })
+      .from("#impact-title", { opacity: 0, duration: 1.5 }, 0)
       .from(
         "#impact-subtitle",
         {
@@ -25,63 +28,79 @@ const Impact = () => {
         0.5
       )
       .from(
-        ".impact-col",
-        { opacity: 0, stagger: { each: 0.2, from: "center" }, duration: 1.5 },
-        1.5
+        ".impact-card",
+        { opacity: 0, stagger: { each: 0.2, from: "start" }, duration: 1.5 },
+        1
       )
       .to(
         ".impact",
-        { opacity: 0, yPercent: 100, stagger: { each: 0.05, from: "end" } },
+        { opacity: 0, y: 1500, stagger: { each: 0.05, from: "end" } },
         9
       );
   };
 
-  const revert = () => {
-    impactTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 3) {
-      console.log("running slide 3");
+      console.log("animating impact...");
       play();
     } else {
-      revert();
+      impactTl.current.pause();
     }
   }, [slideIndex]);
 
   return (
-    <div className="container mx-auto carousel-slide-cont impact-cont">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="slide-body my-2 impact" id="impact-subtitle">
+    <Container fluid className="carousel-slide-cont impact-cont">
+      <Container className="slide-title-cont text-center">
+        <h2 className="slide-subheader my-2 px-4 impact" id="impact-subtitle">
           See how we're making a positive impact
         </h2>
         <h1 className="slide-header-alt mx-0 my-10 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
-      </div>
-      <dl className="mt-10 text-center sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 ">
-        <div className="flex flex-col impact-col impact">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            teammates worldwide
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">
-            12,000 +
-          </dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 impact-col impact">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            countries with insight operations
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">21</dd>
-        </div>
-        <div className="flex flex-col mt-10 sm:mt-0 impact-col impact">
-          <dt className="order-2 mt-2 leading-6 slide-body">
-            technical resources
-          </dt>
-          <dd className="order-1 tracking-tight slide-stat-primary">5000 +</dd>
-        </div>
+      </Container>
+      <dl className="grid grid-cols-1 gap-5 lg:grid-cols-4 slide-content-cont impact-grid">
+        <ImpactCard
+          stat="#16"
+          desc="Australia Best Places to Work"
+          descInfo="Awarded in 2022"
+        />
+        <ImpactCard
+          stat="#7"
+          desc="Fortune World’s Most Admired Companies"
+          descInfo="Awarded in 2021"
+        />
+        <ImpactCard
+          stat="19"
+          desc="Countries with Insight Operations"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="#95"
+          desc="on Forbes World's Best Employers"
+          descInfo="Awarded in 2021"
+        />
+        <ImpactCard
+          stat="#373"
+          desc="on the Fortune 500"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="3.7k"
+          desc="Engineers, Architects and Consultants"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="11k+"
+          desc="Insight Teammates Worldwide"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="#2"
+          desc="Most Gender Diverse Executive Team in Technology"
+          descInfo="Awarded in 2021"
+        />
       </dl>
-    </div>
+    </Container>
   );
 };
 

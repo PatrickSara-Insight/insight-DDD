@@ -27,12 +27,15 @@ function LogoAnimation() {
   );
 
   const setBackground = () => {
+    backgroundControl.current.revert();
+    backgroundControl.current.progress(0).play();
     backgroundControl.current
-      .to(".background-cont", { yPercent: -100, duration: 0.5 }, 9)
-      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 9.25);
+      .to(".background-cont", { yPercent: -100, duration: 0.5 }, 6)
+      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 7);
   };
 
   const play = () => {
+    logoTl.current.revert();
     logoTl.current.progress(0).play();
     logoTl.current
       .set(".logo-cont", { opacity: 100 })
@@ -65,17 +68,13 @@ function LogoAnimation() {
       .to("#logo-dot-btm", { yPercent: -5000 }, 4.4);
   };
 
-  const revert = () => {
-    logoTl.current.revert();
-  };
-
   useEffect(() => {
     if (slideIndex === 0) {
-      console.log("running slide 1");
+      console.log("animating logo...");
       play();
       setBackground();
     } else {
-      revert();
+      logoTl.current.pause();
     }
   }, [slideIndex]);
 

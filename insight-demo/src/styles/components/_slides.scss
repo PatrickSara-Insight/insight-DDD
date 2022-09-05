@@ -4,6 +4,14 @@
     font-family: $font-italic;
 }
 
+.title-primary {
+    @include slide-title
+}
+
+.title-secondary {
+    @include slide-subtitle
+}
+
 .slide-header {
     @include slide-title
 }
@@ -23,13 +31,44 @@
 }
 
 .slide-stat-title {
-    @include slide-body;
-    font-size: calc($font-size-title / 1.5)
+    @include slide-title;
+    @include gradient-text;
+    font-size: calc($font-size-heading / 2)
 }
 
 .slide-body {
     @include slide-body;
     line-height: 1.1;
+}
+
+.card-title {
+    @include slide-title;
+    font-size: calc($font-size-body * 3);
+    color: $color-font-primary;
+}
+
+.card-body {
+    @include slide-body;
+    font-size: calc($font-size-body * 2);
+    color: $color-warm-gray;
+}
+
+.carousel-slide-cont {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    opacity: 0;
+}
+
+.slide-title-cont,
+.slide-content-cont {
+    // margin: 0;
+    width: 100%;
 }
 
 #be-ambitious-title {
@@ -40,17 +79,28 @@
     border-bottom: 15px solid $color-secondary-shade;
 }
 
-.about-container {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 2rem;
+.about-insight-logo {
+    max-width: 50%;
+    min-width: 500px;
+    height: auto;
 }
 
-.about-grid {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+.culture-card-header {
+    position: relative;
+}
+
+.culture-card-header::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-color: inherit;
+    border: solid transparent;
+    content: " ";
+    border-color: #FFFFFF;
+    height: 0;
+    width: 0;
+    border-width: 30px;
+    margin-left: -30px;
 }
 
 .stat-cont {
@@ -62,4 +112,92 @@
     max-width: 30%;
     min-width: 100px;
     height: auto;
+}
+
+.gptw-card {
+    width: 50%;
+    justify-self: center;
+}
+
+.project-logos {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bg-red {
+    background-color: $color-error-shade;
+}
+
+.bg-red::after {
+    border-top-color: $color-error-shade;
+}
+
+.bg-fuchsia {
+    background-color: $color-primary-shade;
+}
+
+.bg-fuchsia::after {
+    border-top-color: $color-primary-shade;
+}
+
+.bg-purple {
+    background-color: $color-secondary-shade;
+}
+
+.bg-purple::after {
+    border-top-color: $color-secondary-shade;
+}
+
+.impact-grid {
+    max-width: 100%;
+}
+
+.gptw-header {
+    font-family: $font-bold;
+    font-size: calc($font-size-body * 2.5);
+}
+
+.gptw-body,
+.impact-body {
+    @include slide-body;
+    font-size: calc($font-size-body * 2);
+    text-align: left;
+    line-height: 1.2;
+    color: $color-dark-gray;
+}
+
+.impact-mute {
+    @include slide-body;
+    font-size: calc($font-size-body * 1.5);
+    text-align: left;
+    color: $color-dark-gray;
+    align-self: end;
+}
+
+.gptw-svg-cont,
+.expertise-svg-cont {
+    height: auto;
+    width: auto;
+}
+
+.gptw-svg {
+    height: 75%;
+    width: 75%;
+}
+
+.expertise-svg {
+    height: 25%;
+    width: 25%;
+}
+
+.expertise-slide-header { 
+    @include slide-title;
+    font-size: 8rem;
+}
+
+.industry-card-title {
+    @include slide-title;
+    font-size: calc($font-size-body * 2.5);
+    @include gradient-text
 }

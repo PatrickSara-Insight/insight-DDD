@@ -30,6 +30,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-red {
+  color: #a5222f;
+}
+
+.font-fuchsia {
+  color: #b40b76;
+}
+
+.font-purple {
+  color: #76379b;
+}
+
 .background-cont {
   background-image: url(../stacked-waves-haikei.svg);
   background-size: cover;
@@ -64,16 +76,6 @@ body {
   z-index: 1;
   height: 100%;
   background: none;
-}
-
-.carousel-slide-cont {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-height: 100%;
-  opacity: 0;
 }
 
 .logo-svg {
@@ -119,24 +121,90 @@ body {
   opacity: 0;
 }
 
+.qr-code {
+  position: absolute;
+  margin: 1rem;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 7.5%;
+  opacity: 100;
+}
+
 .italic {
   font-family: "Klinic Slab Italic", sans-serif;
+}
+
+.title-primary {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+}
+@media screen and (max-width: 1400px) {
+  .title-primary {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title-primary {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .title-primary {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title-primary {
+    font-size: 2rem;
+  }
+}
+
+.title-secondary {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 6rem;
+}
+@media screen and (max-width: 1200px) {
+  .title-secondary {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .title-secondary {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title-secondary {
+    font-size: 1.5rem;
+  }
 }
 
 .slide-header {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
   font-size: 10rem;
-  text-align: center;
 }
 @media screen and (max-width: 1400px) {
   .slide-header {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slide-header {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-header {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .slide-header {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -144,55 +212,100 @@ body {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
   font-size: 10rem;
-  text-align: center;
   font-size: 5rem;
 }
 @media screen and (max-width: 1400px) {
   .slide-header-alt {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slide-header-alt {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-header-alt {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .slide-header-alt {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 .slide-subheader {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 6rem;
+}
+@media screen and (max-width: 1200px) {
+  .slide-subheader {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-subheader {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .slide-subheader {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 .slide-stat-primary {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 6rem;
   font-family: "Klinic Slab Bold", sans-serif;
+}
+@media screen and (max-width: 1200px) {
+  .slide-stat-primary {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-stat-primary {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .slide-stat-primary {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 .slide-stat-title {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 2rem;
-  text-align: center;
-  font-size: 2rem;
+  font-size: 10rem;
+  background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+}
+@media screen and (max-width: 1400px) {
+  .slide-stat-title {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slide-stat-title {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-stat-title {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .slide-stat-title {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
@@ -203,10 +316,69 @@ body {
   text-align: center;
   line-height: 1.1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .slide-body {
     font-size: 1rem;
   }
+}
+
+.card-title {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+  font-size: 3rem;
+  color: #EFE9F4;
+}
+@media screen and (max-width: 1400px) {
+  .card-title {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card-title {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-title {
+    font-size: 2rem;
+  }
+}
+
+.card-body {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #554741;
+}
+@media screen and (max-width: 1200px) {
+  .card-body {
+    font-size: 1rem;
+  }
+}
+
+.carousel-slide-cont {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  opacity: 0;
+}
+
+.slide-title-cont,
+.slide-content-cont {
+  width: 100%;
 }
 
 #be-ambitious-title {
@@ -217,17 +389,28 @@ body {
   border-bottom: 15px solid #76379b;
 }
 
-.about-container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 2rem;
+.about-insight-logo {
+  max-width: 50%;
+  min-width: 500px;
+  height: auto;
 }
 
-.about-grid {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+.culture-card-header {
+  position: relative;
+}
+
+.culture-card-header::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: inherit;
+  border: solid transparent;
+  content: " ";
+  border-color: #FFFFFF;
+  height: 0;
+  width: 0;
+  border-width: 30px;
+  margin-left: -30px;
 }
 
 .stat-cont {
@@ -239,4 +422,174 @@ body {
   max-width: 30%;
   min-width: 100px;
   height: auto;
+}
+
+.gptw-card {
+  width: 50%;
+  justify-self: center;
+}
+
+.project-logos {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-red {
+  background-color: #a5222f;
+}
+
+.bg-red::after {
+  border-top-color: #a5222f;
+}
+
+.bg-fuchsia {
+  background-color: #b40b76;
+}
+
+.bg-fuchsia::after {
+  border-top-color: #b40b76;
+}
+
+.bg-purple {
+  background-color: #76379b;
+}
+
+.bg-purple::after {
+  border-top-color: #76379b;
+}
+
+.impact-grid {
+  max-width: 100%;
+}
+
+.gptw-header {
+  font-family: "Klinic Slab Bold", sans-serif;
+  font-size: 2.5rem;
+}
+
+.gptw-body,
+.impact-body {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  text-align: left;
+  line-height: 1.2;
+  color: #2d2622;
+}
+@media screen and (max-width: 1200px) {
+  .gptw-body,
+.impact-body {
+    font-size: 1rem;
+  }
+}
+
+.impact-mute {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-align: left;
+  color: #2d2622;
+  align-self: end;
+}
+@media screen and (max-width: 1200px) {
+  .impact-mute {
+    font-size: 1rem;
+  }
+}
+
+.gptw-svg-cont,
+.expertise-svg-cont {
+  height: auto;
+  width: auto;
+}
+
+.gptw-svg {
+  height: 75%;
+  width: 75%;
+}
+
+.expertise-svg {
+  height: 25%;
+  width: 25%;
+}
+
+.expertise-slide-header {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+  font-size: 8rem;
+}
+@media screen and (max-width: 1400px) {
+  .expertise-slide-header {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .expertise-slide-header {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .expertise-slide-header {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .expertise-slide-header {
+    font-size: 2rem;
+  }
+}
+
+.industry-card-title {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+  font-size: 2.5rem;
+  background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+@media screen and (max-width: 1400px) {
+  .industry-card-title {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .industry-card-title {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .industry-card-title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .industry-card-title {
+    font-size: 2rem;
+  }
+}
+
+.showcase-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 100;
+  height: 100vh;
+}
+
+.showcase-logo {
+  width: 50%;
+  fill: #554741;
+}
+
+.gray {
+  color: #554741;
 }/*# sourceMappingURL=styles.css.map */
