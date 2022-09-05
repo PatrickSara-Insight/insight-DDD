@@ -48,8 +48,8 @@ function Expertise() {
   }, [slideIndex]);
 
   return (
-    <Container fluid className="carousel-slide-cont mx-auto expertise-cont">
-      <div className="max-w-7xl mx-auto text-center">
+    <Container fluid className="carousel-slide-cont expertise-cont">
+      <Container className="slide-title-cont text-center">
         <h1
           className="slide-header expertise-slide-header expertise mx-0"
           id="expertise-title"
@@ -63,41 +63,39 @@ function Expertise() {
           Tackle today’s ever-changing business environment alongside teams of
           technical experts with decades of industry experience.
         </h2>
-      </div>
-      <div>
-        <dl className="mt-5 lg:mx-20 grid grid-cols-1 gap-5 lg:grid-cols-3 expertise-grid">
-          <ExpertiseCard
-            title="Modern workplace"
-            descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
-            svg={ModernWorkplace}
-          />
-          <ExpertiseCard
-            title="Modern apps"
-            descInfo="Transform legacy applications and create a culture that embraces agile approaches."
-            svg={ModernApps}
-          />
-          <ExpertiseCard
-            title="Modern infrastructure"
-            descInfo="Architect, modernise and manage cloud app, data centers and networking solutions."
-            svg={ModernInfra}
-          />
-          <ExpertiseCard
-            title="Intelligent edge"
-            descInfo="Collect, analyse and act on data across entire organisations to support real-time decision-making."
-            svg={IntelligentEdge}
-          />
-          <ExpertiseCard
-            title="Data and AI"
-            descInfo="Leverage data modeling, artificial intelligence and business analysis to navigate hurdles"
-            svg={DataAI}
-          />
-          <ExpertiseCard
-            title="Cybersecurity"
-            descInfo="Develop comprehensive securiyy strategies that protect networks, end users, and data. "
-            svg={Cybersecurity}
-          />
-        </dl>
-      </div>
+      </Container>
+      <dl className="slide-content-cont grid grid-cols-1 gap-5 lg:grid-cols-3 expertise-grid">
+        <ExpertiseCard
+          title="Modern workplace"
+          descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."
+          svg={ModernWorkplace}
+        />
+        <ExpertiseCard
+          title="Modern apps"
+          descInfo="Transform legacy applications and create a culture that embraces agile approaches."
+          svg={ModernApps}
+        />
+        <ExpertiseCard
+          title="Modern infrastructure"
+          descInfo="Architect, modernise and manage cloud app, data centers and networking solutions."
+          svg={ModernInfra}
+        />
+        <ExpertiseCard
+          title="Intelligent edge"
+          descInfo="Collect, analyse and act on data across entire organisations to support real-time decision-making."
+          svg={IntelligentEdge}
+        />
+        <ExpertiseCard
+          title="Data and AI"
+          descInfo="Leverage data modeling, artificial intelligence and business analysis to navigate hurdles"
+          svg={DataAI}
+        />
+        <ExpertiseCard
+          title="Cybersecurity"
+          descInfo="Develop comprehensive securiyy strategies that protect networks, end users, and data. "
+          svg={Cybersecurity}
+        />
+      </dl>
     </Container>
   );
 }

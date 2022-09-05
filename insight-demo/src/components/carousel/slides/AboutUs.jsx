@@ -47,15 +47,15 @@ const AboutUs = () => {
   }, [slideIndex]);
 
   return (
-    <Container fluid className="carousel-slide-cont about-container mb-12">
+    <Container fluid className="carousel-slide-cont about-container">
       <Image
         className="about-insight-logo about"
         fluid
         alt="insight logo"
         src={Logo}
       />
-      <div className="container min-w-7xl mx-0 about-definition about">
-        <h2 className="slide-header-alt italic about-sub-info text-center">
+      <div className="slide-title-cont about-definition about sm:mx-0 lg:mx-40 xl:mx-80">
+        <h2 className="title-secondary italic about-sub-info text-center">
           noun [mass noun] - The capacity to gain an accurate and deep
           understanding of someone or something.
         </h2>

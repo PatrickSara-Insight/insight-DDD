@@ -39,7 +39,7 @@ function Projects() {
   };
 
   useEffect(() => {
-    if (slideIndex === 8) {
+    if (slideIndex === 11) {
       console.log("animating projects...");
       setBackground();
       play();

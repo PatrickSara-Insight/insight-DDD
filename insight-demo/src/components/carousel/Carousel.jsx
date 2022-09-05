@@ -14,10 +14,13 @@ import GPTW from "./slides/GPTW";
 import Expertise from "./slides/Expertise";
 import Industry from "./slides/Industry";
 import Projects from "./slides/Projects";
+import Employee from "./slides/Employees";
+import Microsoft from "./slides/Microsoft";
+import MoreEmployees from "./slides/MoreEmployees";
 
 const PapaCarousel = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const ENDSLIDEINDEX = 7;
+  const ENDSLIDEINDEX = 11;
   const SLIDEDURATION = 10000;
 
   const nextSlide = useCallback(() => {
@@ -71,18 +74,21 @@ const PapaCarousel = () => {
           <Carousel.Item className="carousel-item">
             <Industry />
           </Carousel.Item>
-          {/* microsoft gold partner slide */}
-          {/* day in the life slides here */}
+          <Carousel.Item className="carousel-item">
+            <Microsoft />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item">
+            <Employee />
+          </Carousel.Item>
+          <Carousel.Item className="carousel-item">
+            <MoreEmployees />
+          </Carousel.Item>
           <Carousel.Item className="carousel-item">
             <BeAmbitious />
           </Carousel.Item>
-
-          {/*
-
-
           <Carousel.Item className="carousel-item">
             <Projects />
-          </Carousel.Item> */}
+          </Carousel.Item>
         </Carousel>
       </SlideContext.Provider>
       <Container fluid className="background-cont">

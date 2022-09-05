@@ -78,16 +78,6 @@ body {
   background: none;
 }
 
-.carousel-slide-cont {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-height: 100%;
-  opacity: 0;
-}
-
 .logo-svg {
   z-index: 99;
   opacity: 0;
@@ -145,6 +135,53 @@ body {
   font-family: "Klinic Slab Italic", sans-serif;
 }
 
+.title-primary {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 10rem;
+}
+@media screen and (max-width: 1400px) {
+  .title-primary {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .title-primary {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .title-primary {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title-primary {
+    font-size: 2rem;
+  }
+}
+
+.title-secondary {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 6rem;
+}
+@media screen and (max-width: 1200px) {
+  .title-secondary {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .title-secondary {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title-secondary {
+    font-size: 1.5rem;
+  }
+}
+
 .slide-header {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
@@ -152,12 +189,22 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .slide-header {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slide-header {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-header {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .slide-header {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -169,35 +216,65 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .slide-header-alt {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slide-header-alt {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-header-alt {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .slide-header-alt {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
 .slide-subheader {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 3rem;
+  font-size: 6rem;
+}
+@media screen and (max-width: 1200px) {
+  .slide-subheader {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-subheader {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .slide-subheader {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 .slide-stat-primary {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 3rem;
+  font-size: 6rem;
   font-family: "Klinic Slab Bold", sans-serif;
+}
+@media screen and (max-width: 1200px) {
+  .slide-stat-primary {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-stat-primary {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .slide-stat-primary {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -213,12 +290,22 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .slide-stat-title {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .slide-stat-title {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .slide-stat-title {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .slide-stat-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -229,7 +316,7 @@ body {
   text-align: center;
   line-height: 1.1;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .slide-body {
     font-size: 1rem;
   }
@@ -239,17 +326,27 @@ body {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
   font-size: 10rem;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #EFE9F4;
 }
 @media screen and (max-width: 1400px) {
   .card-title {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card-title {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card-title {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .card-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -258,13 +355,30 @@ body {
   color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #554741;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .card-body {
     font-size: 1rem;
   }
+}
+
+.carousel-slide-cont {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  opacity: 0;
+}
+
+.slide-title-cont,
+.slide-content-cont {
+  width: 100%;
 }
 
 #be-ambitious-title {
@@ -279,22 +393,6 @@ body {
   max-width: 50%;
   min-width: 500px;
   height: auto;
-}
-
-.about-grid {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.culture-cont,
-.culture-sub-cont,
-.gptw-cont,
-.impact-cont,
-.industry-cont,
-.ba-cont {
-  min-width: 100%;
-  margin: 0;
 }
 
 .culture-card-header {
@@ -381,7 +479,7 @@ body {
   line-height: 1.2;
   color: #2d2622;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .gptw-body,
 .impact-body {
     font-size: 1rem;
@@ -398,14 +496,10 @@ body {
   color: #2d2622;
   align-self: end;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .impact-mute {
     font-size: 1rem;
   }
-}
-
-.gptw-grid {
-  max-width: 66%;
 }
 
 .gptw-svg-cont,
@@ -432,12 +526,22 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .expertise-slide-header {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .expertise-slide-header {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .expertise-slide-header {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .expertise-slide-header {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -453,12 +557,22 @@ body {
 }
 @media screen and (max-width: 1400px) {
   .industry-card-title {
-    font-size: 6rem;
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .industry-card-title {
+    font-size: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .industry-card-title {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .industry-card-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 

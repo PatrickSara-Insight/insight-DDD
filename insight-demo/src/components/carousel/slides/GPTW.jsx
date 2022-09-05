@@ -60,11 +60,8 @@ const GPTW = () => {
   }, [slideIndex]);
 
   return (
-    <Container
-      fluid
-      className="container mx-auto carousel-slide-cont gptw-cont"
-    >
-      <div className="flex flex-row justify-center items-start mb-6">
+    <Container fluid className="carousel-slide-cont gptw-cont">
+      <Container className="slide-title-cont flex flex-row justify-center items-start">
         <Image
           className="gptw-logo gptw"
           alt="great place to work award"
@@ -78,8 +75,8 @@ const GPTW = () => {
             No. 16 Australia Best Places To Work
           </h2>
         </div>
-      </div>
-      <dl className="rounded-lg shadow-lg mt-5 lg:mx-10 grid grid-cols-4 gap-10 gptw-grid bg-slate-100 pb-10 gptw-grid gptw">
+      </Container>
+      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-4 gap-10 gptw-grid bg-slate-100 gptw-grid gptw">
         <GptwCard title="Additional annual leave" svg={AnnualLeave} />
         <GptwCard title="Social events" svg={SocialEvents} />
         <GptwCard title="Work life balance days" svg={Balance} />

@@ -24,24 +24,35 @@ import Retail from "../../assets/retail-industry-icon.png";
 import Service from "../../assets/service-provider-industry-icon.png";
 import SmallBusiness from "../../assets/small-medium-industry-icon.png";
 import Travel from "../../assets/travel-industry-icon.png";
+import Employee from "../carousel/slides/Employees";
+import EmployeeCard from "../common/EmployeeCard";
+import MicrosoftLogo from "../../assets/microsoft-logo-white.png";
+import MicrosoftCard from "../common/MicrosoftCard";
 
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <div className="max-w-7xl mx-auto text-center">
-        <h1 className="slide-header expertise-slide-header gray mx-0 ">
-          Industries we serve
+      <Container className="slide-title-cont text-center">
+        <Image alt="microsoft logo" src={MicrosoftLogo} />
+        <h1
+          className="slide-header-alt mx-0 my-10 microsoft"
+          id="microsoft-title"
+        >
+          Our head is only in one cloud
         </h1>
-        <h2 className="slide-subheader gray mx-0 mt-2">
-          We offer breadth and depth — combining deep industry expertise and
-          technical skills
-        </h2>
-      </div>
-      <div className="max-w-5xl">
-        <h1 className="slide-header ambitious" id="be-ambitious-title">
-          Now is the time to be ambitious.
-        </h1>
-      </div>
+      </Container>
+      <dl className="grid grid-cols-1 gap-5 lg:grid-cols-5 slide-content-cont microsoft-grid">
+        <MicrosoftCard desc="Solution Assessment (Aus) Partner of the Year" />
+        <MicrosoftCard desc="12 Advanced Specialisations in Azure, Security &#38; Modern Work" />
+        <MicrosoftCard desc="18 Microsoft Gold Competencies" />
+        <MicrosoftCard desc="Migration to Azure Partner of the Year" />
+        <MicrosoftCard desc="Azure Security Deployment Global Partner of the Year" />
+        <MicrosoftCard desc="Microsoft Azure Expert MSP and pure-play cloud strategy" />
+        <MicrosoftCard desc="Data &#38; AI Inner Circle Partner" />
+        <MicrosoftCard desc="IoT G10 &#38; Microsoft Bonsai Partner" />
+        <MicrosoftCard desc="Elite DevOps &#38; GitHub Verified Partner" />
+        <MicrosoftCard desc="Global LSP, CSP, and Surface Partner" />
+      </dl>
     </Container>
   );
 };

@@ -45,36 +45,36 @@ const Culture = () => {
   }, [slideIndex]);
 
   return (
-    <Container fluid className="container carousel-slide-cont culture-cont">
-      <div className="culture-sub-cont mx-auto text-center mb-5">
-        <h1 className="slide-header culture" id="culture-title">
+    <Container fluid className="carousel-slide-cont culture-cont">
+      <Container className="slide-content-cont culture-sub-cont text-center">
+        <h1 className="title-primary culture" id="culture-title">
           Core Values
         </h1>
         <h2
-          className="slide-subheader text-center culture"
+          className="title-secondary text-center culture"
           id="culture-subtitle"
         >
           Our success starts with our culture
         </h2>
-      </div>
-      <dl className="mt-5 mx-20 grid grid-cols-1 gap-20 lg:grid-cols-3 culture-grid">
+      </Container>
+      <dl className="grid grid-cols-1 gap-20 lg:grid-cols-3 slide-content-cont culture-grid">
         <ValueCard
           title="Hunger"
           desc="We are change agents, united in our passion to improve every day
-                and deliver outstanding results for our clients, partners and
-                Insight."
+          and deliver outstanding results for our clients, partners and
+          Insight."
           bg="bg-red"
         />
         <ValueCard
           title="Heart"
           desc="We are teammates. We take care of each other, our clients and
-                our communities."
+          our communities."
           bg="bg-fuchsia"
         />
         <ValueCard
           title="Harmony"
           desc="We are a team of diverse individuals who value inclusivity and
-                create meaningful connections so we can win together."
+          create meaningful connections so we can win together."
           bg="bg-purple"
         />
       </dl>

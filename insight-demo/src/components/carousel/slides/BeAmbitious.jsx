@@ -23,7 +23,7 @@ function BeAmbitious() {
   };
 
   useEffect(() => {
-    if (slideIndex === 7) {
+    if (slideIndex === 10) {
       console.log("animating be ambitious...");
       play();
     } else {
@@ -32,7 +32,7 @@ function BeAmbitious() {
   }, [slideIndex]);
 
   return (
-    <Container className="carousel-slide-cont ba-cont max-w-5xl">
+    <Container className="carousel-slide-cont">
       <h1 className="slide-header ambitious" id="be-ambitious-title">
         Now is the time to be ambitious.
       </h1>

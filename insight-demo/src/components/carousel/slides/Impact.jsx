@@ -49,63 +49,57 @@ const Impact = () => {
   }, [slideIndex]);
 
   return (
-    <Container
-      fluid
-      className="container mx-auto carousel-slide-cont impact-cont"
-    >
-      <div className="max-w-4xl mx-auto text-center">
+    <Container fluid className="carousel-slide-cont impact-cont">
+      <Container className="slide-title-cont text-center">
         <h2 className="slide-subheader my-2 px-4 impact" id="impact-subtitle">
           See how we're making a positive impact
         </h2>
         <h1 className="slide-header-alt mx-0 my-10 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
-      </div>
-      <div className="max-w-screen-2xl">
-        <dl className="mt-5 lg:mx-10 grid grid-cols-1 gap-5 lg:grid-cols-4 impact-grid">
-          <ImpactCard
-            stat="#16"
-            desc="Australia Best Places to Work"
-            descInfo="Awarded in 2022"
-          />
-          <ImpactCard
-            stat="#7"
-            desc="Fortune World’s Most Admired Companies"
-            descInfo="Awarded in 2021"
-          />
-          <ImpactCard
-            stat="19"
-            desc="Countries with Insight Operations"
-            descInfo="As of 2022"
-          />
-          <ImpactCard
-            stat="#95"
-            desc="on Forbes World's Best Employers"
-            descInfo="Awarded in 2021"
-          />
-          <ImpactCard
-            stat="#373"
-            desc="on the Fortune 500"
-            descInfo="As of 2022"
-          />
-          <ImpactCard
-            stat="3.7k"
-            desc="Engineers, Architects and Consultants
-"
-            descInfo="As of 2022"
-          />
-          <ImpactCard
-            stat="11k+"
-            desc="Insight Teammates Worldwide"
-            descInfo="As of 2022"
-          />
-          <ImpactCard
-            stat="#2"
-            desc="Most Gender Diverse Executive Team in Technology"
-            descInfo="Awarded in 2021"
-          />
-        </dl>
-      </div>
+      </Container>
+      <dl className="grid grid-cols-1 gap-5 lg:grid-cols-4 slide-content-cont impact-grid">
+        <ImpactCard
+          stat="#16"
+          desc="Australia Best Places to Work"
+          descInfo="Awarded in 2022"
+        />
+        <ImpactCard
+          stat="#7"
+          desc="Fortune World’s Most Admired Companies"
+          descInfo="Awarded in 2021"
+        />
+        <ImpactCard
+          stat="19"
+          desc="Countries with Insight Operations"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="#95"
+          desc="on Forbes World's Best Employers"
+          descInfo="Awarded in 2021"
+        />
+        <ImpactCard
+          stat="#373"
+          desc="on the Fortune 500"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="3.7k"
+          desc="Engineers, Architects and Consultants"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="11k+"
+          desc="Insight Teammates Worldwide"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="#2"
+          desc="Most Gender Diverse Executive Team in Technology"
+          descInfo="Awarded in 2021"
+        />
+      </dl>
     </Container>
   );
 };

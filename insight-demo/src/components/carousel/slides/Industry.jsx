@@ -46,11 +46,8 @@ const Industry = () => {
   }, [slideIndex]);
 
   return (
-    <Container
-      fluid
-      className="container mx-auto carousel-slide-cont industry-cont"
-    >
-      <div className="max-w-screen-2xl mx-auto text-center">
+    <Container fluid className="carousel-slide-cont industry-cont">
+      <Container className="slide-title-cont text-center">
         <h1 className="slide-header mx-0 my-10 industry" id="industry-title">
           Industries we serve
         </h1>
@@ -61,22 +58,17 @@ const Industry = () => {
           We offer breadth and depth — combining deep industry expertise and
           technical skills
         </h2>
-      </div>
-      <div className="max-w-screen-2xl">
-        <dl className="mt-5 lg:mx-10 grid grid-cols-1 gap-5 lg:grid-cols-4 industry-grid">
-          <IndustryCard title="Construction technology" svg={Construction} />
-          <IndustryCard title="Financial services" svg={Financial} />
-          <IndustryCard
-            title="Healthcare &#38; life sciences"
-            svg={Healthcare}
-          />
-          <IndustryCard title="Manufacturing technology" svg={Manufacturing} />
-          <IndustryCard title="Retail &#38; restaurants" svg={Retail} />
-          <IndustryCard title="Service providers" svg={Service} />
-          <IndustryCard title="Small to medium business" svg={SmallBusiness} />
-          <IndustryCard title="Travel &#38; tourism" svg={Travel} />
-        </dl>
-      </div>
+      </Container>
+      <dl className="slide-content-cont grid grid-cols-1 gap-5 lg:grid-cols-4 industry-grid">
+        <IndustryCard title="Construction technology" svg={Construction} />
+        <IndustryCard title="Financial services" svg={Financial} />
+        <IndustryCard title="Healthcare &#38; life sciences" svg={Healthcare} />
+        <IndustryCard title="Manufacturing technology" svg={Manufacturing} />
+        <IndustryCard title="Retail &#38; restaurants" svg={Retail} />
+        <IndustryCard title="Service providers" svg={Service} />
+        <IndustryCard title="Small to medium business" svg={SmallBusiness} />
+        <IndustryCard title="Travel &#38; tourism" svg={Travel} />
+      </dl>
     </Container>
   );
 };

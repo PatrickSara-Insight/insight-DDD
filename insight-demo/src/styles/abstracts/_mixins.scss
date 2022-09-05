@@ -6,21 +6,37 @@
     font-size: $font-size-heading;
 
     @media screen and (max-width: $extra-large) {
-        font-size: $font-size-subheader;
+        font-size: calc($font-size-heading / 2);
     }
 
-        @media screen and (max-width: $small) {
-            font-size: calc($font-size-subheader / 2);
-        }
+    @media screen and (max-width: $large) {
+        font-size: calc($font-size-heading / 3);
+    }
+
+    @media screen and (max-width: $medium) {
+        font-size: calc($font-size-heading / 4);
+    }
+
+    @media screen and (max-width: $small) {
+        font-size: calc($font-size-heading / 5);
+    }
 }
 
 @mixin slide-subtitle {
     font-family: $font-subheading;
     color: $color-font-primary;
-    font-size: calc($font-size-subheader / 2);
+    font-size: $font-size-subheader;
+
+    @media screen and (max-width: $large) {
+        font-size: calc($font-size-subheader / 2);
+    }
+
+    @media screen and (max-width: $medium) {
+        font-size: calc($font-size-subheader / 3);
+    }
 
     @media screen and (max-width: $small) {
-        font-size: calc($font-size-subheader / 3);
+        font-size: calc($font-size-subheader / 4);
     }
 }
 
@@ -30,7 +46,7 @@
     font-size: calc($font-size-body * 2);
     text-align: center;
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $large) {
         font-size: calc($font-size-body);
     }
 }
