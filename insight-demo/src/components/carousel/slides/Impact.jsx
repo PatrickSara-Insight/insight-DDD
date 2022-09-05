@@ -34,8 +34,8 @@ const Impact = () => {
       )
       .to(
         ".impact",
-        { opacity: 0, y: 1500, stagger: { each: 0.05, from: "end" } },
-        9
+        { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
+        8
       );
   };
 
@@ -51,14 +51,14 @@ const Impact = () => {
   return (
     <Container fluid className="carousel-slide-cont impact-cont">
       <Container className="slide-title-cont text-center">
-        <h2 className="slide-subheader my-2 px-4 impact" id="impact-subtitle">
-          See how we're making a positive impact
-        </h2>
-        <h1 className="slide-header-alt mx-0 my-10 impact" id="impact-title">
+        <h1 className="title-secondary mx-0 mb-2 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
+        <h2 className="slide-body mb-20 px-4 impact" id="impact-subtitle">
+          See how we're making a positive impact
+        </h2>
       </Container>
-      <dl className="grid grid-cols-1 gap-5 lg:grid-cols-4 slide-content-cont impact-grid">
+      <dl className="grid grid-cols-1 gap-5 xl:grid-cols-4 slide-content-cont impact-grid responsive-grid">
         <ImpactCard
           stat="#16"
           desc="Australia Best Places to Work"

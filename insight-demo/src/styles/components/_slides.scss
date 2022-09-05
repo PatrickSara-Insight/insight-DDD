@@ -12,6 +12,11 @@
     @include slide-subtitle
 }
 
+.title-tertiary {
+    @include slide-subtitle;
+    font-size: calc($font-size-heading / 3)
+}
+
 .slide-header {
     @include slide-title
 }
@@ -77,6 +82,10 @@
 
 #ambitious-it-span {
     border-bottom: 15px solid $color-secondary-shade;
+}
+
+.responsive-grid {
+    @include grid-flex
 }
 
 .about-insight-logo {
@@ -182,8 +191,8 @@
 }
 
 .gptw-svg {
-    height: 75%;
-    width: 75%;
+    height: 50%;
+    width: 50%;
 }
 
 .expertise-svg {
@@ -199,5 +208,9 @@
 .industry-card-title {
     @include slide-title;
     font-size: calc($font-size-body * 2.5);
+    @include gradient-text
+}
+
+.insight-gradient {
     @include gradient-text
 }

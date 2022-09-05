@@ -8,7 +8,7 @@ const ValueCard = (props) => {
       >
         <h3 className="card-title font-bold">{props.title}</h3>
       </dd>
-      <dt className="card-body gray text-center my-5 p-20">{props.desc}</dt>
+      <dt className="card-body gray text-center my-5 p-16">{props.desc}</dt>
     </div>
   );
 };

@@ -30,8 +30,8 @@ const AboutUs = () => {
         ".about",
         {
           opacity: 0,
-          stagger: { each: 0.5, from: "end" },
-          duration: 1.5,
+          stagger: { each: 0.25, from: "end" },
+          duration: 1,
         },
         8
       );
@@ -54,8 +54,8 @@ const AboutUs = () => {
         alt="insight logo"
         src={Logo}
       />
-      <div className="slide-title-cont about-definition about sm:mx-0 lg:mx-40 xl:mx-80">
-        <h2 className="title-secondary italic about-sub-info text-center">
+      <div className="slide-title-cont about-definition about my-10">
+        <h2 className="title-secondary italic about-sub-info text-center mx:0 md:mx-10 lg:mx-40 xl:mx-80 px-0 lg:px-40 xl:px-80">
           noun [mass noun] - The capacity to gain an accurate and deep
           understanding of someone or something.
         </h2>

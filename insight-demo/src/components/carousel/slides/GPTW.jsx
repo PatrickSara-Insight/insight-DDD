@@ -68,15 +68,15 @@ const GPTW = () => {
           src={gptw}
         />
         <div className="flex flex-col justify-start items-center mx-auto text-left gptw">
-          <h1 className="slide-header" id="gptw-title">
+          <h1 className="title-primary" id="gptw-title">
             Insight Benefits
           </h1>
-          <h2 className="slide-subheader my-4" id="gptw-subtitle">
+          <h2 className="title-tertiary my-4" id="gptw-subtitle">
             No. 16 Australia Best Places To Work
           </h2>
         </div>
       </Container>
-      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-4 gap-10 gptw-grid bg-slate-100 gptw-grid gptw">
+      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-4 gap-10 gptw-grid bg-slate-100 gptw-grid responsive-grid gptw">
         <GptwCard title="Additional annual leave" svg={AnnualLeave} />
         <GptwCard title="Social events" svg={SocialEvents} />
         <GptwCard title="Work life balance days" svg={Balance} />
