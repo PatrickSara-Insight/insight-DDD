@@ -68,7 +68,7 @@ const Employee = () => {
         <EmployeeCard
           name="Partick"
           position="Graduate Consultant"
-          quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
+          quote={`"“I have had the privilege of joining Insight as a graduate consultant, and in the short time I have been here, I have already worked on a variety of exciting projects. The team around me has made every effort to expose me to different areas of the industry and support me in my career development.”`}
           src={PatrickSara}
         />
         <EmployeeCard

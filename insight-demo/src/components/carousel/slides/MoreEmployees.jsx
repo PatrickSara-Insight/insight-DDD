@@ -3,7 +3,7 @@ import { SlideContext } from "../../../store/SlideContext";
 import gsap from "gsap";
 import { Container } from "react-bootstrap";
 import EmployeeCard from "../../common/EmployeeCard";
-import PatrickSara from "../../../assets/Patrick_SARA.png";
+import Thomas from "../../../assets/Thomas.png";
 import Claire from "../../../assets/Claire_DOMASZ.png";
 
 const MoreEmployees = () => {
@@ -69,7 +69,7 @@ const MoreEmployees = () => {
           name="Thomas"
           position="Power Platforms Team Lead"
           quote={`"At Insight, I have been very fortunate to have the opportunity to work on many exciting projects while growing my career alongside a diverse group of transparent, like-minded, inspirational and supportive teammates. I am trusted by my teammates with responsibility and freedom to do the work I enjoy. This year, I look forward to smashing more goals with my teammates #beAmbitious"`}
-          src={PatrickSara}
+          src={Thomas}
         />
       </ul>
     </Container>
