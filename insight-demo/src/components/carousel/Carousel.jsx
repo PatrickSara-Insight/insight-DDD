@@ -75,9 +75,14 @@ const PapaCarousel = () => {
         </Carousel>
       </SlideContext.Provider>
       <Container fluid className="background-cont">
-        <Image className="logo-vertical" fluid alt="insight-logo" src={Logo} />
         <Image
-          className="qr-code"
+          className="logo-vertical small-display-none"
+          fluid
+          alt="insight-logo"
+          src={Logo}
+        />
+        <Image
+          className="qr-code small-display-none"
           fluid
           alt="insight qr code for ddd"
           src={QR}

@@ -32,7 +32,8 @@ function LogoAnimation() {
     backgroundControl.current.progress(0).play();
     backgroundControl.current
       .to(".background-cont", { yPercent: -100, duration: 0.5 }, 6)
-      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 7);
+      .to(".logo-vertical", { opacity: 100, duration: 1.5 }, 7)
+      .to(".qr-code", { opacity: 100, duration: 1.5 }, 7);
   };
 
   const play = () => {

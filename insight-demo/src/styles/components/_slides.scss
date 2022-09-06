@@ -13,8 +13,7 @@
 }
 
 .title-tertiary {
-    @include slide-subtitle;
-    font-size: calc($font-size-heading / 3)
+    @include slide-body;
 }
 
 .slide-header {
@@ -47,15 +46,11 @@
 }
 
 .card-title {
-    @include slide-title;
-    font-size: calc($font-size-body * 3);
-    color: $color-font-primary;
+    @include card-title;
 }
 
 .card-body {
-    @include slide-body;
-    font-size: calc($font-size-body * 2);
-    color: $color-warm-gray;
+    @include card-body;
 }
 
 .carousel-slide-cont {
@@ -90,7 +85,6 @@
 
 .about-insight-logo {
     max-width: 50%;
-    min-width: 500px;
     height: auto;
 }
 
@@ -108,8 +102,8 @@
     border-color: #FFFFFF;
     height: 0;
     width: 0;
-    border-width: 30px;
-    margin-left: -30px;
+    border-width: 15px;
+    margin-left: -15px;
 }
 
 .stat-cont {
@@ -169,8 +163,7 @@
 
 .gptw-body,
 .impact-body {
-    @include slide-body;
-    font-size: calc($font-size-body * 2);
+    @include card-body;
     text-align: left;
     line-height: 1.2;
     color: $color-dark-gray;
@@ -207,9 +200,20 @@
 
 .industry-card-title,
 .project-card-title {
-    @include slide-title;
-    font-size: calc($font-size-body * 2.5);
+    @include card-title;
     @include gradient-text
+}
+
+.microsoft-card-title {
+    @include slide-body;
+    @include gradient-text;
+}
+
+.industry-svg {
+    @media screen and (max-width: $small) {
+        height: 3rem;
+        width: 3rem;
+    }
 }
 
 .insight-gradient {
@@ -225,4 +229,10 @@
 
 .projects-container {
     height: 100%;
+}
+
+.small-display-none {
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
 }

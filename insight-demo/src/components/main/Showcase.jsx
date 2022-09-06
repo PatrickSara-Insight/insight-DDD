@@ -46,19 +46,27 @@ import QR from "../../assets/DDDQR.png";
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <Container
-        fluid
-        className="flex flex-col justify-evenly items-center projects-container"
+      <h1 className="title-primary text-center mb-20 gray">
+        Now is the time to be ambitious.
+      </h1>
+      <a
+        target="_blank"
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=EnVjbBfEeE6dYrYSWOS2GceQhB2c5b5CrLD6hDE4otRUQlc5WlJEM05TQ1VJNEw0N1BLTkoyQjhaSi4u"
+        rel="noreferrer"
       >
-        <ProjectCont title="Public Sector" src={PublicSector} />
-        <ProjectCont title="Education" src={Education} />
-        <ProjectCont title="Entertainment  &#38; Finance" src={Entertainment} />
-        <ProjectCont
-          title="Manufacturing  &#38; Utilities"
-          src={Manfacturing}
+        <Image
+          className="ba-qr-code w-64 h-64"
+          fluid
+          alt="insight qr code for ddd"
+          src={QR}
         />
-        <ProjectCont title="Mining" src={Mining} />
-      </Container>
+      </a>
+      <h2
+        className="title-secondary text-center mt-20 font-bold gray"
+        id="join-us"
+      >
+        Join us
+      </h2>
     </Container>
   );
 };

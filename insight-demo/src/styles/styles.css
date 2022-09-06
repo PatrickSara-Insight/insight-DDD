@@ -128,7 +128,7 @@ body {
   left: 0;
   height: auto;
   width: 7.5%;
-  opacity: 100;
+  opacity: 0;
 }
 
 .italic {
@@ -185,22 +185,12 @@ body {
 .title-tertiary {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 6rem;
-  font-size: 3.3333333333rem;
+  font-size: 2rem;
+  text-align: center;
 }
 @media screen and (max-width: 1200px) {
   .title-tertiary {
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 992px) {
-  .title-tertiary {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .title-tertiary {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -347,38 +337,24 @@ body {
 .card-title {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 10rem;
   font-size: 3rem;
-  color: #EFE9F4;
-}
-@media screen and (max-width: 1400px) {
-  .card-title {
-    font-size: 5rem;
-  }
+  text-align: center;
 }
 @media screen and (max-width: 1200px) {
   .card-title {
-    font-size: 3.3333333333rem;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 992px) {
   .card-title {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .card-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 .card-body {
   font-family: "Klinic Slab Light", sans-serif;
-  color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 2rem;
-  color: #554741;
 }
 @media screen and (max-width: 1200px) {
   .card-body {
@@ -424,7 +400,6 @@ body {
 
 .about-insight-logo {
   max-width: 50%;
-  min-width: 500px;
   height: auto;
 }
 
@@ -442,8 +417,8 @@ body {
   border-color: #FFFFFF;
   height: 0;
   width: 0;
-  border-width: 30px;
-  margin-left: -30px;
+  border-width: 15px;
+  margin-left: -15px;
 }
 
 .stat-cont {
@@ -504,10 +479,8 @@ body {
 .gptw-body,
 .impact-body {
   font-family: "Klinic Slab Light", sans-serif;
-  color: #EFE9F4;
   font-size: 2rem;
   text-align: center;
-  font-size: 2rem;
   text-align: left;
   line-height: 1.2;
   color: #2d2622;
@@ -582,35 +555,46 @@ body {
 .project-card-title {
   font-family: "Klinic Slab Light", sans-serif;
   color: #EFE9F4;
-  font-size: 10rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-align: center;
   background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
-@media screen and (max-width: 1400px) {
-  .industry-card-title,
-.project-card-title {
-    font-size: 5rem;
-  }
-}
 @media screen and (max-width: 1200px) {
   .industry-card-title,
 .project-card-title {
-    font-size: 3.3333333333rem;
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 992px) {
   .industry-card-title,
 .project-card-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }
+
+.microsoft-card-title {
+  font-family: "Klinic Slab Light", sans-serif;
+  color: #EFE9F4;
+  font-size: 2rem;
+  text-align: center;
+  background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+@media screen and (max-width: 1200px) {
+  .microsoft-card-title {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .industry-card-title,
-.project-card-title {
-    font-size: 2rem;
+  .industry-svg {
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -631,6 +615,12 @@ body {
 
 .projects-container {
   height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .small-display-none {
+    display: none;
+  }
 }
 
 .showcase-cont {

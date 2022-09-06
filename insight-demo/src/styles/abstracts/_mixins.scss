@@ -51,6 +51,31 @@
     }
 }
 
+@mixin card-title {
+    font-family: $font-heading;
+    color: $color-font-primary;
+    font-size: calc($font-size-body * 3);
+    text-align: center;
+    
+    @media screen and (max-width: $large) {
+        font-size: calc($font-size-body * 2);
+        }
+
+    @media screen and (max-width: $medium) {
+        font-size: calc($font-size-body * 1.5);
+    }
+}
+
+@mixin card-body {
+        font-family: $font-heading;
+        font-size: calc($font-size-body * 2);
+        text-align: center;
+        
+        @media screen and (max-width: $large) {
+            font-size: calc($font-size-body);
+        }
+}
+
 @mixin gradient-text {
         background-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%);
         background-clip: text;

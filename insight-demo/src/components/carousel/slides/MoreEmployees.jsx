@@ -47,8 +47,8 @@ const MoreEmployees = () => {
 
   return (
     <Container fluid className="carousel-slide-cont moreEmployee-cont">
-      <Container className="slide-content-cont employee-sub-cont text-center mb-20">
-        <h1 className="title-primary employee" id="moreEmployee-title">
+      <Container className="slide-content-cont employee-sub-cont text-center mb-2 lg:mb-20">
+        <h1 className="title-primary employee" id="employee-title">
           A day in the life
         </h1>
         <h2
@@ -58,7 +58,7 @@ const MoreEmployees = () => {
           See what some of our employees have to say
         </h2>
       </Container>
-      <ul className="grid grid-cols-1 gap-20 xl:grid-cols-2 slide-content-cont moreEmployee-grid employee-grid-2 responsive-grid">
+      <ul className="grid grid-cols-1 gap-4 lg:gap-20 lg:grid-cols-2 slide-content-cont moreEmployee-grid employee-grid-2 responsive-grid">
         <EmployeeCard
           name="Claire"
           position="UX Consultant"
