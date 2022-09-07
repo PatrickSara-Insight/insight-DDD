@@ -21,6 +21,7 @@ const Employee = () => {
     employeeTl.current.progress(0).play();
     employeeTl.current
       .set(".employee-cont", { opacity: 100 })
+      .set(".employee", { opacity: 100 })
       .from("#employee-title", { opacity: 0 })
       .from(
         "#employee-subtitle",
@@ -68,7 +69,7 @@ const Employee = () => {
         <EmployeeCard
           name="Partick"
           position="Graduate Consultant"
-          quote={`"“I have had the privilege of joining Insight as a graduate consultant, and in the short time I have been here, I have already worked on a variety of exciting projects. The team around me has made every effort to expose me to different areas of the industry and support me in my career development.”`}
+          quote={`"I have had the privilege of joining Insight as a graduate consultant, and in the short time I have been here, I have already worked on a variety of exciting projects. The team around me has made every effort to expose me to different areas of the industry and support me in my career development.”`}
           src={PatrickSara}
         />
         <EmployeeCard

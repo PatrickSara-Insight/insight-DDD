@@ -6,7 +6,7 @@ import QR from "../../../assets/DDDQR.png";
 
 function BeAmbitious() {
   const { slideIndex, setSlideIndex } = useContext(SlideContext);
-  const SLIDEDURATION = 8000;
+  const SLIDEDURATION = 8500;
 
   const bATl = useRef(
     gsap.timeline({

@@ -23,8 +23,7 @@ const MoreEmployees = () => {
       .set(".moreEmployee-cont", { opacity: 100 })
       .set("#moreEmployee-title", { opacity: 100 })
       .from(".moreEmployee-grid", { opacity: 0, duration: 1 }, 0)
-      .to(".moreEmployee-grid", { opacity: 0 }, 18.5)
-      .to(".moreEmployee-cont", { opacity: 0 }, 18.75);
+      .to(".employee", { opacity: 0 }, 18.5);
   };
 
   const nextSlide = useCallback(() => {
