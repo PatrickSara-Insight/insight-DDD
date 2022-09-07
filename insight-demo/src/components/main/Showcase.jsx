@@ -46,36 +46,54 @@ import QR from "../../assets/DDDQR.png";
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <Container className="slide-content-cont culture-sub-cont text-center min-w-fit mx-0">
-        <h1 className="title-primary culture" id="culture-title">
-          Core Values
+      <Container className="slide-title-cont text-center ">
+        <h1 className="gray title-secondary mx-0 mb-2 impact" id="impact-title">
+          Local presence, global reach, since 1988
         </h1>
-        <h2
-          className="title-secondary text-center culture"
-          id="culture-subtitle"
-        >
-          Our success starts with our culture
+        <h2 className="gray title-tertiary px-4 impact" id="impact-subtitle">
+          See how we're making a positive impact
         </h2>
       </Container>
-      <dl className="grid grid-cols-1 gap-4 lg:grid lg:gap-20 xl:grid-cols-3 slide-content-cont culture-grid responsive-grid">
-        <ValueCard
-          title="Hunger"
-          desc="We are change agents, united in our passion to improve every day
-          and deliver outstanding results for our clients, partners and
-          Insight."
-          bg="bg-red"
+      <dl className="grid grid-cols-2 lg:grid-cols-4 slide-content-cont impact-grid">
+        <ImpactCard
+          stat="#16"
+          desc="Australia Best Places to Work"
+          descInfo="Awarded in 2022"
         />
-        <ValueCard
-          title="Heart"
-          desc="We are teammates. We take care of each other, our clients and
-          our communities."
-          bg="bg-fuchsia"
+        <ImpactCard
+          stat="#7"
+          desc="Fortune World’s Most Admired Companies"
+          descInfo="Awarded in 2021"
         />
-        <ValueCard
-          title="Harmony"
-          desc="We are a team of diverse individuals who value inclusivity and
-          create meaningful connections so we can win together."
-          bg="bg-purple"
+        <ImpactCard
+          stat="19"
+          desc="Countries with Insight Operations"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="#95"
+          desc="on Forbes World's Best Employers"
+          descInfo="Awarded in 2021"
+        />
+        <ImpactCard
+          stat="#373"
+          desc="on the Fortune 500"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="3.7k"
+          desc="Engineers, Architects and Consultants"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="11k+"
+          desc="Insight Teammates Worldwide"
+          descInfo="As of 2022"
+        />
+        <ImpactCard
+          stat="#2"
+          desc="Most Gender Diverse Executive Team in Technology"
+          descInfo="Awarded in 2021"
         />
       </dl>
     </Container>

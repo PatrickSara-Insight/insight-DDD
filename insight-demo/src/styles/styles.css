@@ -394,6 +394,15 @@ body {
   width: 100%;
 }
 
+.slide-title-cont {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 992px) {
+  .slide-title-cont {
+    margin-bottom: 5rem;
+  }
+}
+
 #be-ambitious-title {
   opacity: 100;
 }
@@ -499,6 +508,18 @@ body {
 
 .impact-grid {
   max-width: 100%;
+}
+
+.impact-card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  .impact-card {
+    margin: 2.5rem;
+    padding: 2.5rem;
+    margin-top: 0;
+  }
 }
 
 .gptw-header {

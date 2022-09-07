@@ -60,7 +60,7 @@ const Impact = () => {
 
   return (
     <Container fluid className="carousel-slide-cont impact-cont">
-      <Container className="mb-5 lg:mb-20 slide-title-cont text-center ">
+      <Container className="mb-5 lg:mb-20 slide-title-cont text-center">
         <h1 className="title-secondary mx-0 mb-2 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
