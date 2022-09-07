@@ -58,24 +58,28 @@
 @mixin card-title {
     font-family: $font-heading;
     color: $color-font-primary;
-    font-size: calc($font-size-body * 3);
+    font-size: calc($font-size-body * 2.5);
     text-align: center;
     
-    @media screen and (max-width: $large) {
+    @media screen and (max-width: $extra-large) {
         font-size: calc($font-size-body * 2);
         }
 
-    @media screen and (max-width: $medium) {
+    @media screen and (max-width: $large) {
         font-size: calc($font-size-body * 1.5);
     }
+
+        @media screen and (max-width: $medium) {
+            font-size: calc($font-size-body * 1.25);
+        }
 }
 
 @mixin card-body {
         font-family: $font-heading;
-        font-size: calc($font-size-body * 2);
+        font-size: calc($font-size-body * 1.5);
         text-align: center;
         
-        @media screen and (max-width: $large) {
+        @media screen and (max-width: $extra-large) {
             font-size: calc($font-size-body);
         }
 }
@@ -92,7 +96,11 @@
     width: 100%;
 
     @media screen and (min-width: $large) {
-        width: 75%;
+        width: 90%;
+    }
+    
+    @media screen and (min-width: $extra-large) {
+        width: 80%;
     }
 }
 

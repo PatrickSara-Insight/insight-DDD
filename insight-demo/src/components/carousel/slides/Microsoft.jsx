@@ -29,7 +29,7 @@ const Microsoft = () => {
       .to(
         ".microsoft",
         { opacity: 0, y: 2000, stagger: { each: 0.05, from: "end" } },
-        13.5
+        13
       );
   };
 
@@ -53,16 +53,13 @@ const Microsoft = () => {
 
   return (
     <Container fluid className="carousel-slide-cont microsoft-cont">
-      <Container className="slide-title-cont flex flex-col justify-start items-center text-center mb-4 lg:mb-20">
+      <Container className="slide-title-cont flex flex-col justify-start items-center text-center">
         <Image alt="microsoft logo" src={MicrosoftLogo} className="microsoft" />
-        <h1
-          className="title-tertiary mx-0 my-4 lg:my-10 microsoft"
-          id="microsoft-title"
-        >
+        <h1 className="title-tertiary mx-0 mt-4 microsoft" id="microsoft-title">
           Our head is only in one cloud
         </h1>
       </Container>
-      <dl className="grid grid-cols-2 gap-4 lg:gap-20 lg:grid-cols-5 slide-content-cont microsoft-grid responsive-grid">
+      <dl className="grid grid-cols-2 xl:grid-cols-5 slide-content-cont microsoft-grid">
         <MicrosoftCard desc="Solution Assessment (Aus) Partner of the Year" />
         <MicrosoftCard desc="12 Advanced Specialisations in Azure, Security &#38; Modern Work" />
         <MicrosoftCard desc="18 Microsoft Gold Competencies" />

@@ -46,56 +46,30 @@ import QR from "../../assets/DDDQR.png";
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <Container className="slide-title-cont text-center ">
-        <h1 className="gray title-secondary mx-0 mb-2 impact" id="impact-title">
-          Local presence, global reach, since 1988
-        </h1>
-        <h2 className="gray title-tertiary px-4 impact" id="impact-subtitle">
-          See how we're making a positive impact
-        </h2>
-      </Container>
-      <dl className="grid grid-cols-2 lg:grid-cols-4 slide-content-cont impact-grid">
-        <ImpactCard
-          stat="#16"
-          desc="Australia Best Places to Work"
-          descInfo="Awarded in 2022"
+      <h1
+        className="title-primary text-center mb-20 ambitious"
+        id="be-ambitious-title"
+      >
+        Now is the time to be ambitious.
+      </h1>
+      <a
+        target="_blank"
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=EnVjbBfEeE6dYrYSWOS2GceQhB2c5b5CrLD6hDE4otRUQlc5WlJEM05TQ1VJNEw0N1BLTkoyQjhaSi4u"
+        rel="noreferrer"
+      >
+        <Image
+          className="ba-qr-code w-80 h-80 ambitious"
+          fluid
+          alt="insight qr code for ddd"
+          src={QR}
         />
-        <ImpactCard
-          stat="#7"
-          desc="Fortune World’s Most Admired Companies"
-          descInfo="Awarded in 2021"
-        />
-        <ImpactCard
-          stat="19"
-          desc="Countries with Insight Operations"
-          descInfo="As of 2022"
-        />
-        <ImpactCard
-          stat="#95"
-          desc="on Forbes World's Best Employers"
-          descInfo="Awarded in 2021"
-        />
-        <ImpactCard
-          stat="#373"
-          desc="on the Fortune 500"
-          descInfo="As of 2022"
-        />
-        <ImpactCard
-          stat="3.7k"
-          desc="Engineers, Architects and Consultants"
-          descInfo="As of 2022"
-        />
-        <ImpactCard
-          stat="11k+"
-          desc="Insight Teammates Worldwide"
-          descInfo="As of 2022"
-        />
-        <ImpactCard
-          stat="#2"
-          desc="Most Gender Diverse Executive Team in Technology"
-          descInfo="Awarded in 2021"
-        />
-      </dl>
+      </a>
+      <h2
+        className="title-secondary text-center mt-20 font-bold ambitious"
+        id="join-us"
+      >
+        Join us
+      </h2>
     </Container>
   );
 };

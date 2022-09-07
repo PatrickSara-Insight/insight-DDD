@@ -59,7 +59,7 @@ function Expertise() {
 
   return (
     <Container fluid className="carousel-slide-cont expertise-cont">
-      <Container className="slide-title-cont text-center mb-4 lg:mb-20">
+      <Container className="slide-title-cont text-center mb-0">
         <h1
           className="title-primary expertise-slide-header expertise mx-0"
           id="expertise-title"
@@ -74,7 +74,7 @@ function Expertise() {
           technical experts with decades of industry experience.
         </h2>
       </Container>
-      <dl className="slide-content-cont grid grid-cols-2 gap-2 lg:grid lg:gap-5 lg:grid-cols-3 expertise-grid responsive-grid">
+      <dl className="slide-content-cont grid grid-cols-2 xl:grid-cols-3 expertise-grid">
         <ExpertiseCard
           title="Modern workplace"
           descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."

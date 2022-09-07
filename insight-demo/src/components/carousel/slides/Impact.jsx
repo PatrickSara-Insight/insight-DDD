@@ -60,7 +60,7 @@ const Impact = () => {
 
   return (
     <Container fluid className="carousel-slide-cont impact-cont">
-      <Container className="mb-5 lg:mb-20 slide-title-cont text-center">
+      <Container className="slide-title-cont text-center ">
         <h1 className="title-secondary mx-0 mb-2 impact" id="impact-title">
           Local presence, global reach, since 1988
         </h1>
@@ -68,7 +68,7 @@ const Impact = () => {
           See how we're making a positive impact
         </h2>
       </Container>
-      <dl className="grid grid-cols-2 gap-2 lg:grid lg:gap-20 lg:grid-cols-4 slide-content-cont impact-grid responsive-grid">
+      <dl className="grid grid-cols-2 lg:grid-cols-4 slide-content-cont impact-grid">
         <ImpactCard
           stat="#16"
           desc="Australia Best Places to Work"
