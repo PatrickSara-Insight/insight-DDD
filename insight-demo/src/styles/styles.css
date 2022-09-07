@@ -714,7 +714,7 @@ body {
 }
 
 .project-card-title {
-  width: 100%;
+  width: 30%;
   border-width: 3px;
   border-style: solid;
   -o-border-image: linear-gradient(to right, #ae0a46 0%, #a80b6e 49%, #582873 100%) 0 0 100% 0;

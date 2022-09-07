@@ -11,7 +11,7 @@ import Mining from "../../../assets/mining.png";
 
 function Projects() {
   const { slideIndex, setSlideIndex } = useContext(SlideContext);
-  const SLIDEDURATION = 12500;
+  const SLIDEDURATION = 2000;
 
   const projectsTl = useRef(
     gsap.timeline({
@@ -37,13 +37,13 @@ function Projects() {
       .to(".qr-code", { opacity: 0, duration: 1.5 }, 0);
   };
 
-  const play = () => {
-    projectsTl.current.revert();
-    projectsTl.current.progress(0).play();
-    projectsTl.current
-      .set(".projects-cont", { opacity: 100 }, 3)
-      .to(".projects-cont", { opacity: 0 }, 9);
-  };
+  // const play = () => {
+  //   projectsTl.current.revert();
+  //   projectsTl.current.progress(0).play();
+  //   projectsTl.current
+  //     .set(".projects-cont", { opacity: 100 }, 3)
+  //     .to(".projects-cont", { opacity: 0 }, 9);
+  // };
 
   const nextSlide = useCallback(() => {
     setSlideIndex(0);
@@ -54,7 +54,7 @@ function Projects() {
       const timer = setTimeout(() => {
         nextSlide();
       }, SLIDEDURATION);
-      play();
+      // play();
       setBackground();
       return () => {
         clearTimeout(timer);
@@ -66,7 +66,7 @@ function Projects() {
 
   return (
     <Container fluid className="carousel-slide-cont projects-cont">
-      <Container
+      {/* <Container
         fluid
         className="flex flex-col justify-evenly items-center projects-container"
       >
@@ -78,7 +78,7 @@ function Projects() {
           src={Manfacturing}
         />
         <ProjectCont title="Mining" src={Mining} />
-      </Container>
+      </Container> */}
     </Container>
   );
 }

@@ -13,7 +13,7 @@ import Impact from "./slides/Impact";
 import GPTW from "./slides/GPTW";
 import Expertise from "./slides/Expertise";
 import Industry from "./slides/Industry";
-import Projects from "./slides/Projects";
+import EndSlide from "./slides/Projects";
 import Employee from "./slides/Employees";
 import Microsoft from "./slides/Microsoft";
 import MoreEmployees from "./slides/MoreEmployees";
@@ -70,7 +70,7 @@ const PapaCarousel = () => {
             <BeAmbitious />
           </Carousel.Item>
           <Carousel.Item className="carousel-item">
-            <Projects />
+            <EndSlide />
           </Carousel.Item>
         </Carousel>
       </SlideContext.Provider>
