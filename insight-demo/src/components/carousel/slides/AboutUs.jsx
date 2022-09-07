@@ -65,7 +65,7 @@ const AboutUs = () => {
         src={Logo}
       />
       <div className="slide-title-cont about-definition about my-10">
-        <h2 className="title-secondary italic about-sub-info text-center mx:0 md:mx-10 lg:mx-40 xl:mx-80 px-0 lg:px-40 xl:px-80">
+        <h2 className="title-secondary italic about-sub-info text-center mx:0 px-0 lg:px-40 lg:mx-40">
           noun [mass noun] - The capacity to gain an accurate and deep
           understanding of someone or something.
         </h2>

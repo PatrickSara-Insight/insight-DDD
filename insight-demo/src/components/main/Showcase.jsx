@@ -46,27 +46,38 @@ import QR from "../../assets/DDDQR.png";
 const Showcase = () => {
   return (
     <Container fluid className="showcase-cont">
-      <h1 className="title-primary text-center mb-20 gray">
-        Now is the time to be ambitious.
-      </h1>
-      <a
-        target="_blank"
-        href="https://forms.office.com/Pages/ResponsePage.aspx?id=EnVjbBfEeE6dYrYSWOS2GceQhB2c5b5CrLD6hDE4otRUQlc5WlJEM05TQ1VJNEw0N1BLTkoyQjhaSi4u"
-        rel="noreferrer"
-      >
-        <Image
-          className="ba-qr-code w-64 h-64"
-          fluid
-          alt="insight qr code for ddd"
-          src={QR}
+      <Container className="slide-content-cont culture-sub-cont text-center min-w-fit mx-0">
+        <h1 className="title-primary culture" id="culture-title">
+          Core Values
+        </h1>
+        <h2
+          className="title-secondary text-center culture"
+          id="culture-subtitle"
+        >
+          Our success starts with our culture
+        </h2>
+      </Container>
+      <dl className="grid grid-cols-1 gap-4 lg:grid lg:gap-20 xl:grid-cols-3 slide-content-cont culture-grid responsive-grid">
+        <ValueCard
+          title="Hunger"
+          desc="We are change agents, united in our passion to improve every day
+          and deliver outstanding results for our clients, partners and
+          Insight."
+          bg="bg-red"
         />
-      </a>
-      <h2
-        className="title-secondary text-center mt-20 font-bold gray"
-        id="join-us"
-      >
-        Join us
-      </h2>
+        <ValueCard
+          title="Heart"
+          desc="We are teammates. We take care of each other, our clients and
+          our communities."
+          bg="bg-fuchsia"
+        />
+        <ValueCard
+          title="Harmony"
+          desc="We are a team of diverse individuals who value inclusivity and
+          create meaningful connections so we can win together."
+          bg="bg-purple"
+        />
+      </dl>
     </Container>
   );
 };

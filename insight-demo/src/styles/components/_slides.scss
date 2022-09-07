@@ -88,8 +88,21 @@
     height: auto;
 }
 
+.culture-sub-cont {
+    margin-bottom: 1.25rem;
+
+        @media screen and (min-width: $large) {
+            margin-bottom: 5rem;
+        }
+}
+
 .culture-card-header {
     position: relative;
+    padding: 0.5rem 0;
+
+        @media screen and (min-width: $large) {
+            padding: 1rem 0;
+        }
 }
 
 .culture-card-header::after {
@@ -234,5 +247,13 @@
 .small-display-none {
         @media screen and (max-width: $medium) {
             display: none;
+        }
+}
+
+.value-card-body {
+    padding: 2.5rem;
+
+        @media screen and (min-width: $medium) {
+            padding: 4rem;
         }
 }

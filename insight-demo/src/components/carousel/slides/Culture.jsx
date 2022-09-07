@@ -56,7 +56,7 @@ const Culture = () => {
 
   return (
     <Container fluid className="carousel-slide-cont culture-cont">
-      <Container className="slide-content-cont culture-sub-cont text-center mb-5 md:mb-20">
+      <Container className="slide-content-cont culture-sub-cont text-center min-w-fit mx-0">
         <h1 className="title-primary culture" id="culture-title">
           Core Values
         </h1>
@@ -67,7 +67,7 @@ const Culture = () => {
           Our success starts with our culture
         </h2>
       </Container>
-      <dl className="grid grid-cols-1 gap-4 md:gap-20 md:grid-cols-3 slide-content-cont culture-grid responsive-grid">
+      <dl className="grid grid-cols-1 gap-4 lg:grid lg:gap-20 lg:grid-cols-3 slide-content-cont culture-grid responsive-grid">
         <ValueCard
           title="Hunger"
           desc="We are change agents, united in our passion to improve every day

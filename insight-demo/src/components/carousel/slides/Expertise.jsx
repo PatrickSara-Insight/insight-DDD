@@ -74,7 +74,7 @@ function Expertise() {
           technical experts with decades of industry experience.
         </h2>
       </Container>
-      <dl className="slide-content-cont grid grid-cols-2 gap-2 lg:gap-5 lg:grid-cols-3 expertise-grid responsive-grid">
+      <dl className="slide-content-cont grid grid-cols-2 gap-2 lg:grid lg:gap-5 lg:grid-cols-3 expertise-grid responsive-grid">
         <ExpertiseCard
           title="Modern workplace"
           descInfo="Top-tier support, productivity tools, and end-to-end IT asset maagement."

@@ -166,6 +166,11 @@ body {
   color: #EFE9F4;
   font-size: 6rem;
 }
+@media screen and (max-width: 1400px) {
+  .title-secondary {
+    font-size: 4rem;
+  }
+}
 @media screen and (max-width: 1200px) {
   .title-secondary {
     font-size: 3rem;
@@ -252,6 +257,11 @@ body {
   color: #EFE9F4;
   font-size: 6rem;
 }
+@media screen and (max-width: 1400px) {
+  .slide-subheader {
+    font-size: 4rem;
+  }
+}
 @media screen and (max-width: 1200px) {
   .slide-subheader {
     font-size: 3rem;
@@ -273,6 +283,11 @@ body {
   color: #EFE9F4;
   font-size: 6rem;
   font-family: "Klinic Slab Bold", sans-serif;
+}
+@media screen and (max-width: 1400px) {
+  .slide-stat-primary {
+    font-size: 4rem;
+  }
 }
 @media screen and (max-width: 1200px) {
   .slide-stat-primary {
@@ -403,8 +418,23 @@ body {
   height: auto;
 }
 
+.culture-sub-cont {
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 1200px) {
+  .culture-sub-cont {
+    margin-bottom: 5rem;
+  }
+}
+
 .culture-card-header {
   position: relative;
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 1200px) {
+  .culture-card-header {
+    padding: 1rem 0;
+  }
 }
 
 .culture-card-header::after {
@@ -620,6 +650,15 @@ body {
 @media screen and (max-width: 992px) {
   .small-display-none {
     display: none;
+  }
+}
+
+.value-card-body {
+  padding: 2.5rem;
+}
+@media screen and (min-width: 992px) {
+  .value-card-body {
+    padding: 4rem;
   }
 }
 

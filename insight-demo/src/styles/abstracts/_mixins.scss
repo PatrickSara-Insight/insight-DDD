@@ -27,6 +27,10 @@
     color: $color-font-primary;
     font-size: $font-size-subheader;
 
+    @media screen and (max-width: $extra-large) {
+        font-size: calc($font-size-subheader / 1.5);
+    }
+
     @media screen and (max-width: $large) {
         font-size: calc($font-size-subheader / 2);
     }

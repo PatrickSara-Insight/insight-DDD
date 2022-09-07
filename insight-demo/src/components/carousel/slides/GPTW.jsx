@@ -86,7 +86,7 @@ const GPTW = () => {
           </h2>
         </div>
       </Container>
-      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-10 gptw-grid bg-white p-2 lg:p-6 gptw-grid responsive-grid gptw">
+      <dl className="slide-content-cont rounded-lg shadow-lg grid grid-cols-2 lg:grid lg:grid-cols-4 gap-4 lg:gap-10 gptw-grid bg-white p-2 lg:p-6 gptw-grid responsive-grid gptw">
         <GptwCard title="Additional annual leave" svg={AnnualLeave} />
         <GptwCard title="Social events" svg={SocialEvents} />
         <GptwCard title="Work life balance days" svg={Balance} />
